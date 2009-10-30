@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="generator" content="gvim" />
+<meta name="author" content="闲耘 (mail[AT]xianyun.org)" />
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="Stylesheet" type="text/css" href="css/style.css" >
+<title>Script#39 - </title>
+</head>
+<body>
+http://www.vim.org/scripts/script.php?script_id=39
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td class="prompt">作者</td></tr>
+<tr><td><a href="http://www.vim.org/account/profile.php?user_id=92">Benji Fisher</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">脚本类型</td></tr>
+<tr><td>共用(utility)</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">描述</td></tr>
+<tr><td>
+        脚本 matchit.vim 允许你配置 % 来匹配多于单个字符。
+        你可以匹配字符甚至正则表达式。
+        当然，也会智能匹配treats字符串(treats strings)和注释（被认可的语法高亮原理）
+默认的 ftplugins (File Type Plugins) 包括若干语言的设置：
+<br>Ada, ASP with VBS, Csh, DTD, Essbase, Fortran, HTML, JSP
+<br>(同 HTML), LaTeX, Lua, Pascal, SGML, Shell, Tcsh, Vim, XML.
+我不再跟踪追寻，所以还可能有更多。
+<br>The documentation (included in the zip file) explains how to configure
+<br>the script for a new language and how to modify the defaults.
+<br>
+<br>Since vim 6.0, matchit.vim has been included in the standard vim distribution,
+<br>under the macros/ directory; the version here may be more recent.
+<br></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="prompt">install details</td></tr>
+<tr><td>Vim 5.x:&nbsp;&nbsp;Make sure to download the correct version (1.0).&nbsp;&nbsp;Add a line like
+<br>
+<br>:source path/to/matchit.vim
+<br>
+<br>to your vimrc file.&nbsp;&nbsp;More details are in matchit.html (included).
+<br>
+<br>Vim 6.x, 7.x:&nbsp;&nbsp;Download the most recent version.
+<br>Unpack the zip file in your personal vim directory (e.g. ~/.vim on *NIX):
+<br>this will put matchit.vim in your plugin/ directory and put matchit.txt into
+<br>your doc/ directory.&nbsp;&nbsp;Then do
+<br>
+<br>:helptags ~/.vim/doc
+<br>
+<br>to rebuild the tags file.&nbsp;&nbsp;For details, read
+<br>
+<br>:help add-local-help
+<br>
+<br>Make sure you have a line like
+<br>
+<br>:filetype plugin on
+<br>
+<br>in your vimrc file.&nbsp;&nbsp;This enables filetype plugins, many of which tell
+<br>matchit.vim which matching pairs to use.</td></tr>
+<tr><td>&nbsp;</td></tr>
+</table>
+
+</body>
+</html>
