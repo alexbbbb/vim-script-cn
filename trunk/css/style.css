@@ -7,6 +7,8 @@ p{
     width:40em;
 }
 ul, ol{width:40em;}
+ol.cat li a{text-decoration:none; border:0 none;}
+ol.cat li a span{color:#999; display:inline-block; width:4em; text-align:right; margin:4px;}
 
 th {
 	font-family: arial,helvetica,sans-serif;
