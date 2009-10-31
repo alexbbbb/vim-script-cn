@@ -1,6 +1,10 @@
+html,body{font-size:14px;}
 body, td, p  {
 	font-family: arial,helvetica,sans-serif;
 	font-family: arial,helvetica,sans-serif;
+}
+p{
+    width:40em;
 }
 
 th {
@@ -67,7 +71,7 @@ h1 {
 
 h2 {
 	font-family: arial,helvetica,sans-serif;
-	font-size: small;
+    font-size:1.5em;
 	font-weight: bold;
 	color: #000066;
 }
@@ -81,7 +85,7 @@ h2 {
 
 h3 {
 	font-family: arial,helvetica,sans-serif;
-	font-size: x-small;
+	font-size: 1.3em;
 	font-weight: bold;
 	color: #000066;
 }
@@ -98,6 +102,7 @@ small {
 	font-size: 75%;
 }
 
+a{text-decoration:none; border-bottom:1px dashed #00f;}
 a.small {
 	font-family: arial,helvetica,sans-serif;
 	font-size: 75%;
