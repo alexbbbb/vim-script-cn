@@ -1,13 +1,20 @@
-#summary One-sentence summary of this page.
+# Vim 文档规范
 
-= Introduction =
+= 介绍 =
 
-Add your content here.
+Vim 文档有一些沿袭下来的风格及特有的规范，这里介绍一二。
 
 
-= Details =
+= Unix 文档风格 =
+因为在计算机的古代，显示器大都只能显示 80 列，而 Vim 最初又是被设计为可以在任何显示
+设备中使用的编辑器，所以帮助文档也延续了这个光荣的传统。在实际应用中一般不超过 78 列。
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+
+= Vim 规范 =
+Vim 有一种叫“模式行(modeline)”的语法，它定义了让 Vim 以什么风格来显示当前文档。
+模式行一般写在文档的最后，并需要以一个以上空格开始，如下，它定义了文档最宽 78 列，
+将 < Tab> (ts:tabstop)空白显示为 8 个空格宽度，并且文档的文件格式（语法高亮风格）
+是“帮助(help)”：
+{{{
+ vim:tw=78:ts=8:ft=help
+}}}
