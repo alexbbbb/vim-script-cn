@@ -1,0 +1,10 @@
+= [http://www.vim.org/scripts/script.php?script_id=ID VimScriptName] =
+
+作者：[http://www.vim.org/account/profile.php?user_id=ID AUTHOR]
+
+脚本类型：公用(utility)
+
+== 描述 ==
+
+
+== 安装细节 ==
