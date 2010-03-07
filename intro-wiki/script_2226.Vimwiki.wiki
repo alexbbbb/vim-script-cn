@@ -1,0 +1,68 @@
+
+= (vimscript#2226) Vimwiki =
+= [http://www.vim.org/scripts/script.php?script_id=2226 (vimscript#2226) Vimwiki] =
+
+作者：[http://www.vim.org/account/profile.php?user_id=14343 Maxim Kim]
+
+脚本类型：公用(ftplugin)
+
+== 描述 ==
+一个用于私人 Wiki 的 Vim 插件。
+=============================================================================
+可以在 [http://code.google.com/p/vimwiki/] 看屏幕截图。
+如果你不喜欢 vimball 档，那里也有 zip 压缩的文件 vimwiki 文件。
+
+J.A.J. Pater 写了一份 Vimwiki 的参考手册 [http://habamax.ru/myvim/data/vimwikiqrc.pdf]
+
+
+安装条件
+=============================================================================
+确保你的 vimrc 文件中有如下的设置：
+{{{
+    set nocompatible
+    filetype plugin on
+    syntax on
+}}}
+离开这些设置 Vimwiki 将不能正常工作。
+
+
+介绍
+=============================================================================
+Vimwiki 是一个 Vim 中的个人 wiki -- 一个有它自己的高亮语法和链接的文本文件。
+
+使用 vimwiki 你可以：
+    - 组织笔记和想法；
+    - 管理待办事项列表；
+    - 写文档。
+
+通过按 <Leader>ww （通常是 \ww）键来快速启动，进入 wiki 索引页。默认路径在：
+{{{
+    ~/vimwiki/index.wiki
+}}}
+参考下面示例：
+{{{
+= 我的知识库 =
+    * 我的紧急任务(MyUrgentTasks) -- 昨天应该完成的事！！！
+    * 古腾堡计划(ProjectGutenberg) -- 强大的好书。
+    * 便条簿(ScratchPad) -- 各种临时的东西。
+}}}
+
+注意：ProjectGutenberg, MyUrgentTasks 和 ScratchPad 将高亮成“错误”样式。
+这些驼峰形式的链接尚不存在。（驼峰形式就是两个以大写字母开头的单词组合成一个词）
+
+将光标放置在 ProjectGutenberg 上并按回车(<Enter>)键，你将进入
+ProjectGutenberg ，编辑并保存它，然后按退格键(<Backspace>)可以回到上一个 wiki
+文件。你现在就会看到不同了 -- ProjectGutenberg 高亮为一个链接。
+
+
+== 安装细节 ==
+Windows:
+========
+  # 解压缩。
+  # 使用 Vim 打开 vimwiki_N_N.vba (N_N 是版本号，例如 0_8)。
+  # 执行 `:so %` 命令进行安装。
+
+Linux:
+========
+  # 使用 Vim 打开 vimwiki_N_N.vba.gz (N_N 是版本号，例如 0_8)。
+  # 执行 `:so %` 命令进行安装。
