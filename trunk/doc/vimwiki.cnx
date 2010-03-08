@@ -31,7 +31,7 @@
         5.5. 列表                    |vimwiki-syntax-lists|
         5.6. 表格                    |vimwiki-syntax-tables|
         5.7. 预格式化文本            |vimwiki-syntax-preformatted|
-        5.8. 块                      |vimwiki-syntax-blockquotes|
+        5.8. 块级引用                |vimwiki-syntax-blockquotes|
         5.9. 注释                    |vimwiki-syntax-comments|
     6. 折叠/大纲                     |vimwiki-folding|
     7. 占位符                        |vimwiki-placeholders|
@@ -588,39 +588,37 @@ Note *, - 或 # 之后的空格是必须的。
 
 
 ------------------------------------------------------------------------------
-5.6. Tables                                            *vimwiki-syntax-tables*
+5.6. 表格                                              *vimwiki-syntax-tables*
 
-Tables are created by entering the content of each cell separated by |
-delimiters. You can insert other inline wiki syntax in table cells, including
-typeface formatting and links.
-For example: >
+表格是每个单元格有竖线分隔符 | 构成的内容，你也可以在表格单元格中插入其他内联
+的 wiki 语法，包括字体样式和链接。
+例如： >
 
- | Year | Temperature (low) | Temperature (high) |
- |------+-------------------+--------------------|
- | 1900 | -10               | 25                 |
- | 1910 | -15               | 30                 |
- | 1920 | -10               | 32                 |
- | 1930 | _N/A_             | _N/A_              |
- | 1940 | -2                | 40                 |
+ | 年   | 最低温度 | 最高温度 |
+ |------+------------+--------|
+ | 1900 | -10      | 25       |
+ | 1910 | -15      | 30       |
+ | 1920 | -10      | 32       |
+ | 1930 | _N/A_    | _N/A_    |
+ | 1940 | -2       | 40       |
 >
 
-In html the following part >
- | Year | Temperature (low) | Temperature (high) |
- |------+-------------------+--------------------|
+下面的这部分，在 html 中高亮为表头样式： >
+ | 年   | 最低温度 | 最高温度 |
+ |------+----------+----------|
 >
-is higlighted as a table header.
 
 
-See |vimwiki-tables| for more details on how to manage tables.
+关于如何管理表格的详细信息，可以参考 |vimwiki-tables|。
 
-Note: You can not use [[link|description]] type of links in tables. Use
-[[link][description]] instead.
+Note: 你可以在表格中使用 [[链接地址|描述信息]] 的链接类型，
+或使用 [[链接地址][描述信息]] 来替代。
 
 
 ------------------------------------------------------------------------------
-5.7. Preformatted text                           *vimwiki-syntax-preformatted*
+5.7. 预格式化文本                                *vimwiki-syntax-preformatted*
 
-Use {{{ and }}} to define block of preformatted text:
+使用 {{{ 和 }}} 来定义预格式化文本块：
 {{{ >
   Tyger! Tyger! burning bright
    In the forests of the night,
@@ -633,187 +631,187 @@ Use {{{ and }}} to define block of preformatted text:
 }}}
 
 
-You can add optional information to {{{ tag: >
+你也可以添加附加信息到 {{{ 标签： >
 {{{class="brush: python" >
  def hello(world):
      for x in range(10):
          print("Hello {0} number {1}".format(world, x))
 }}}
 
-Result of HTML export: >
+导出的 HTML 结果是： >
  <pre class="brush: python">
  def hello(world):
      for x in range(10):
          print("Hello {0} number {1}".format(world, x))
  </pre>
 
-This might be useful for coloring some programming code with external js tools
-like google syntax highlighter.
+这就可以使用类似 google syntax highlighter 这样的 js
+代码着色器这样有用的工具了。
 
-You can setup vimwiki to highlight code snippets in preformatted text.
-See |vimwiki-option-nested_syntaxes|
-
-------------------------------------------------------------------------------
-5.8. Blockquotes                                  *vimwiki-syntax-blockquotes*
-
-Text started with 4 or more spaces is a blockquote.
-
-    This would be a blockquote in vimwiki. It is not highlighted in vim but
-    could be styled by css in html. Blockquotes are usually used to quote a
-    long piece of text from another source.
+可以设置 vimwiki 来高亮预格式化代码片段。
+参考 |vimwiki-option-nested_syntaxes|
 
 ------------------------------------------------------------------------------
-5.9. Comments                                        *vimwiki-syntax-comments*
+5.8. 块级引用                                     *vimwiki-syntax-blockquotes*
 
-Text between <!-- and --> is a comment.
-Ex: >
+以 4 个以上空格开始的文本，就是一个引用块。
+
+    这在 vimwiki 中是一个引用块，它在 vim 中不会被高亮，但是可以使用样式表让
+    它在 html 中高亮，块级引用通常用来引用其他来源的较长文本片段。
+
+------------------------------------------------------------------------------
+5.9. 注释                                            *vimwiki-syntax-comments*
+
+在 <!-- 和 --> 之间的文本是一个注释。
+例如： >
  <!-- this text would not be in HTML -->
 <
 
 ==============================================================================
-6. Folding/Outline                                           *vimwiki-folding*
+6. 代码折叠/大纲                                             *vimwiki-folding*
 
-Vimwiki can fold or outline headers and list items.
+Vimwiki 可以根据标题和列表项来折叠或显示大纲。
 
-Example:
-= My current task =
-  * [ ] Do stuff 1
-    * [ ] Do substuff 1.1
-    * [ ] Do substuff 1.2
-      * [ ] Do substuff 1.2.1
-      * [ ] Do substuff 1.2.2
-    * [ ] Do substuff 1.3
-  * [ ] Do stuff 2
-  * [ ] Do stuff 3
+例如：
+= 我的当前任务 =
+  * [ ] 做某事 1
+    * [ ] 做某事的子步骤 1.1
+    * [ ] 做某事的子步骤 1.2
+      * [ ] 做某事的子步骤 1.2.1
+      * [ ] 做某事的子步骤 1.2.2
+    * [ ] 做某事的子步骤 1.3
+  * [ ] 做某事 2
+  * [ ] 做某事 3
 
-Hit |zM| :
-= My current task = [8] --------------------------------------~
+击 |zM| 键：
+= 我的当前任务 = [8] --------------------------------------~
 
-Hit |zr| :
-= My current task =~
-  * [ ] Do stuff 1 [5] --------------------------------------~
-  * [ ] Do stuff 2~
-  * [ ] Do stuff 3~
+击 |zr| 键：
+= 我的当前任务 =~
+  * [ ] 做某事 1 [5] --------------------------------------~
+  * [ ] 做某事 2~
+  * [ ] 做某事 3~
 
-Hit |zr| one more time:
-= My current task =~
-  * [ ] Do stuff 1~
-    * [ ] Do substuff 1.1~
-    * [ ] Do substuff 1.2 [2] -------------------------------~
-    * [ ] Do substuff 1.3~
-  * [ ] Do stuff 2~
-  * [ ] Do stuff 3~
+击 |zr| 键更多次：
+= 我的当前任务 =~
+  * [ ] 做某事 1~
+    * [ ] 做某事的子步骤 1.1~
+    * [ ] 做某事的子步骤 1.2 [2] -------------------------------~
+    * [ ] 做某事的子步骤 1.3~
+  * [ ] 做某事 2~
+  * [ ] 做某事 3~
 
-NOTE: Whether you use default syntax, folding on list items should work
-properly only if all of them are indented using current |shiftwidth|.
-For MediaWiki * or # should be in the first column.
+NOTE: 不论是否使用默认语法，只要是使用 |shiftwidth| 来缩进，在列表项是的折叠
+都会正常工作。对于 MediaWiki 来说，* 和 # 都应该放在第一列。
 
-To turn folding on/off check |g:vimwiki_folding|.
+设置 |g:vimwiki_folding| 来启用/禁用折叠。
 
 ==============================================================================
-7. Placeholders                                         *vimwiki-placeholders*
+7. 占位符                                               *vimwiki-placeholders*
 
 ------------------------------------------------------------------------------
-7.1. Table of Contents               *vimwiki-toc* *vimwiki-table-of-contents*
+7.1. 目录                            *vimwiki-toc* *vimwiki-table-of-contents*
 
 You can add 'table of contents' to your html page generated from wiki one.
-Just place >
+从某个 wiki 导出 html 时，可以添加 '目录' 到 html 页面中。
+只需要输入 >
 
 %toc
 
-into your wiki page.
-You can also add caption to your 'toc': >
+到 wiki 页面。
+还可以给“目录”添加标题： >
 
-%toc Table of Contents
+%toc 目录
 
-or >
+或者 >
 
-%toc Whatever
+%toc 随便什么
 
 
 ==============================================================================
-8. Todo lists                                             *vimwiki-todo-lists*
+8. 待办事项列表(Todo lists)                               *vimwiki-todo-lists*
 
-You can have todo lists -- lists of items you can check/uncheck.
+可以(使用 Vimwiki)来做待办事项列表 -- 一个可以切换选中/反选的项目列表。
 
-Consider the following example:
-= Toggleable list of todo items =
-  * [X] Toggle list item on/off.
-    * [X] Simple toggling between [ ] and [X].
-    * [X] All list's subitems should be toggled on/off appropriately.
-    * [X] Toggle child subitems only if current line is list item
-    * [X] Parent list item should be toggled depending on it's child items.
-  * [X] Make numbered list items toggleable too
-  * [X] Add highlighting to list item boxes
-  * [X] Add [ ] to the next created with o, O and <CR> list item.
+参考如下示例：
+= 可切换的待办列表项 =
+  * [X] 切换列表项开/关。
+    * [X] 简单的在 [ ] 和 [X] 之间切换。
+    * [X] 所有的列表子项将被适当的切换为开/关。
+    * [X] 仅当当前行是列表项时，切换子项。
+    * [X] 父列表项将受子列表项的切换影响。
+  * [X] 同样支持编号列表项的切换。
+  * [X] 添加高亮到列表项的复选框。
+  * [X] 使用 o, O 和 <CR> 创建新行时，新列表项会带 [ ]。(译注：<CR>没有带 [ ])
 
 
-Pressing <C-Space> on the first list item will toggle it and all of it's child
-items:
-= Toggleable list of todo items =
-  * [ ] Toggle list item on/off.
-    * [ ] Simple toggling between [ ] and [X].
-    * [ ] All list's subitems should be toggled on/off appropriately.
-    * [ ] Toggle child subitems only if current line is list item
-    * [ ] Parent list item should be toggled depending on it's child items.
-  * [X] Make numbered list items toggleable too
-  * [X] Add highlighting to list item boxes
-  * [X] Add [ ] to the next created with o, O and <CR> list item.
+在第一个列表项按 <C-Space> 会切换所有的子项：
+(译注：<C-Space> 一般是中文输入法的热键，可以自定义键盘映射)
+= 可切换的待办列表项 =
+  * [ ] 切换列表项开/关。
+    * [ ] 简单的在 [ ] 和 [X] 之间切换。
+    * [ ] 所有的列表子项将被适当的切换为开/关。
+    * [ ] 仅当当前行是列表项时，切换子项。
+    * [ ] 父列表项将受子列表项的切换影响。
+  * [X] 同样支持编号列表项的切换。
+  * [X] 添加高亮到列表项的复选框。
+  * [X] 使用 o, O 和 <CR> 创建新行时，新列表项会带 [ ]。
 
-Pressing <C-Space> on the third list item will toggle it and all of it's
-parent items:
-= Toggleable list of todo items =
-  * [.] Toggle list item on/off.
-    * [ ] Simple toggling between [ ] and [X].
-    * [X] All list's subitems should be toggled on/off appropriately.
-    * [ ] Toggle child subitems only if current line is list item
-    * [ ] Parent list item should be toggled depending on it's child items.
-  * [ ] Make numbered list items toggleable too
-  * [ ] Add highlighting to list item boxes
-  * [ ] Add [ ] to the next created with o, O and <CR> list item.
+在第三个列表项是按 <C-Space> 将切换自身和其父项：
+= 可切换的待办列表项 =
+  * [.] 切换列表项开/关。
+    * [ ] 简单的在 [ ] 和 [X] 之间切换。
+    * [X] 所有的列表子项将被适当的切换为开/关。
+    * [ ] 仅当当前行是列表项时，切换子项。
+    * [ ] 父列表项将受子列表项的切换影响。
+  * [ ] 同样支持编号列表项的切换。
+  * [ ] 添加高亮到列表项的复选框。
+  * [ ] 使用 o, O 和 <CR> 创建新行时，新列表项会带 [ ]。
 
-Parent items could be toggled by its child items. Symbol inside [ ] depends on
-percentage of toggled child items(see also |g:vimwiki_listsyms|): >
+父项会受子项的切换影响，[ ] 中的符号与子项百分比对照如
+（也可参考 |g:vimwiki_listsyms| ）：
     [ ] -- 0%
     [.] -- 1-33%
     [o] -- 34-66%
     [O] -- 67-99%
     [X] -- 100%
 
-It is possible to toggle several list items using visual mode.
+在可视模式下，可以批量切换多个列表项。
 
 
 ==============================================================================
-9. Tables                                                     *vimwiki-tables*
+9. 表格                                                       *vimwiki-tables*
 
-Use :VimwikiTable command to create default table with 5 columns and 2 rows: >
+使用 :VimwikiTable 命令默认创建 5 列 2 行的表格： >
 
  |   |   |   |   |   |
  |---+---+---+---+---|
  |   |   |   |   |   |
 <
 
-Tables are auto-formattable. Let's add some text into first cell: >
+表格会自动格式化，我们先加些文本到第一个表格单元中： >
 
- | First Name  |   |   |   |   |
+ | 姓氏  |   |   |   |   |
  |---+---+---+---+---|
  |   |   |   |   |   |
 <
 
-Whenever you press <TAB>, <CR> or leave Insert mode table is formatted: >
-
- | First Name |   |   |   |   |
- |------------+---+---+---+---|
- |            |   |   |   |   |
+无论按 <TAB>, <CR> 还是离开插入模式，表格都将被格式化： >
+(译注 I：<TAB> 键会与其他使用 <TAB> 键的脚本(如snipMate)冲突，可以重新映射其他
+热键；
+译注 II：0.9.9及之前版本对于双宽字符的格式化有问题，1.0 beta之后有修正。)
+>
+ | 姓氏 |   |   |   |   |
+ |------+---+---+---+---|
+ |      |   |   |   |   |
 <
 
-You can easily create nice looking text tables, just press <TAB> and enter new
-values: >
+你可以轻易的创建看起来不错的文本风格的表格，只需要按 <TAB> 键并输入新值： >
 
- | First Name | Last Name  | Age | City     | e-mail               |
- |------------+------------+-----+----------+----------------------|
- | Vladislav  | Pokrishkin | 31  | Moscow   | vlad_pok@smail.com   |
- | James      | Esfandiary | 27  | Istanbul | esfandiary@tmail.com |
+ | 姓氏       | 名字       | 年龄 | 城市       | 电子邮件             |
+ |------------+------------+------+------------+----------------------|
+ | Vladislav  | Pokrishkin | 31   | 莫斯科     | vlad_pok@smail.com   |
+ | James      | Esfandiary | 27   | 伊斯坦布尔 | esfandiary@tmail.com |
 <
 
 
