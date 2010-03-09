@@ -20,69 +20,65 @@ snipMate                                       *snippet* *snippets* *snipMate*
 {Vi 不支持这些特性。}
 
 ==============================================================================
-DESCRIPTION                                             *snipMate-description*
+描述                                                    *snipMate-description*
 
-snipMate.vim implements some of TextMate's snippets features in Vim. A
-snippet is a piece of often-typed text that you can insert into your
-document using a trigger word followed by a <tab>.
+snipMate.vim 为 Vim 实现了一些 TextMate 的片段(补全)特性，片段就是使用一个
+关键字后加 <tab> 键来插入一些常用的文本。
 
-For instance, in a C file using the default installation of snipMate.vim, if
-you type "for<tab>" in insert mode, it will expand a typical for loop in C: >
+例如，在 C 文件中使用默认安装的 snipMate.vim，如果在插入模式下输入 `for<tab>`，
+它将展开为典型的 C 循环： >
 
  for (i = 0; i < count; i++) {
 
  }
 
 
-To go to the next item in the loop, simply <tab> over to it; if there is
-repeated code, such as the "i" variable in this example, you can simply
-start typing once it's highlighted and all the matches specified in the
-snippet will be updated. To go in reverse, use <shift-tab>.
+要转到下一个循环项，只需要简单的按 <tab> 键；如果是重复的代码，例如示例中的
+变量 `i`，只需要在高亮处输入文本，所有指定匹配的项都将被更新。要返回到上一项，
+使用 <shift-tab> 就可以了。
 
 ==============================================================================
-SYNTAX                                                        *snippet-syntax*
+语法                                                          *snippet-syntax*
 
-Snippets can be defined in two ways. They can be in their own file, named
-after their trigger in 'snippets/<filetype>/<trigger>.snippet', or they can be
-defined together in a 'snippets/<filetype>.snippets' file. Note that dotted
-'filetype' syntax is supported -- e.g., you can use >
+有两种方式定义片段，一种是定义在 'snippets/<filetype>/<trigger>.snippet'文件
+中，另一种则定义在 'snippets/<filetype>.snippets'文件中。
+(译注：<filetype> 是文件类型，如 html，<trigger> 是关键字。)
+注意，文件类型(filetype)支持点号(.) -- 例如，可以使用 >
 
 	:set ft=html.eruby
 
-to activate snippets for both HTML and eRuby for the current file.
+为当前文件同时激活 HTML 和 eRuby 两种片段。
 
-The syntax for snippets in *.snippets files is the following: >
+*.snippets 文件的片段语法如下： >
 
- snippet trigger
- 	expanded text
-	more expanded text
+ snippet 关键字
+ 	将被展开的文本
+	更多被展开的文本
 
-Note that the first hard tab after the snippet trigger is required, and not
-expanded in the actual snippet. The syntax for *.snippet files is the same,
-only without the trigger declaration and starting indentation.
+注意：关键字之后的片段中，最前面的硬 TAB 字符是必须的，并且不会展开到实际展开后
+的文本中。*.snippet 文件也一样，除非声明关键字时，以缩进开始。
 
-Also note that snippets must be defined using hard tabs. They can be expanded
-to spaces later if desired (see |snipMate-indenting|).
+另外注意：片段必须使用硬 TAB 空白来定义，如果需要的话可以展开为空格
+（参考 |snipMate-indenting|）。
 
-"#" is used as a line-comment character in *.snippets files; however, they can
-only be used outside of a snippet declaration. E.g.: >
+井号(#) 用来作为 *.snippets 文件的单行注释，当然，它们只能用在片段定义之外，
+例如： >
 
- # this is a correct comment
+ # 这是一个正确的注释
  snippet trigger
  	expanded text
  snippet another_trigger
- 	# this isn't a comment!
+ 	# 这不是一个注释！
 	expanded text
 <
-This should hopefully be obvious with the included syntax highlighting.
+这从语法着色上可以明显看出来。
 
                                                                *snipMate-${#}*
-Tab stops ~
+制表符(Tab stops) ~
 
-By default, the cursor is placed at the end of a snippet. To specify where the
-cursor is to be placed next, use "${#}", where the # is the number of the tab
-stop. E.g., to place the cursor first on the id of a <div> tag, and then allow
-the user to press <tab> to go to the middle of it:
+默认情况下，光标被放置在片段的最后。可使用 "${#}"来指定下一个光标出现在哪里。
+井号(#)即制表符的数字。例如：将光标放置在 <div> 标签的 id 属性值上，并允许用户
+使用 <tab> 键跳转到 <div> 的中间：
  >
  snippet div
  	<div id="${1}">
@@ -90,7 +86,7 @@ the user to press <tab> to go to the middle of it:
 	</div>
 <
                         *snipMate-placeholders* *snipMate-${#:}* *snipMate-$#*
-Placeholders ~
+占位符 ~
 
 Placeholder text can be supplied using "${#:text}", where # is the number of
 the tab stop. This text then can be copied throughout the snippet using "$#",
