@@ -2,7 +2,7 @@
     * {O} Vimwiki (hotoo.cn@gmail.com,lizaib@gmail.com)
         [http://code.google.com/p/vimwiki/ on GoogleCode.com]
         [http://www.vim.org/scripts/script.php?script_id=2226 on Vim.org]
-    * [.] snipMate (hotoo.cn@gmail.com)
+    * . snipMate (hotoo.cn@gmail.com)
         [http://code.google.com/p/snipmate/ on GoogleCode.com]
         [http://github.com/msanders/snipmate.vim on Github.com]
         [http://www.vim.org/scripts/script.php?script_id=2540 on Vim.org]
