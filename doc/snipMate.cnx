@@ -88,22 +88,20 @@ snipMate.vim 为 Vim 实现了一些 TextMate 的片段(补全)特性，片段�
                         *snipMate-placeholders* *snipMate-${#:}* *snipMate-$#*
 占位符 ~
 
-Placeholder text can be supplied using "${#:text}", where # is the number of
-the tab stop. This text then can be copied throughout the snippet using "$#",
-given # is the same number as used before. So, to make a C for loop: >
+占位符文本可以由 "${#:text}" 提供，其中 # 是制表符的数值。而其中的 "text" 可以
+使用 "$#" 来引用前面的副本，例如 C 循环： >
 
  snippet for
  	for (${2:i}; $2 < ${1:count}; $1++) {
 		${4}
 	}
 
-This will cause "count" to first be selected and change if the user starts
-typing. When <tab> is pressed, the "i" in ${2}'s position will be selected;
-all $2 variables will default to "i" and automatically be updated if the user
-starts typing.
-NOTE: "$#" syntax is used only for variables, not for tab stops as in TextMate.
+首先将选中 "count"，用户也可以输入来改变被选中内容。当按下 <tab> 键， ${2} 中
+的 "i" 将被定位并被选中，所有的 $2 变量默认值是 "i"，它也会受用户输入影响同步
+更新。
+注意：TextMate 的 "$#" 语法仅用于变量，不可以是制表符。
 
-Variables within variables are also possible. For instance: >
+变量中引用变量也是可以的，例如： >
 
  snippet opt
  	<option value="${1:option}">${2:$1}</option>
