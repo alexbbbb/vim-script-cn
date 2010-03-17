@@ -8,3 +8,4 @@
     * [script_1218.html (#1218) The NERD Commenter]
     * [script_2150.html (#2150) CSS Color Preview]
     * [[script_2226.Vimwiki|Vimwiki]]
+    * [[script_2204.TwitVim|TwitVim : Twitter client for Vim]]
