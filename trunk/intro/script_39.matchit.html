@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<head>
+<link rel="Stylesheet" type="text/css" href="css/style.css" />
+<title>script_39.matchit</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+    <div class="contents">
+
+<h1 id="toc1">[http://www.vim.org/scripts/script.php?script_id=39 matchit.zip : 扩展 % 以支持 HTML, LaTeX, 及其他语言]</h1>
+
+<p>
+作者：<a href="http://www.vim.org/account/profile.php?user_id=92">Benji Fisher</a>
+</p>
+
+<p>
+脚本类型：公用(utility)
+</p>
+
+<h2 id="toc2">描述</h2>
+<p>
+脚本 matchit.vim 允许你配置 % 来匹配多于单个字符。你可以匹配字符甚至正则表达式。当然，也会智能匹配字符串(treats strings)和注释（被认可的语法高亮原理）默认的 ftplugins (File Type Plugins) 包括若干语言的设置：
+Ada, ASP with VBS, Csh, DTD, Essbase, Fortran, HTML, JSP (同 HTML), LaTeX, Lua, Pascal, SGML, Shell, Tcsh, Vim, XML.
+我不再跟踪追寻，所以还可能有更多。
+</p>
+
+<p>
+文档（包含在zip压缩包中）解释了如何配置以支持一种新的语言，并解释了如何修改默认值。
+</p>
+
+<p>
+*从Vim6.0以后，matchit.vim被列为Vim标准配置，放在 macros/ 目录下；*这里的版本可能较新(? the version here may be more recent.)
+</p>
+
+
+<h2 id="toc3">安装细节</h2>
+<p>
+Vim 5.x: 下载正确的版本(1.0)，并在 vimrc 配置文件中添加如下一行：
+</p>
+<pre>
+:source path/to/matchit.vim
+</pre>
+<p>
+更多的信息请看 matchit.html。
+</p>
+
+<p>
+Vim 6.x, 7.x: 下载最新的版本，并解压至 Vim 安装目录（如 *NIX 是 ~/.vim ，Windows 下是 $VIM/vimfile/ ），这样，将会把 matchit.vim 放至 plugin/ 目录，把 matchit.txt 放至 doc/ 目录。然后在 Vim 中运行如下命令来构建标记文件(tags file)
+</p>
+<pre>
+:helptags ~/.vim/doc
+</pre>
+<p>
+详细信息请看：
+</p>
+<pre>
+:help add-local-help
+</pre>
+<p>
+确定你的 vimrc 文件中有这样一行：
+</p>
+<pre>
+:filetype plugin on
+</pre>
+<p>
+这是用来启用文件类型的插件，其中更多是为了告诉 matchit.vim 正确的使用哪些匹配对。
+</p>
+    </div>
+    <div id="footer">
+        Copyleft &copy; 2009-2010 <a href="http://code.google.com/p/vim-script-cn/">Vim Script Chinese Term</a>.
+    </div>
+</body>
+</html>
