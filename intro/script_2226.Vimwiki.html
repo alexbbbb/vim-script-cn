@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
 <head>
-<link rel="Stylesheet" type="text/css" href="style.css" />
+<link rel="Stylesheet" type="text/css" href="css/style.css" />
 <title>script_2226.Vimwiki</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
@@ -12,30 +12,30 @@
 <h1 id="toc2">[http://www.vim.org/scripts/script.php?script_id=2226 (vimscript#2226) Vimwiki]</h1>
 
 <p>
-×÷Õß£º<a href="http://www.vim.org/account/profile.php?user_id=14343">Maxim Kim</a>
+ä½œè€…ï¼š<a href="http://www.vim.org/account/profile.php?user_id=14343">Maxim Kim</a>
 </p>
 
 <p>
-½Å±¾ÀàĞÍ£º¹«ÓÃ(ftplugin)
+è„šæœ¬ç±»å‹ï¼šå…¬ç”¨(ftplugin)
 </p>
 
-<h2 id="toc3">ÃèÊö</h2>
+<h2 id="toc3">æè¿°</h2>
 <p>
-Ò»¸öÓÃÓÚË½ÈË Wiki µÄ Vim ²å¼ş¡£
+ä¸€ä¸ªç”¨äºç§äºº Wiki çš„ Vim æ’ä»¶ã€‚
 =============================================================================
-¿ÉÒÔÔÚ <a href="http://code.google.com/p/vimwiki/">http://code.google.com/p/vimwiki/</a> ¿´ÆÁÄ»½ØÍ¼¡£
-Èç¹ûÄã²»Ï²»¶ vimball µµ£¬ÄÇÀïÒ²ÓĞ zip Ñ¹ËõµÄÎÄ¼ş vimwiki ÎÄ¼ş¡£
+å¯ä»¥åœ¨ <a href="http://code.google.com/p/vimwiki/">http://code.google.com/p/vimwiki/</a> çœ‹å±å¹•æˆªå›¾ã€‚
+å¦‚æœä½ ä¸å–œæ¬¢ vimball æ¡£ï¼Œé‚£é‡Œä¹Ÿæœ‰ zip å‹ç¼©çš„æ–‡ä»¶ vimwiki æ–‡ä»¶ã€‚
 </p>
 
 <p>
-J.A.J. Pater Ğ´ÁËÒ»·İ Vimwiki µÄ²Î¿¼ÊÖ²á <a href="http://habamax.ru/myvim/data/vimwikiqrc.pdf">http://habamax.ru/myvim/data/vimwikiqrc.pdf</a>
+J.A.J. Pater å†™äº†ä¸€ä»½ Vimwiki çš„å‚è€ƒæ‰‹å†Œ <a href="http://habamax.ru/myvim/data/vimwikiqrc.pdf">http://habamax.ru/myvim/data/vimwikiqrc.pdf</a>
 </p>
 
 
 <p>
-°²×°Ìõ¼ş
+å®‰è£…æ¡ä»¶
 =============================================================================
-È·±£ÄãµÄ vimrc ÎÄ¼şÖĞÓĞÈçÏÂµÄÉèÖÃ£º
+ç¡®ä¿ä½ çš„ vimrc æ–‡ä»¶ä¸­æœ‰å¦‚ä¸‹çš„è®¾ç½®ï¼š
 </p>
 <pre>
     set nocompatible
@@ -43,73 +43,73 @@ J.A.J. Pater Ğ´ÁËÒ»·İ Vimwiki µÄ²Î¿¼ÊÖ²á <a href="http://habamax.ru/myvim/data/v
     syntax on
 </pre>
 <p>
-Àë¿ªÕâĞ©ÉèÖÃ Vimwiki ½«²»ÄÜÕı³£¹¤×÷¡£
+ç¦»å¼€è¿™äº›è®¾ç½® Vimwiki å°†ä¸èƒ½æ­£å¸¸å·¥ä½œã€‚
 </p>
 
 
 <p>
-½éÉÜ
+ä»‹ç»
 =============================================================================
-Vimwiki ÊÇÒ»¸ö Vim ÖĞµÄ¸öÈË wiki -- Ò»¸öÓĞËü×Ô¼ºµÄ¸ßÁÁÓï·¨ºÍÁ´½ÓµÄÎÄ±¾ÎÄ¼ş¡£
+Vimwiki æ˜¯ä¸€ä¸ª Vim ä¸­çš„ä¸ªäºº wiki -- ä¸€ä¸ªæœ‰å®ƒè‡ªå·±çš„é«˜äº®è¯­æ³•å’Œé“¾æ¥çš„æ–‡æœ¬æ–‡ä»¶ã€‚
 </p>
 
 <p>
-Ê¹ÓÃ vimwiki Äã¿ÉÒÔ£º
+ä½¿ç”¨ vimwiki ä½ å¯ä»¥ï¼š
 </p>
 <ul>
 <li>
-×éÖ¯±Ê¼ÇºÍÏë·¨£»
+ç»„ç»‡ç¬”è®°å’Œæƒ³æ³•ï¼›
 </li>
 <li>
-¹ÜÀí´ı°ìÊÂÏîÁĞ±í£»
+ç®¡ç†å¾…åŠäº‹é¡¹åˆ—è¡¨ï¼›
 </li>
 <li>
-Ğ´ÎÄµµ¡£
+å†™æ–‡æ¡£ã€‚
 </li>
 </ul>
 
 <p>
-Í¨¹ı°´ &lt;Leader&gt;ww £¨Í¨³£ÊÇ \ww£©¼üÀ´¿ìËÙÆô¶¯£¬½øÈë wiki Ë÷ÒıÒ³¡£Ä¬ÈÏÂ·¾¶ÔÚ£º
+é€šè¿‡æŒ‰ &lt;Leader&gt;ww ï¼ˆé€šå¸¸æ˜¯ \wwï¼‰é”®æ¥å¿«é€Ÿå¯åŠ¨ï¼Œè¿›å…¥ wiki ç´¢å¼•é¡µã€‚é»˜è®¤è·¯å¾„åœ¨ï¼š
 </p>
 <pre>
     ~/vimwiki/index.wiki
 </pre>
 <p>
-²Î¿¼ÏÂÃæÊ¾Àı£º
+å‚è€ƒä¸‹é¢ç¤ºä¾‹ï¼š
 </p>
 <pre>
-= ÎÒµÄÖªÊ¶¿â =
-    * ÎÒµÄ½ô¼±ÈÎÎñ(MyUrgentTasks) -- ×òÌìÓ¦¸ÃÍê³ÉµÄÊÂ£¡£¡£¡
-    * ¹ÅÌÚ±¤¼Æ»®(ProjectGutenberg) -- Ç¿´óµÄºÃÊé¡£
-    * ±ãÌõ²¾(ScratchPad) -- ¸÷ÖÖÁÙÊ±µÄ¶«Î÷¡£
+= æˆ‘çš„çŸ¥è¯†åº“ =
+    * æˆ‘çš„ç´§æ€¥ä»»åŠ¡(MyUrgentTasks) -- æ˜¨å¤©åº”è¯¥å®Œæˆçš„äº‹ï¼ï¼ï¼
+    * å¤è…¾å ¡è®¡åˆ’(ProjectGutenberg) -- å¼ºå¤§çš„å¥½ä¹¦ã€‚
+    * ä¾¿æ¡ç°¿(ScratchPad) -- å„ç§ä¸´æ—¶çš„ä¸œè¥¿ã€‚
 </pre>
 
 <p>
-×¢Òâ£ºProjectGutenberg, MyUrgentTasks ºÍ ScratchPad ½«¸ßÁÁ³É¡°´íÎó¡±ÑùÊ½¡£
-ÕâĞ©ÍÕ·åĞÎÊ½µÄÁ´½ÓÉĞ²»´æÔÚ¡££¨ÍÕ·åĞÎÊ½¾ÍÊÇÁ½¸öÒÔ´óĞ´×ÖÄ¸¿ªÍ·µÄµ¥´Ê×éºÏ³ÉÒ»¸ö´Ê£©
+æ³¨æ„ï¼šProjectGutenberg, MyUrgentTasks å’Œ ScratchPad å°†é«˜äº®æˆâ€œé”™è¯¯â€æ ·å¼ã€‚
+è¿™äº›é©¼å³°å½¢å¼çš„é“¾æ¥å°šä¸å­˜åœ¨ã€‚ï¼ˆé©¼å³°å½¢å¼å°±æ˜¯ä¸¤ä¸ªä»¥å¤§å†™å­—æ¯å¼€å¤´çš„å•è¯ç»„åˆæˆä¸€ä¸ªè¯ï¼‰
 </p>
 
 <p>
-½«¹â±ê·ÅÖÃÔÚ ProjectGutenberg ÉÏ²¢°´»Ø³µ(&lt;Enter&gt;)¼ü£¬Äã½«½øÈë
-ProjectGutenberg £¬±à¼­²¢±£´æËü£¬È»ºó°´ÍË¸ñ¼ü(&lt;Backspace&gt;)¿ÉÒÔ»Øµ½ÉÏÒ»¸ö wiki
-ÎÄ¼ş¡£ÄãÏÖÔÚ¾Í»á¿´µ½²»Í¬ÁË -- ProjectGutenberg ¸ßÁÁÎªÒ»¸öÁ´½Ó¡£
+å°†å…‰æ ‡æ”¾ç½®åœ¨ ProjectGutenberg ä¸Šå¹¶æŒ‰å›è½¦(&lt;Enter&gt;)é”®ï¼Œä½ å°†è¿›å…¥
+ProjectGutenberg ï¼Œç¼–è¾‘å¹¶ä¿å­˜å®ƒï¼Œç„¶åæŒ‰é€€æ ¼é”®(&lt;Backspace&gt;)å¯ä»¥å›åˆ°ä¸Šä¸€ä¸ª wiki
+æ–‡ä»¶ã€‚ä½ ç°åœ¨å°±ä¼šçœ‹åˆ°ä¸åŒäº† -- ProjectGutenberg é«˜äº®ä¸ºä¸€ä¸ªé“¾æ¥ã€‚
 </p>
 
 
-<h2 id="toc4">°²×°Ï¸½Ú</h2>
+<h2 id="toc4">å®‰è£…ç»†èŠ‚</h2>
 <p>
 Windows:
 ========
 </p>
 <ol>
 <li>
-½âÑ¹Ëõ¡£
+è§£å‹ç¼©ã€‚
 </li>
 <li>
-Ê¹ÓÃ Vim ´ò¿ª vimwiki_N_N.vba (N_N ÊÇ°æ±¾ºÅ£¬ÀıÈç 0_8)¡£
+ä½¿ç”¨ Vim æ‰“å¼€ vimwiki_N_N.vba (N_N æ˜¯ç‰ˆæœ¬å·ï¼Œä¾‹å¦‚ 0_8)ã€‚
 </li>
 <li>
-ĞĞ <code>:so %</code> ÃüÁî½øĞĞ°²×°¡£
+æ‰§è¡Œ <code>:so %</code> å‘½ä»¤è¿›è¡Œå®‰è£…ã€‚
 </li>
 </ol>
 
@@ -119,12 +119,12 @@ Linux:
 </p>
 <ol>
 <li>
-Ê¹ÓÃ Vim ´ò¿ª vimwiki_N_N.vba.gz (N_N ÊÇ°æ±¾ºÅ£¬ÀıÈç 0_8)¡£
+ä½¿ç”¨ Vim æ‰“å¼€ vimwiki_N_N.vba.gz (N_N æ˜¯ç‰ˆæœ¬å·ï¼Œä¾‹å¦‚ 0_8)ã€‚
 </li>
 <li>
-ĞĞ <code>:so %</code> ÃüÁî½øĞĞ°²×°¡£
-</ol>
+æ‰§è¡Œ <code>:so %</code> å‘½ä»¤è¿›è¡Œå®‰è£…ã€‚
 </li>
+</ol>
     </div>
     <div id="footer">
         Copyleft &copy; 2009-2010 <a href="http://code.google.com/p/vim-script-cn/">Vim Script Chinese Term</a>.

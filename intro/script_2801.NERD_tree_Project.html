@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<head>
+<link rel="Stylesheet" type="text/css" href="css/style.css" />
+<title>script_2801.NERD_tree_Project</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+    <div class="contents">
+
+<h1 id="toc1">[http://www.vim.org/scripts/script.php?script_id=2801 NERD_tree Project : 尝试查找项目根目录，并使用 NERD_tree 浏览项目]</h1>
+
+<p>
+作者：<a href="http://www.vim.org/account/profile.php?user_id=18141">Janlay Wu</a>
+</p>
+
+<p>
+脚本类型：公用(utility)
+</p>
+
+<h2 id="toc2">描述</h2>
+<p>
+这个插件协同 NERD_tree ( <a href="http://www.vim.org/scripts/script.php?script_id=1658">http://www.vim.org/scripts/script.php?script_id=1658</a> ) 一起工作，它尝试找出项目根目录，并在当前目录调用 NERD_tree。
+这个插件是如何工作的
+</p>
+
+<p>
+它搜寻几个用于表明项目根目录所在位置的文件：
+</p>
+<pre>
+    build.xml, Makefile, .project, .lvimrc
+</pre>
+<p>
+如果发现其中任何一个，便认为这是项目根所在目录。命令 ToggleNERDTree 将打开这个根目录，这样就保证你在正确的项目是工作。 如果未找到项目根目录， NERD_tree 将打开当前目录。
+</p>
+
+<h2 id="toc3">用法</h2>
+
+<p>
+在 normal 模式下输入：
+</p>
+<pre>
+:ToggleNERDTree&lt;CR&gt;
+</pre>
+<p>
+或者在 vimrc 中映射快捷键：
+</p>
+<pre>
+map &lt;F8&gt; :ToggleNERDTree&lt;CR&gt;
+</pre>
+<h2 id="toc4">自定义</h2>
+
+<p>
+让 NERD_tree 去辨认更多的项目，就像scons(?)：
+</p>
+<pre>
+let g:NTPNames = add(g:NTPNames, 'SConstruct')
+</pre>
+<p>
+或者添加更多的文件类型：
+</p>
+<pre>
+extend(g:NTPNames, ['*.sln', '*.csproj'])
+</pre>
+<h2 id="toc5">安装细节</h2>
+
+<p>
+首先，确保 NERD_tree 被正确安装。
+</p>
+
+<p>
+然后将 NERD_tree_project.vim 放至 ~/.vim/plugin (*nix) 或者 $HOME/vimfiles/plugin (DOS)。
+</p>
+    </div>
+    <div id="footer">
+        Copyleft &copy; 2009-2010 <a href="http://code.google.com/p/vim-script-cn/">Vim Script Chinese Term</a>.
+    </div>
+</body>
+</html>

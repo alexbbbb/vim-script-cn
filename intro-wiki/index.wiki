@@ -1,11 +1,11 @@
 
 = Vim 脚本 文档中文计划 =
 
-    * [script_8.html (#8) VimBuddy]
-    * [script_39.html (#39) matchit]
-    * [script_1658.html (#1658) NERD_tree]
-    * [script_2801.html (#2801) NERD_tree Project]
-    * [script_1218.html (#1218) The NERD Commenter]
-    * [script_2150.html (#2150) CSS Color Preview]
-    * [[script_2226.Vimwiki|Vimwiki]]
-    * [[script_2204.TwitVim|TwitVim : Twitter client for Vim]]
+    * [[script_8.VimBuddy|VimBuddy (#8)]]
+    * [[script_39.matchit|matchit (#39)]]
+    * [[script_1658.NERD_tree|NERD_tree (#1658)]]
+    * [[script_2801.NERD_tree_Project|NERD_tree Project (#2801)]]
+    * [[script_1218.NERD_commenter|The NERD Commenter (#1218)]]
+    * [[script_2150.CSS_Color_Preview|CSS Color Preview (#2150)]]
+    * [[script_2226.Vimwiki|Vimwiki (#2226)]]
+    * [[script_2204.TwitVim|TwitVim (#2204)]]

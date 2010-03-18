@@ -1,0 +1,73 @@
+
+= [http://www.vim.org/scripts/script.php?script_id=1218 The NERD Commenter: 一个简化代码注释的插件，支持多种文件类型] =
+
+作者：[http://www.vim.org/account/profile.php?user_id=7006 Marty Grenfell]
+
+脚本类型：公用(utility)
+
+== 描述 ==
+从这里获取最新的开发版本 https://github.com/scrooloose/nerdcommenter
+
+默认使用以下映射（同样有一个映射对应的菜单项）
+
+以下多数映射只在普通或可视模式下使用。
+
+|NERDComInsertComment| 仅映射在插入模式下。
+
+,cc |NERDComComment|
+注释当前行或者可视模式下被选中的文本。
+
+,cn |NERDComNestedComment|
+除嵌套(forces nesting?)外和 |NERDComComment| 相同
+
+,c<space> |NERDComToggleComment|
+切换被选中行的注释状态。如果所选中行中的第一行是已注释的，则所有选中行将取消注释，反之亦然。
+
+,cm |NERDComMinimalComment|
+Comments the given lines using only one set of multipart delimiters if possible.
+如果可能，注释将设定一个以分隔符分成多个部分的集合。(?)
+
+,ci |NERDComInvertComment|
+切换个别选中行的注释状态。选中行如果是被注释的，则取消注释，反之如果选中行未被注释，则注释之。
+
+,cs |NERDComSexyComment|
+迷人地(?)注释选中行。
+
+,cy |NERDComYankComment|
+和 |NERDComComment| 相同，不过注释前，会将被注释行放到寄存器。
+
+,c$ |NERDComEOLComment|
+注释光标所在位置，直到行尾。
+
+,cA |NERDComAppendComment|
+添加注释符到行末，并进入插入模式，光标移到注释符中。
+
+,cI |NERDComPrependComment|
+添加注释符到行起始处，并将光标定位到注释符中。
+
+|NERDComInsertComment|
+在光标所在位置插入注释符，默认禁用此功能。
+
+,ca |NERDComAltDelim|
+如果当前文件类型支持多种注释符，则使用该命令来切换使用不同的注释符（如Javascript支持单行注释“//”和多行注释“/* */”）。
+
+,cl或者,cr或者,cb |NERDComAlignedComment|
+与 |NERDComComment| 相同，不过注释符会向左对齐(,cl)，或向右对齐(,cr)，或同时左右对齐(,cb)。
+
+,cu |NERDComUncommentLine|
+取消选中行的注释。
+
+此插件支持一些文件类型：
+abaqus abc acedb ada ahdl amiga aml ampl ant apache apachestyle asm68k asm asn aspvbs atlas autohotkey autoit automake ave awk basic b bc bdf bib bindzone bst btm caos catalog c cfg cg ch changelog cl clean clipper cmake conf config context cpp crontab cs csc csp css cterm cupl csv cvs dcl debchangelog debcontrol debsources def diff django docbk dns dosbatch dosini dot dracula dsl dtd dtml dylan ecd eiffel elf elmfilt erlang eruby eterm expect exports fetchmail fgl focexec form fortran foxpro fstab fvwm fx gdb gdmo geek gentoo-package-keywords' gentoo-package-mask' gentoo-package-use' gnuplot gtkrc haskell hb h help hercules hog html htmldjango htmlos ia64 icon idlang idl indent inform inittab ishd iss ist jam java javascript jess jgraph jproperties jproperties jsp kconfig kix kscript lace lex lftp lifelines lilo lisp lite lotos lout lprolog lscript lss lua lynx m4 mail make maple masm master matlab mel mf mib mma model moduala. modula2 modula3 monk mush muttrc named nasm nastran natural ncf netdict netrw nqc nroff nsis ocaml occam omlet omnimark openroad opl ora otl ox pascal passwd pcap pccts perl pfmain php phtml pic pike pilrc pine plaintex plm plsql po postscr pov povini ppd ppwiz procmail progress prolog psf ptcap python python qf radiance ratpoison r rc readline rebol registry remind rexx robots rpl rtf ruby sa samba sas sather scheme scilab screen scsh sdl sed selectbuf sgml sgmldecl sgmllnx sicad simula sinda skill slang sl slrnrc sm smarty smil smith sml snnsnet snnspat snnsres snobol4 spec specman spice sql sqlforms sqlj sqr squid st stp strace svn systemverilog tads taglist tags tak tasm tcl terminfo tex text plaintex texinfo texmf tf tidy tli trasys tsalt tsscl tssgm uc uil vb verilog verilog_systemverilog vgrindefs vhdl vim viminfo virata vo_base vrml vsejcl webmacro wget winbatch wml [^w]*sh wvdial xdefaults xf86conf xhtml xkb xmath xml xmodmap xpm2 xpm xslt yacc yaml z8a
+
+== 安装细节 ==
+
+注意：在2.0.0版中，已将脚本和帮助文件重命名为 NERD_commenter.vim 和 NERD_commenter.txt。如果您从小于 2.0.0 的版本升级到版本号大于 2.0.0 时，必须删除旧的 NERD_comments.vim 和 NERD_comments.txt 文件。
+
+将 NERD_commenter.vim 放到 ~/.vim/plugin 目录，并将 NERD_commenter.txt 放至 ~/.vim/doc 目录下。
+
+运行 `:helptags ~/.vim/doc`
+
+重启 Vim。
+
+转到 `:help NERD_commenter.txt` 并获得更多的帮助信息。
