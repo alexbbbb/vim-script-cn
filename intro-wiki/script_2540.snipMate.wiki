@@ -1,0 +1,47 @@
+
+= [http://www.vim.org/scripts/script.php?script_id=2540 snipMate : TextMate-style snippets for Vim] =
+
+作者：[http://www.vim.org/account/profile.php?user_id=16544 Michael Sanders]
+
+脚本类型：公用(utility)
+
+== 描述 ==
+snipMate.vim 的目标是实现 TextMate 片段特性的一个低调，简洁的 Vim 脚本，
+片段内容是一种经常输入的文字，你可以在文档中插入关键的触发字，并按 <Tab> 键。
+
+例如，默认安装 snipMate.vom 的情况下，在 C 文件中的插入模式下输入 "for<tab>"
+将被展开为经典的 C 循环：
+{{{
+for (i = 0; i< count; i++) {
+
+}
+}}}
+
+要跳转到循环中的下一项，按 <tab> 键就可以了；如果是重复的代码，像示例中的
+"i" 变量，你只需要修改高亮处，其他特定的地方也会自动同步更新。
+
+需要 Vim 7 或更高版本的支持。
+快速入门，可以看这个视频 http://vimeo.com/3535418
+更多的帮助可以参考 ~/.vim/doc/snipMate.txt
+(译注for Windows: D:\Vim\vimfiles\doc\snipMate.txt)
+
+snipMate.vim 其他的一些特性：
+* 语法片段与 TextMate 非常相似，可以轻易的转换。
+* 片段是保持透明的（即不在缓冲区中使用标记和占位符），你不需要转义一个不完整的片段，有时候这非常有用。
+* 在输入过程中，自动更新变量片段。
+* 片段可以有多个匹配。
+* 片段可以跨出规程，例如 do...while 循环的条件表达式可以添加到代码之前。
+
+报告 Bug，请求增加特性，等等，欢迎你发邮件或提交问题跟踪： http://code.google.com/p/snipmate/issues/list
+
+如果你对开发版的插件有兴趣，可以看： http://github.com/msanders/snipmate.vim
+
+玩的愉快！
+
+== 安装细节 ==
+解压缩 snipMate.zip 文件到 ~/.vim (Windows 下是 $HOME\vimfiles)
+{{{
+unzip snipMate.zip -d ~/.vim
+}}}
+注意，这将覆盖已有文件，包括旧版的 snipMate，和默认的 *.snippets 类型文件。
+如果不希望被覆盖，重命名即可，如 c-mysnips.snippets。
