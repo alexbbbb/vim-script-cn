@@ -4,12 +4,12 @@ body, td, p  {
 	font-family: arial,helvetica,sans-serif;
 }
 
+#contents{width:40em;}
+
 h1,h2,h3,h4,h5,h6{color:000;}
 h1{font-size:2em;}
 h2{font-size:1.5em;}
 h3{font-size:1.2em;}
-
-#contents{width:40em;}
 
 pre{margin:.5em; padding:5px; overflow:hidden;
   background:#FFF7D7 none;
@@ -18,6 +18,10 @@ pre{margin:.5em; padding:5px; overflow:hidden;
   line-height:1.5em; font-family:"Courier New","andale mono", "monotype.com", "courier new", monospace,"\5B8B\4F53"; font-size:1em;}
 
 blockquote {padding: 0.4em; background-color: #f6f5eb;}
+
+ul{margin:3px 1.5em; padding:0; list-style-type:none;}
+    ul li{margin:0 1px; padding:0 0 0 22px; list-style-type:none;
+        background:transparent url(listItemArrow.png) no-repeat scroll left -2px;}
 
 table{table-layout:fixed; border-collapse:collapse; border-spacing:0;
     border-width:1px 0 0 1px; border-style:solid; border-color:#ccc;}
