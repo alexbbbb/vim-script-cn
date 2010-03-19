@@ -6,4 +6,4 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 <body>
-    <div class="contents">
+    <div id="contents">
