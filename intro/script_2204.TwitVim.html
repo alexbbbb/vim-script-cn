@@ -22,7 +22,7 @@
 <p>
 TwitVim 是一个 Vim 插件，让你可以在 Vim 中发推或者查看好友的推，
 这个插件是基于 Travis Jeffery 开发的 <a href="http://www.vim.org/scripts/script.php?script_id=2124">vimscript#2124</a> 的增强版。
-荣誉属于 Travis ，属于他的创意，和最初的脚本实现。
+荣誉属于 Travis ，属于他的创意，和他最初的脚本实现。
 </p>
 
 <p>
@@ -142,18 +142,36 @@ vim twitvim.vba
 </li>
 <li>
 再把下面这行加到 .vimrc 或 _vimrc 中：
-<pre class="code vim">
 </li>
 </ol>
-    let twitvim_login = "USER:PASS"
-    }}}
-    修改 USER 和 PASS 为你的 Twitter 用户名和密码。
-# 如果你通过代理上网，加入下面这行：
-    {{{class="code vim"
-    let twitvim_proxy = "proxyhost:proxyport"
-    }}}
-    修改 proxyhost 和 proxyport 为你的代理服务器地址和端口号。
-</pre></code>
+
+<pre class="code vim">
+let twitvim_login = "USER:PASS"
+</pre>
+
+<p>
+修改 USER 和 PASS 为你的 Twitter 用户名和密码。
+</p>
+
+<p>
+如果你通过代理上网，加入下面这行：
+</p>
+
+<pre class="code vim">
+let twitvim_proxy = "proxyhost:proxyport"
+</pre>
+
+<p>
+修改 proxyhost 和 proxyport 为你的代理服务器地址和端口号。
+</p>
+
+<h2 id="toc5">技巧</h2>
+<p>
+TwitVim 支持第三方 API，在 vimrc 中设置：
+</p>
+<pre>
+let g:twitvim_api_root = "api.example.com"
+</pre>
     </div>
     <div id="footer">
         Copyleft &copy; 2009-2010 <a href="http://code.google.com/p/vim-script-cn/">Vim script docs of Chinese term</a>.

@@ -8,7 +8,7 @@
 == 描述 ==
 TwitVim 是一个 Vim 插件，让你可以在 Vim 中发推或者查看好友的推，
 这个插件是基于 Travis Jeffery 开发的 [http://www.vim.org/scripts/script.php?script_id=2124 vimscript#2124] 的增强版。
-荣誉属于 Travis ，属于他的创意，和最初的脚本实现。
+荣誉属于 Travis ，属于他的创意，和他最初的脚本实现。
 
 TwitVim 拥有许多经典 Twitter 客户端所支持的特性，包括：
     * 好友，用户，私信，和时间线(timeline)
@@ -71,12 +71,23 @@ vim twitvim.vba
 # 首先，你需要先安装 cURL，可以从 [http://curl.haxx.se/ 这里] 下载。
 # 然后添加脚本到 Vim 的 plugins 目录。实际位置是平台相关的，详细可以看 `:help add-plugin`。
 # 再把下面这行加到 .vimrc 或 _vimrc 中：
-    {{{class="code vim"
-    let twitvim_login = "USER:PASS"
-    }}}
-    修改 USER 和 PASS 为你的 Twitter 用户名和密码。
-# 如果你通过代理上网，加入下面这行：
-    {{{class="code vim"
-    let twitvim_proxy = "proxyhost:proxyport"
-    }}}
-    修改 proxyhost 和 proxyport 为你的代理服务器地址和端口号。
+
+{{{class="code vim"
+let twitvim_login = "USER:PASS"
+}}}
+
+修改 USER 和 PASS 为你的 Twitter 用户名和密码。
+
+如果你通过代理上网，加入下面这行：
+
+{{{class="code vim"
+let twitvim_proxy = "proxyhost:proxyport"
+}}}
+
+修改 proxyhost 和 proxyport 为你的代理服务器地址和端口号。
+
+== 技巧 ==
+TwitVim 支持第三方 API，在 vimrc 中设置：
+{{{
+let g:twitvim_api_root = "api.example.com"
+}}}
