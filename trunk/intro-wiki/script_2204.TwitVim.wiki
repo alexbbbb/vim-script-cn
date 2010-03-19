@@ -1,5 +1,5 @@
 
-= [http://www.vim.org/scripts/script.php?script_id=2204 TwitVim : Twitter client for Vim] =
+= [http://www.vim.org/scripts/script.php?script_id=2204 TwitVim : Vim 的 Twitter 客户端] =
 
 作者：[http://www.vim.org/account/profile.php?user_id=8120 Po Shan Cheah]
 
