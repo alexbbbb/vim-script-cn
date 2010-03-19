@@ -1,5 +1,5 @@
 
-= [http://www.vim.org/scripts/script.php?script_id=2540 snipMate : TextMate-style snippets for Vim] =
+= [http://www.vim.org/scripts/script.php?script_id=2540 snipMate : Vim 中 TextMate 风格的片段补全] =
 
 作者：[http://www.vim.org/account/profile.php?user_id=16544 Michael Sanders]
 
@@ -23,7 +23,7 @@ for (i = 0; i< count; i++) {
 需要 Vim 7 或更高版本的支持。
 快速入门，可以看这个视频 http://vimeo.com/3535418
 更多的帮助可以参考 ~/.vim/doc/snipMate.txt
-(译注for Windows: D:\Vim\vimfiles\doc\snipMate.txt)
+(译注for Windows: $Vim\vimfiles\doc\snipMate.txt)
 
 snipMate.vim 其他的一些特性：
 * 语法片段与 TextMate 非常相似，可以轻易的转换。
