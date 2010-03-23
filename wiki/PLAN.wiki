@@ -16,6 +16,7 @@
     * [ ] NeoComplCache
         [http://www.vim.org/scripts/script.php?script_id=2620 on Vim.org]
         [http://sinolog.it/?p=1399 Vim的终极自动补全插件：NeoComplCache]
+    * [ ] [http://www.vim.org/scripts/script.php?script_id=3025 Command-T]
     * [ ] acp
     * [ ] mru
     * [ ] ctags
