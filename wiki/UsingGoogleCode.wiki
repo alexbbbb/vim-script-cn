@@ -4,9 +4,9 @@
 
 *如果确实不懂，也不感兴趣这方面的技术，只是想参与翻译文档，可以将翻译好的内容以文本文件为附件，发送到我的邮箱。*
 
-== 安装 SVN 客户端 ==
+== SVN 客户端软件 ==
 一般常用 [http://tortoisesvn.net/ tortoiseSVN]
-[http://tortoisesvn.net/docs/nightly/TortoiseSVN_zh_CN/ tortoiseSVN 使用文档]
+[http://tortoisesvn.net/docs/nightly/TortoiseSVN_zh_CN/ 帮助文档]
 
 安装方法和大多数软件的安装一样，简单的下一步即可。
 
