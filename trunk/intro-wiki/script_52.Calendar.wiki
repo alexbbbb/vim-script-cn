@@ -1,0 +1,19 @@
+
+= [http://www.vim.org/scripts/script.php?script_id=52 Calendar] =
+
+作者：[http://www.vim.org/account/profile.php?user_id=130 Yasuhiro Matsumoto]
+
+脚本类型：公用(utility)
+
+== 描述 ==
+这个脚本创建日历窗口，它不使用外部日历程序。
+
+== 安装细节 ==
+复制 calendar.vim 到 plugin （Windows: $VIM\vimfiles\plugin\）目录即可。
+
+== 备注 ==
+如果安装了 [script_2226.Vimwiki.html Vimwiki]，会修改日历的默认存储路径为
+g:vimwiki_list 中第一个Wiki，日记会存储到这个目录下的 diary 下。
+
+== 资源 ==
+# [http://www.gracecode.com/archives/674/ 推荐使用 Vim Calendar 插件]
