@@ -1,6 +1,5 @@
 
-= (vimscript#2226) Vimwiki =
-= [http://www.vim.org/scripts/script.php?script_id=2226 (vimscript#2226) Vimwiki] =
+= [http://www.vim.org/scripts/script.php?script_id=2226 Vimwiki] =
 
 作者：[http://www.vim.org/account/profile.php?user_id=14343 Maxim Kim]
 
