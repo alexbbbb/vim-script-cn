@@ -10,3 +10,4 @@
     # [[script_2204.TwitVim|TwitVim (#2204)]]
     # [[script_2540.snipMate|snipMate (#2540)]]
     # [[script_1238_mark|Mark (#1238)]]
+    # [[script_52.Calendar|Calendar (#52)]]
