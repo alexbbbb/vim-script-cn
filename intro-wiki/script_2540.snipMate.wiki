@@ -45,3 +45,6 @@ unzip snipMate.zip -d ~/.vim
 }}}
 注意，这将覆盖已有文件，包括旧版的 snipMate，和默认的 *.snippets 类型文件。
 如果不希望被覆盖，重命名即可，如 c-mysnips.snippets。
+
+== 资源 ==
+# [http://vim-script-cn.googlecode.com/svn/trunk/doc/snipMate.cnx 中文帮助文档]
