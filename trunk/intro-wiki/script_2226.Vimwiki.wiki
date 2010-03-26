@@ -65,3 +65,6 @@ Linux:
 ========
   # 使用 Vim 打开 vimwiki_N_N.vba.gz (N_N 是版本号，例如 0_8)。
   # 执行 `:so %` 命令进行安装。
+
+== 资源 ==
+# [http://vim-script-cn.googlecode.com/svn/trunk/doc/vimwiki.cnx 中文帮助文档]

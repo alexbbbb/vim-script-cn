@@ -55,5 +55,6 @@ NERD tree 提供以下特性和功能：
 
 帮助页面请看 :help NERD_tree.txt
 
-== 另见 ==
-[http://mt-zj.blogspot.com/2009/02/vimnerd-tree.html 虚拟隐居谷: Vim之Nerd Tree杂草帮助] ^[http://linux.chinaunix.net/techdoc/desktop/2009/05/01/1109687.shtml 2]^
+== 资源 ==
+# [http://vim-script-cn.googlecode.com/svn/trunk/doc/NERD_tree.cnx 中文帮助文档]
+# [http://mt-zj.blogspot.com/2009/02/vimnerd-tree.html 虚拟隐居谷: Vim之Nerd Tree杂草帮助] ^[http://linux.chinaunix.net/techdoc/desktop/2009/05/01/1109687.shtml 2]^
