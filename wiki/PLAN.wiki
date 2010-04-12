@@ -8,6 +8,10 @@
         [http://www.vim.org/scripts/script.php?script_id=2540 on Vim.org]
     * {X} mark
         [http://www.vim.org/scripts/script.php?script_id=1238 on Vim.org]
+    * [ ] [http://www.vim.org/scripts/script.php?script_id=3052 changesPlugin : indicate changes of a buffer]
+    * [ ] [http://www.vim.org/scripts/script.php?script_id=152 ShowMarks : Visually shows the location of marks.]
+    * [ ] [http://www.vim.org/scripts/script.php?script_id=2142 showmarks : Display marks as signs (needs +sign feat )]
+    * [ ] [http://www.vim.org/scripts/script.php?script_id=1026 Visual Mark : Visual mark, similar to UltraEdit's bookmark]
     * [ ] matchit
     * [ ] NERD_tree
     * [ ] NERD_tree Project
