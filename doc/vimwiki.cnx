@@ -1265,7 +1265,7 @@ g:vimwiki_listsyms[4] 是完成 100% 的项。
 ------------------------------------------------------------------------------
 *g:vimwiki_use_mouse*
 
-从 |vimwiki-local-mappings| 处使用本地鼠标映射。
+从 |vimwiki-local-mappings| 处使用局部鼠标映射。
 
 值              描述~
 0               不使用鼠标映射。
