@@ -818,175 +818,174 @@ You can add 'table of contents' to your html page generated from wiki one.
 
 
 ==============================================================================
-10. Diary                                                      *vimwiki-diary*
+10. 日记                                                      *vimwiki-diary*
 
-Diary helps you make daily notes. You can really easy add information into
-vimwiki that should be sorted out later. Just hit <Leader>w<Leader>w to create
-new daily note with name based on current date. The link to this newly created
-file is added to a diary wiki file.
+日记功能可帮助你记录日常笔记，你能够非常容易地将分类的日记添加至Vimwiki中，
+只要按下<Leader>w<Leader>w，即可以当前的日期为名来创建新的笔记，
+这个新创建的笔记文件，会保存在diary目录中。
 
-Usage example with default settings: >
-  Consider today is 2010-01-27.
+现在，你可以参考下面示例来创建你的日记：
+  今天是2010-01-27。
 
-  Hit \w\w .
+  按 \w\w 打开日记首页。
   ~/vimwiki/diary.wiki is created.
 
-  2 following lines are added to ~/vimwiki/diary/diary.wiki :
+  2 把下面几行添加到 ~/vimwiki/diary/diary.wiki 文件中
   = Diary =
   | [[2010-01-27]] |
 
   ~/vimwiki/diary/2010-01-27.wiki is created.
-  You are ready to add your information there.
+  这样，就生成了以当前日期命中的wiki日记文件，你可在这个日记中记录事项了。
+  要是你没做键盘映射，你可在Vim命令模式执行:VimwikiMakeDiaryNote，也可以进入日记页。
   -------------------------------------------
 
-  On the next day.
-  Hit \w\w .
+  撰写第二天的日记
+  按 \w\w 。
 
-  The first line after = Diary = is changed in ~/vimwiki/diary/diary.wiki :
+  打开~/vimwiki/diary/diary.wiki文件后，在 = Diary = 下的第一行增加第二天
+  的日期即可。
+
   = Diary =
   | [[2010-01-28]] | [[2010-01-27]] |
 
   ~/vimwiki/diary/2010-01-28.wiki is created.
-  You are ready to add your information there.
+  这样，就创建第二天的日记了，你可以添加信息在这个日记中。.
 >
+默认情况下在一行创建4个链接，所有的链接都以日期进行分类的。
 
-By default there are 4 links on the line. All links are sorted by their dates.
 
-Calendar integration                                        *vimwiki-calendar*
+集成日历功能                                                *vimwiki-calendar*
 ------------------------------------------------------------------------------
-If you have Calendar.vim installed you can use it to create diary notes.
-Just open calendar with :Calendar and tap <Enter> on the date. Wiki file would
-be created in default wiki's diary.
+如果你已经安装了Calendar.vim插件，你可以使用它来创建笔记。
+在命令模式执行:Calendar，并按<Enter>键，会在diary目录创建以当前日期为名.Wiki文件。
+嗯，这种方式创建的日记比前面的方法好多了。
 
-Get it from http://www.vim.org/scripts/script.php?script_id=52
-
+Calendar.vim的插件，你可以在这下载：http://www.vim.org/scripts/script.php?script_id=52
 
 
 ==============================================================================
-11. Options                                                  *vimwiki-options*
-
-There are global and per wiki(local) options available to tune vimwiki.
-All global options are set using the following template: >
+11. 选项                                                      *vimwiki-options*
+可以通过全局或者每个 wiki (局部)的选项来设置 vimwki，所有的全局选项都使用如下模板来设置：
     let g:option_name=option_value
 
-All per wiki options are |Dictionary|'s pairs in a list of wikies
-(dictionaries). See |g:vimwiki_list| option for more details.
+你可以参考下面的|g:vimwiki_list|说明与实例，在_vimrc文件中配置相关参数。
 
 ------------------------------------------------------------------------------
 *g:vimwiki_list* *vimwiki-multiple-wikies*
 
-Each item in g:vimwiki_list is a |Dictionary| that holds all customization
-available for a wiki represented by that item. It is in form of >
+一般形式：
   {'option1': 'value1', 'option2: 'value2', ...}
 
-Consider the following example: >
+请参考下面的例子：
   let g:vimwiki_list = [{'path': '~/my_site/', 'path_html': '~/public_html/'}]
 
-It gives us one wiki located at ~/my_site/ that could be htmlized to
-~/public_html/
+打开Vimwiki时会定向到 ~/my_site/ 目录，而生成的网页文件会储存在 ~/public_html/
+目录。
 
-The next example: >
+下一个例子：
   let g:vimwiki_list = [{'path': '~/my_site/', 'path_html': '~/public_html/'},
             \ {'path': '~/my_docs/', 'ext': '.mdox'}]
-gives us 2 wikies, first wiki as in previous example, second one is located in
-~/my_docs/ and its files have .mdox extension.
+在上面的示例中，第二行表示增加了2个wiki，第二个会定向至 ~/my_docs/
+、ext、.mdox目录中。.
 
-Empty |Dictionary| in the g:vimwiki_list is the wiki with default options: >
+在 g:vimwiki_list 设置空目录，其选项为如下： >
   let g:vimwiki_list = [{},
             \ {'path': '~/my_docs/', 'ext': '.mdox'}]
 
-<
+译者的设置如下：
+  let g:vimwiki_list = [{'path': 'F:/File/My Dropbox/VimWiki/A0.WikiIndex/',
+\ 'path_html': 'F:/File/My Dropbox/VimWiki/Z0.OutHtml',
+\ 'html_header': 'F:/File/My Dropbox/VimWiki/Z0.Template/header.tpl',}]
 
 
-PER WIKI OPTIONS                                       *viwmiki-local-options*
+局部WIKI选项                                         *viwmiki-local-options*
 
 
 
 *vimwiki-option-path*
 ------------------------------------------------------------------------------
-Key             Default value~
+选项             缺省值
 path            ~/vimwiki/
 
-Description~
-Wiki files location: >
+描述
+定向至Wiki文件夹：
   let g:vimwiki_list = [{'path': '~/my_site/'}]
-<
+
 
 *vimwiki-option-path_html*
 ------------------------------------------------------------------------------
-Key             Default value~
+选项             缺省值
 path_html       ~/vimwiki_html/
 
-Description~
-HTML files converted from wiki files location: >
+描述
+wiki转换为HTML网页格式的定向位置：
   let g:vimwiki_list = [{'path': '~/my_site/',
                        \ 'path_html': '~/my_site_html/'}]
 
-If you omit this option path_html would be path - '/' + '_html/': >
+
+如果省略 path_html 的"/"号及"_html"选项，可能无法生成网页，例如下面的示例： >
   let g:vimwiki_list = [{'path': '~/okidoki/'}]
 
-ie, path_html = '~/okidoki_html/'
+建议修改为 path_html = '~/okidoki_html/'
 
 *vimwiki-option-auto_export*
 ------------------------------------------------------------------------------
-Key             Default value     Values~
+选项            缺省值            值~
 auto_export     0                 0, 1
 
-Description~
-Set this option to 1 to automatically generate HTML file when corresponding
-wiki page is saved: >
+描述
+执行保存wiki页时，若设置此项值为1时，将自动生成HTML文件
   let g:vimwiki_list = [{'path': '~/my_site/', 'auto_export': 1}]
 
-This will keep you HTML files up to date.
+这会使你的HTML文件保持最新的！
 
 *vimwiki-option-index*
 ------------------------------------------------------------------------------
-Key             Default value~
+选项            缺省值
 index           index
 
-Description~
-Name of wiki index file: >
+描述
+wiki的首页名
   let g:vimwiki_list = [{'path': '~/my_site/', 'index': 'main'}]
 
-NOTE: Do not add extension.
+NOTE: 不要添加文件扩展名！
 
 
 *vimwiki-option-ext*
 ------------------------------------------------------------------------------
-Key             Default value~
+选项             缺省值
 ext             .wiki
 
-Description~
-Extension of wiki files: >
+描述
+wiki文件扩展名
   let g:vimwiki_list = [{'path': '~/my_site/',
                        \ 'index': 'main', 'ext': '.document'}]
 
-<
+
 *vimwiki-option-syntax*
 ------------------------------------------------------------------------------
-Key             Default value     Values~
+选项            缺省值            值
 syntax          default           default, media
 
-Description~
-Wiki syntax.
-You can use different markup languages (currently default vimwiki and
-MediaWiki) but only vimwiki's default markup could be converted to HTML at the
-moment.
-To use MediaWiki's wiki markup: >
+描述
+Wiki语法加色
+你可以使用不同的标记语言(当前缺省的为vimwiki与MediaWiki的语法标记)，但只有在Vimwiki预设标记
+不能转换HTML时才有效。
+使用MediaWiki的标记： >
   let g:vimwiki_list = [{'path': '~/my_site/', 'syntax': 'media'}]
 <
 
 *vimwiki-option-html_header*
 ------------------------------------------------------------------------------
-Key             Default value~
+选项             缺省值
 html_header
 
-Description~
-Set up file name for html header template: >
+描述
+设置html文件头模板：
   let g:vimwiki_list = [{'path': '~/my_site/',
           \ 'html_header': '~/public_html/header.tpl'}]
 
-This header.tpl could look like: >
+这个header.tpl模板代码，你可以参考下面的： >
     <html>
     <head>
         <link rel="Stylesheet" type="text/css" href="%root_path%style.css" />
@@ -996,86 +995,84 @@ This header.tpl could look like: >
     <body>
         <div class="contents">
 
-where
-  %title% is replaced by a wiki page name
-  %root_path% is replaced by a count of ../ for pages buried in subdirs:
-    if you have wikilink [[dir1/dir2/dir3/my page in a subdir]] then
-    %root_path% is replaced by '../../../'.
+变量说明
+  %title% 显示wiki页的名字
+  %root_path% 显示子目录链接
+
 
 
 *vimwiki-option-html_footer*
 ------------------------------------------------------------------------------
-Key             Default value~
+选项             缺省值
 html_footer
 
-Description~
-Set up file name for html footer template: >
+描述
+设置html文件页脚模板：
   let g:vimwiki_list = [{'path': '~/my_site/',
           \ 'html_footer': '~/public_html/footer.tpl'}]
 
-This footer.tpl could look like: >
+可参考如下页脚模板footer.tpl文件代码：
         </div>
     </body>
     </html>
-<
+
 
 *vimwiki-option-css_name*
 ------------------------------------------------------------------------------
-Key             Default value~
+选项            缺省值
 css_name        style.css
 
-Description~
-Set up css file name: >
+描述
+设置.css文件名：
   let g:vimwiki_list = [{'path': '~/my_pages/',
           \ 'css_name': 'main.css'}]
-<
-or even >
+
+或者 >
   let g:vimwiki_list = [{'path': '~/my_pages/',
           \ 'css_name': 'css/main.css'}]
 <
 
 *vimwiki-option-gohome*
 ------------------------------------------------------------------------------
-Key             Default value     Values~
+选项            缺省值            值~
 gohome          split             split, vsplit, tabe
 
-Description~
-This option controls the way |:VimwikiGoHome| command works.
-For instance you have 'No write since last change' buffer. After <Leader>ww
-(or :VimwikiGoHome) vimwiki index file will be splitted with it. Or vertically
-splitted. Or opened in a new tab.
-Ex: >
+描述
+这个选项与:VimwikiGoHome 命令的功能一样。
+比如“没有写入上次缓冲区”，然后执行 <Leader>ww (或者 :VimwikiGoHome)，vimwiki
+索引文件将会分开窗口，即垂直分开或在一个新的tab窗口打开。
+例如: >
   let g:vimwiki_list = [{'path': '~/my_site/', 'gohome': 'vsplit'}]
 <
 
 *vimwiki-option-maxhi*
 ------------------------------------------------------------------------------
-Key             Default value     Values~
+选项            缺省值            值~
 maxhi           1                 0, 1
 
-Description~
-Non-existent WikiWord highlighting could be quite slow and if you don't want
-it set maxhi to 0: >
+描述~
+不存在WikiWord关键字，即红色高亮标记的关键字，会使操作比较慢，比如切换啥的。
+如果你想关闭文件系统总是检查WikiWord，你可以将maxhi的值设为0。
+例如:
   let g:vimwiki_list = [{'path': '~/my_site/', 'maxhi': 0}]
 
-This disables filesystem checks for WikiWords.
+
 
 
 *vimwiki-option-nested_syntaxes*
 ------------------------------------------------------------------------------
-Key             Default value     Values~
-nested_syntaxes {}                pairs of highlight keyword and vim filetype
+选项             缺省值           值~
+nested_syntaxes {}                成对的高亮关键字，或者vim的文件类型
 
-Description~
-You can make preformatted text to be highlighted with a different syntaxes
-available for vim.
-For example the following setup: >
+描述~
+你可以在Vim显示不同的语言语法高亮，像C++、Pytho等语法高亮。
+例如下面的设置: >
   let wiki = {}
   let wiki.path = '~/my_site/'
   let wiki.nested_syntaxes = {'python': 'python', 'c++': 'cpp'}
   let vimwiki_list = [wiki]
 
-would give you python and c++ highlighting in: >
+设置python、c++高亮: >
  {{{class="brush: python"
  for i in range(1, 5):
      print(i)
@@ -1089,7 +1086,7 @@ would give you python and c++ highlighting in: >
  }
  }}}
 
-or in: >
+或者: >
  {{{c++
  #include "helloworld.h"
  int helloworld()
@@ -1107,30 +1104,29 @@ or in: >
 
 *vimwiki-option-diary_rel_path*
 ------------------------------------------------------------------------------
-Key             Default value~
+选项            缺省值~
 diary_rel_path  diary/
 
-Description~
-Related to |vimwiki-option-path| path for diary wiki-files.
+描述~
+|vimwiki-option-path|的路径用以重新载入日记文件夹。
 
 
 *vimwiki-option-diary_index*
 ------------------------------------------------------------------------------
-Key             Default value~
+选项            缺省值
 diary_index     diary
 
-Description~
-Name of wiki-file that holds all links to dated wiki-files.
+描述~
+diary文件夹用来保存以日期命名的wiki文件，diary文件名可自定义别的文件名。
 
 
 *vimwiki-option-diary_header*
 ------------------------------------------------------------------------------
-Key             Default value~
+选项            缺省值~
 diary_header    Diary
 
-Description~
-Name of the header in |vimwiki-option-diary_index| where links to dated
-wiki-files are located.
+描述~
+在 |vimwik-option-diary_index| 中的名称将链接到以日期命名的 wiki 文件。
 
 
 *vimwiki-option-diary_link_count*
@@ -1138,9 +1134,9 @@ wiki-files are located.
 Key               Default value~
 diary_link_count  4
 
-Description~
-Number of maximum dated links placed on one line.
-Ex:
+描述~
+每一行显示日期链接的最大数目。
+例如:
 = Diary =
 || [[2010-01-30]] || [[2010-01-29]] || [[2010-01-28]] || [[2010-01-27]] ||
 || [[2010-01-26]] || [[2010-01-25]] ||
@@ -1148,59 +1144,59 @@ Ex:
 
 
 
-GLOBAL OPTIONS                                        *viwmiki-global-options*
+全局选项                                              *viwmiki-global-options*
 
-Use: >
+使用: >
     let g:option_name=option_value
-to set them.
+来设置。
 
 ------------------------------------------------------------------------------
 *g:vimwiki_hl_headers*
 
-Highlight headers with =Reddish=, ==Greenish==, ===Blueish=== colors.
+高亮标题颜色： =Reddish=, ==Greenish==, ===Blueish===
 
-Value           Description~
-1               Use predefined colors to highlight different header levels.
-0               Use |hl-Title| or  VimwikiHeader1-VimwikiHeader6 (if defined
-                in a colorscheme)
+值              描述~
+1               使用预先定义的颜色高亮不同级别的标题。
+0               使用 |hl-Title| 或  VimwikiHeader1-VimwikiHeader6 (如果已定义
+                了颜色主题的话)
 
-Default: 1
+缺省值为: 1
 
 
 ------------------------------------------------------------------------------
 *g:vimwiki_hl_cb_checked*
 
-Checked list items could be highlighted with a color:
+选中列表项可以高亮显示的颜色:
 
-  * [X] the whole line could be highlighted with the option set to 1.
-  * [ ] I wish vim could use strikethru.
+  * [X] 整行高亮，可将选项值设为1.
+  * [ ] 我希望 Vim 可以使用 strikethru(?).
 
-Value           Description~
-1               Highlight checked [X] check box with |group-name| "Comment".
-0               Don't.
+值              描述~
+1               用组名( |group-name| ) 为 "Comment" 的语法高亮选中的复选框。
+0               不要高亮
 
-Default: 0
+缺省值: 0
 
 
 ------------------------------------------------------------------------------
 *g:vimwiki_global_ext* *vimwiki-temporary-wiki*
 
-If a file with a registered wiki extension is opened in a dir that is not
-listed in |g:vimwiki_list| then:
+如果一个扩展名是 wiki 的文件被打开，而它有所在的目录不在 |g:vimwiki_list| 列表中，
+则：
 
-Value           Description~
-1               make a temporary wiki in that dir.
-0               don't make temporary wiki it that dir.
+值              描述~
+1               标记这个目录为临时wiki.
+0               不标记这个目录为临时wiki.
 
-Default: 1
+缺省值: 1
 
 
 ------------------------------------------------------------------------------
 *g:vimwiki_upper* *g:vimwiki_lower*
 
-This affects WikiWord detection.
-By default WikiWord detection uses English and Russian letters.
-You can set up your own: >
+这会影响WikiWord的检测。
+在默认情况下，WikiWord会检测使用英语、俄语的字母。
+你可以设置为你自己的: >
   let g:vimwiki_upper = "A-Z\u0410-\u042f"
   let g:vimwiki_lower = "a-z\u0430-\u044f"
 
@@ -1208,163 +1204,158 @@ You can set up your own: >
 ------------------------------------------------------------------------------
 *g:vimwiki_auto_checkbox*
 
-if on, creates checkbox while toggling list item.
+如果开启，创建复选框会触发列表项目。.
 
-Value           Description~
-0               Do not create checkbox.
-1               Create checkbox.
+值              描述~
+0               不要创建复选框。
+1               创造复选框。
 
-Default: 1
+缺省值: 1
 
-Ex:
-Press <C-Space> (|:VimwikiToggleListItem|) on a list item without checkbox to
-create it: >
+例如:
+执行 <C-Space> (|:VimwikiToggleListItem|) 在一个列表项没有复选框来创建它： >
   * List item
-result: >
+结果: >
   * [ ] List item
 
 
 ------------------------------------------------------------------------------
 *g:vimwiki_menu*
 
-GUI menu of available wikies to select.
+用 GUI 菜单来选择可用的 wiki。
 
-Value              Description~
-''                 No menu
-'Vimwiki'          Top level menu "Vimwiki"
-'Plugin.Vimwiki'   "Vimwiki" submenu of top level menu "Plugin"
-etc.
+值                 描述~
+''                 没有菜单
+'Vimwiki'          顶层菜单"Vimwiki"
+'Plugin.Vimwiki'   "Vimwiki" 子菜单的顶层菜单 "Plugin" 等。
 
-Default: 'Vimwiki'
+缺省值: 'Vimwiki'
 
 ------------------------------------------------------------------------------
 *g:vimwiki_stripsym*
 
-Change strip symbol -- in Windows you cannot use /*?<>:" in file names so
-vimwiki replaces them with neutral symbol (_ is default): >
+更改脚本符号 -- 在Windows你不能使用 /*?<>" 作为文件名，所以 vimwiki 替换它们为
+自然符号。( _ 是缺省) ：
     let g:vimwiki_stripsym = '_'
 
-You can change it to a <space> for example: >
+你可以将它更改为空格，例子： >
     let g:vimwiki_stripsym = ' '
 
 ------------------------------------------------------------------------------
 *g:vimwiki_badsyms*
 
-Consider you do not like spaces in filenames (as some vimwiki users do).
-In that case you can set up bad symbols that would be converted to
+你可能不喜欢文件名中包含空格（就像其他 vimwiki 用户一样），如果这样，你可以
+设置将那些坏字符转换为指定的字符
 |g:vimwiki_stripsym|: >
     let g:vimwiki_badsyms = ' '
 
-Now files for all [[links with spaces]] would be created like
-'links_with_spaces'.
+现在所有的 [[links with spaces]] 将被创建类似 'links_with_spaces' 这样的文件。
 
-This option is a complement one to |g:vimwiki_stripsym|.
+这个选项是 |g:vimwiki_stripsym| 的一个补充。
 
 ------------------------------------------------------------------------------
 *g:vimwiki_listsyms*
 
-String of 5 symbols for list items with checkboxes.
-Default value is ' .oOX'.
+列表复选框中 5 个字符的字符串（译注：用来表示列表项的完成度）。
+默认值是 ' .oOX'。
 
-g:vimwiki_listsyms[0] is for 0% done items.
-g:vimwiki_listsyms[4] is for 100% done items.
+g:vimwiki_listsyms[0] 是完成 0% 的项。
+g:vimwiki_listsyms[4] 是完成 100% 的项。
 
 ------------------------------------------------------------------------------
 *g:vimwiki_use_mouse*
 
-Use local mouse mappings from |vimwiki-local-mappings|.
+从 |vimwiki-local-mappings| 处使用本地鼠标映射。
 
-Value           Description~
-0               Do not use mouse mappings.
-1               Use mouse mappings.
+值              描述~
+0               不使用鼠标映射。
+1               使用鼠标映射。
 
-Default: 0
+默认值: 0
 
 ------------------------------------------------------------------------------
 *g:vimwiki_folding*
 
-Enable/disable vimwiki's folding/outline. Folding in vimwiki is using 'expr'
-foldmethod which is very flexible but really slow.
+启用/禁用 vimwiki 的折叠/大纲。 vimwiki 使用 'expr' 折叠方法(foldmethod)，它
+很灵活但是性能很低。
 
-Value           Description~
-0               Disable folding.
-1               Enable folding.
+值              描述~
+0               禁用折叠。
+1               启用折叠。
 
-Default: 0
+默认值: 0
 
 ------------------------------------------------------------------------------
 *g:vimwiki_fold_lists*
 
-Enable/disable folding of list subitems.
+启用/禁用 折叠子列表项。
 
-Value           Description~
-0               Disable list subitem's folding.
-1               Enable list subitem's folding.
+值              描述~
+0               禁用子列表项的折叠功能。
+1               启用子列表项的折叠功能。
 
-Default: 0
+默认值: 0
 
 ------------------------------------------------------------------------------
 *g:vimwiki_fold_trailing_empty_lines*
 
-Fold or do not fold empty lines between folded headers.
+折叠，或不折叠那些已经折叠的行之间的空行。
 
-Value           Description~
-0               Fold only one empty line. The rest empty lines are unfolded.
-1               Fold in all empty lines.
+值              描述~
+0               仅折叠一个空行，其他的空行不折叠。
+1               折叠所有的空行。
 
-Default: 0
+默认值: 0
 
 ------------------------------------------------------------------------------
 *g:vimwiki_camel_case*
 
-If you do not want WikiWord to be a link this setting is just for you.
+如果不希望 WikiWord 这样的驼峰式词组作为一个 Wiki 链接，可以更改这个设置。
 
-Value           Description~
-0               Do not make links from CamelCased words.
-1               Make links from CamelCased words.
+值              描述~
+0               不要将驼峰式词组作为 Wiki 链接。
+1               将驼峰式词组作为 Wiki 链接。
 
-Default: 1
+默认值: 1
 
 ------------------------------------------------------------------------------
 *g:vimwiki_list_ignore_newline*
 
-This is HTML related.
-Convert newlines to <BR />s in multiline list items.
+这是与 HTML 相关的选项。
+在多行列表项里将换行符转为 <BR />。
 
-Value           Description~
-0               Newlines in a list item are converted to <BR />s.
-1               Ignore newlines.
+值              描述~
+0               将换行符转为 <BR />。
+1               忽略换行符。
 
-Default: 1
+默认值: 1
 
 ------------------------------------------------------------------------------
 *g:vimwiki_use_calendar*
 
-Create new or open existing diary wiki-file for the date selected in Calendar.
-See |vimwiki-calendar|.
+针对日历里选中日期，新建或打开已存在的日记 wiki 文件。
+参考 |vimwiki-calendar|。
 
-Value           Description~
-0               Do not use calendar.
-1               Use calendar.
+值              描述~
+0               不要使用日历。
+1               使用日历。
 
-Default: 1
+默认值: 1
 
 
 ------------------------------------------------------------------------------
 *g:vimwiki_browsers* *VimwikiWeblinkHandler*
 
-You can open external weblinks in a webbrowser. Webbrowsers are listed in
-|g:vimwiki_browsers|.
+你可以使用 Web 浏览器打开一个外部链接。浏览器列表参考 |g:vimwiki_browsers|。
 
-For win32 it is: chrome, opera, firefox and explorer.
-For other OSes it is: opera, firefox and konqueror.
+针对 Win32：chrome, opera, firefox 和 explorer。
+针对其他系统：opera, firefox 和 konqueror。
 
-The first available browser from the list is used to open weblink.
-If you have opera and firefox and want weblinks to be opened in the latter
-just: >
+列表中第一个可用的浏览器会被用来打开链接。假如你有 opera 和 firefox，并希望
+用后者打开链接，只需要： >
  let g:vimwiki_browsers=['C:\Program Files\Firefox\firefox.exe']
 
-or redefine VimwikiWeblinkHandler function: >
+或者重定义 VimwikiWeblinkHandler 函数： >
   function! VimwikiWeblinkHandler(weblink)
     let browser = 'C:\Program Files\Firefox\firefox.exe'
     execute '!start "'.browser.'" ' . a:weblink
@@ -1374,13 +1365,13 @@ or redefine VimwikiWeblinkHandler function: >
 ------------------------------------------------------------------------------
 *g:vimwiki_table_auto_fmt*
 
-Turn on/off table auto-formatting.
+启用或禁用表格的自动格式化。
 
-Value           Description~
-0               Do not auto-format tables.
-1               Auto-format tables.
+值              描述~
+0               不要自动格式化表格。
+1               自动格式化表格。
 
-Default: 1
+默认值: 1
 
 
 ------------------------------------------------------------------------------
@@ -1388,45 +1379,42 @@ Default: 1
 
 Convert directory name from current |encoding| into 'g:vimwiki_w32_dir_enc'
 before it is created.
+从当前编码(|encoding|)转换目录名称为 'g:vimwiki_w32_dir_enc' 编码。
 
-If have 'enc=utf-8' and you set up >
+比如当前编码是 'enc=utf-8' 并且你设置 >
     let g:vimwiki_w32_dir_enc = 'cp1251'
 <
-then following the next link with <CR>: >
+则下面带换行符(<CR>)的链接： >
     [[привет/мир]]
 >
-would convert utf-8 'привет' to cp1251 and create directory with that name.
+将从 utf-8 的 'привет' 转换为 cp1251 编码，并使用这个名称创建目录。
 
-Default value: ''
+默认值: ''
 
-
-==============================================================================
-12. Help                                                        *vimwiki-help*
-
-As you could see I am not native English speaker (not a writer as well).
-Please send me correct phrases instead of that incorrect stuff I have used
-here.
-
-Any help is really appreciated!
 
 ==============================================================================
-13. Author                                                    *vimwiki-author*
+12. 帮助                                                        *vimwiki-help*
 
-I live in Moscow and you may believe me -- there are no polar bears (no brown
-too) here in the streets.
+你是否看出我的母语不是英语（所以写的不是很好）。请报告这里用的不正确的短语，
+并将正确的发给我。
 
-I do not do programming for a living. So don't blame me for an ugly
-ineffective code. Improvements are welcome.
+对于给予的任何帮助，感谢之至！
 
-Many thanks to all of you for voting vimwiki up on www.vim.org. I do vimwiki
-in my spare time I could use to dance argentine tango with beautiful women.
-Your votes are kind of a good replacement. ;)
+==============================================================================
+13. 作者                                                    *vimwiki-author*
 
-Sincerely yours,
+我住在莫斯科，不过相信我，这里的大街上没有北极熊（也没有棕熊）。
+
+我不以编程为生，所以不要诧异我那些丑陋低效的代码，欢迎你来改善它。
+
+感谢所有在 www.vim.org 上给 vimwiki 投票的人。我本可以用业余时间和美女跳舞，
+不过你的投票也是一种很好的替代形式。 ;)
+
+此致，
 Maxim Kim <habamax@gmail.com>.
 
-Vimwiki's website: http://code.google.com/p/vimwiki/
-Vim plugins website: http://www.vim.org/scripts/script.php?script_id=2226
+Vimwiki 的网站: http://code.google.com/p/vimwiki/
+在 Vim 插件的网址: http://www.vim.org/scripts/script.php?script_id=2226
 
 ==============================================================================
 14. Changelog                                              *vimwiki-changelog*
