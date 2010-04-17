@@ -16,7 +16,7 @@ snipMate                                       *snippet* *snippets* *snipMate*
 |snipMate-contact|       联系方式
 
 支持 Vim 7.0 或更高版本。
-这个插件需要设置 'compatible' ，否则无法工作。
+这个插件不能设置 'compatible' ，否则无法工作。
 {Vi 不支持这些特性。}
 
 ==============================================================================
