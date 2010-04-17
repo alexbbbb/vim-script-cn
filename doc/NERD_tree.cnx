@@ -24,19 +24,19 @@ CONTENTS                                                   *NERDTree-contents*
     2.功能....................................|NERDTreeFunctionality|
         2.1.全局命令..........................|NERDTreeGlobalCommands|
         2.2.书签..............................|NERDTreeBookmarks|
-            2.2.1.The bookmark table..........|NERDTreeBookmarkTable|
-            2.2.2.Bookmark commands...........|NERDTreeBookmarkCommands|
-            2.2.3.Invalid bookmarks...........|NERDTreeInvalidBookmarks|
-        2.3.NERD tree mappings................|NERDTreeMappings|
-        2.4.The filesystem menu...............|NERDTreeFilesysMenu|
-    3.Options.................................|NERDTreeOptions|
-        3.1.Option summary....................|NERDTreeOptionSummary|
-        3.2.Option details....................|NERDTreeOptionDetails|
-    4.Hacking the NERD tree...................|NERDTreeHacking|
-    5.About...................................|NERDTreeAbout|
-    6.Changelog...............................|NERDTreeChangelog|
-    7.Credits.................................|NERDTreeCredits|
-    8.License.................................|NERDTreeLicense|
+            2.2.1.书签表......................|NERDTreeBookmarkTable|
+            2.2.2.书签命令....................|NERDTreeBookmarkCommands|
+            2.2.3.无效书签....................|NERDTreeInvalidBookmarks|
+        2.3.NERD tree 映射....................|NERDTreeMappings|
+        2.4.文件系统菜单......................|NERDTreeFilesysMenu|
+    3.选项....................................|NERDTreeOptions|
+        3.1.选项概述..........................|NERDTreeOptionSummary|
+        3.2.选项细目..........................|NERDTreeOptionDetails|
+    4.改造 NERD tree..........................|NERDTreeHacking|
+    5.关于....................................|NERDTreeAbout|
+    6.版本日志................................|NERDTreeChangelog|
+    7.捐助....................................|NERDTreeCredits|
+    8.许可证..................................|NERDTreeLicense|
 
 ==============================================================================
 1. Intro                                                            *NERDTree*
