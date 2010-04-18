@@ -13,6 +13,8 @@
     * [ ] [http://www.vim.org/scripts/script.php?script_id=2142 showmarks : Display marks as signs (needs +sign feat )]
     * [ ] [http://www.vim.org/scripts/script.php?script_id=1026 Visual Mark : Visual mark, similar to UltraEdit's bookmark]
     * [ ] matchit
+    * [ ] [http://www.vim.org/scripts/script.php?script_id=1697 surround]
+    * [ ] [http://www.vim.org/scripts/script.php?script_id=2136 repeat]
     * [ ] NERD_tree
     * [ ] NERD_tree Project
     * [ ] calendar
