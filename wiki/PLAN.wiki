@@ -1,21 +1,19 @@
 = 翻译计划 =
-    * {X} [http://www.vim.org/scripts/script.php?script_id=2226 Vimwiki.vim] [http://code.google.com/p/vimwiki/ 2] [http://code.google.com/p/vim-script-cn/source/browse/trunk/doc/vimwiki.cnx Vimwiki.cnx] (hotoo.cn{AT}gmail.com,lizaib{AT}gmail.com)
+    * {X} [http://www.vim.org/scripts/script.php?script_id=2226 Vimwiki.vim] [http://code.google.com/p/vimwiki/ 2] [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_2226.Vimwiki.html home] [http://code.google.com/p/vim-script-cn/source/browse/trunk/doc/vimwiki.cnx Vimwiki.cnx] (hotoo.cn{AT}gmail.com,lizaib{AT}gmail.com)
     * {X} [http://code.google.com/p/snipmate/ snipMate.vim] [http://github.com/msanders/snipmate.vim 2] [http://www.vim.org/scripts/script.php?script_id=2540 3] [http://code.google.com/p/vim-script-cn/source/browse/trunk/doc/snipMate.cnx snipMate.cnx] (hotoo.cn{AT}gmail.com)
-    * {X} [http://www.vim.org/scripts/script.php?script_id=1238 mark]
+    * {X} [http://www.vim.org/scripts/script.php?script_id=1238 mark] [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_1238_mark.html home]
     * [ ] [http://www.vim.org/scripts/script.php?script_id=3052 changesPlugin : indicate changes of a buffer]
     * [ ] [http://www.vim.org/scripts/script.php?script_id=152 ShowMarks : Visually shows the location of marks.]
     * [ ] [http://www.vim.org/scripts/script.php?script_id=2142 showmarks : Display marks as signs (needs +sign feat )]
     * [ ] [http://www.vim.org/scripts/script.php?script_id=1026 Visual Mark : Visual mark, similar to UltraEdit's bookmark]
-    * [ ] matchit
+    * [ ] matchit [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_39.matchit.html doc]
     * [ ] [http://www.vim.org/scripts/script.php?script_id=1697 surround]
     * [ ] [http://www.vim.org/scripts/script.php?script_id=2136 repeat]
-    * [ ] NERD_tree
-    * [ ] NERD_tree Project
+    * [ ] NERD_tree [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_1658.NERD_tree.html home]
+    * [ ] NERD_tree Project [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_2801.NERD_tree_Project.html home]
     * [ ] calendar
     * [ ] bufexplorer
-    * [ ] NeoComplCache
-        [http://www.vim.org/scripts/script.php?script_id=2620 on Vim.org]
-        [http://sinolog.it/?p=1399 Vim的终极自动补全插件：NeoComplCache]
+    * [ ] [http://www.vim.org/scripts/script.php?script_id=2620 NeoComplCache] [http://sinolog.it/?p=1399 Vim的终极自动补全插件：NeoComplCache]
     * [ ] [http://www.vim.org/scripts/script.php?script_id=3025 Command-T]
     * [ ] [http://www.vim.org/scripts/script.php?script_id=1984 FuzzyFinder]
     * [ ] acp
@@ -24,6 +22,6 @@
     * [ ] taglist
     * [ ] tasklist
     * [ ] Template
-    * [ ] The DERD Commenter
+    * [ ] The DERD Commenter [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_1218.NERD_commenter.html home]
     * [ ] CSS Color Preview
     * [ ] vimbuddy
