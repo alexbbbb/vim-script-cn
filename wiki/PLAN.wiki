@@ -1,13 +1,7 @@
 = 翻译计划 =
-    * {X} [http://code.google.com/p/vim-script-cn/source/browse/trunk/doc/vimwiki.cnx Vimwiki.cnx] (hotoo.cn{AT}gmail.com,lizaib{AT}gmail.com)
-        [http://code.google.com/p/vimwiki/ on GoogleCode.com]
-        [http://www.vim.org/scripts/script.php?script_id=2226 on Vim.org]
-    * {X} snipMate (hotoo.cn{AT}gmail.com)
-        [http://code.google.com/p/snipmate/ on GoogleCode.com]
-        [http://github.com/msanders/snipmate.vim on Github.com]
-        [http://www.vim.org/scripts/script.php?script_id=2540 on Vim.org]
-    * {X} mark
-        [http://www.vim.org/scripts/script.php?script_id=1238 on Vim.org]
+    * {X} [http://www.vim.org/scripts/script.php?script_id=2226 Vimwiki.vim] [http://code.google.com/p/vimwiki/ 2] [http://code.google.com/p/vim-script-cn/source/browse/trunk/doc/vimwiki.cnx Vimwiki.cnx] (hotoo.cn{AT}gmail.com,lizaib{AT}gmail.com)
+    * {X} [http://code.google.com/p/snipmate/ snipMate.vim] [http://github.com/msanders/snipmate.vim 2] [http://www.vim.org/scripts/script.php?script_id=2540 3] [http://code.google.com/p/vim-script-cn/source/browse/trunk/doc/snipMate.cnx snipMate.cnx] (hotoo.cn{AT}gmail.com)
+    * {X} [http://www.vim.org/scripts/script.php?script_id=1238 mark]
     * [ ] [http://www.vim.org/scripts/script.php?script_id=3052 changesPlugin : indicate changes of a buffer]
     * [ ] [http://www.vim.org/scripts/script.php?script_id=152 ShowMarks : Visually shows the location of marks.]
     * [ ] [http://www.vim.org/scripts/script.php?script_id=2142 showmarks : Display marks as signs (needs +sign feat )]
