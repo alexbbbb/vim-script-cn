@@ -23,5 +23,5 @@
     * [ ] tasklist
     * [ ] Template
     * [ ] The DERD Commenter [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_1218.NERD_commenter.html home]
-    * [ ] CSS Color Preview
-    * [ ] vimbuddy
+    * [ ] CSS Color Preview [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_2150.CSS_Color_Preview.html home]
+    * [ ] vimbuddy [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_8.VimBuddy.html home]
