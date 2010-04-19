@@ -14,6 +14,7 @@
     * [ ] calendar
     * [ ] bufexplorer
     * [ ] [http://www.vim.org/scripts/script.php?script_id=2620 NeoComplCache] [http://sinolog.it/?p=1399 Vim的终极自动补全插件：NeoComplCache]
+    * [ ] [http://www.vim.org/scripts/script.php?script_id=1520 OmniCppComplete]
     * [ ] [http://www.vim.org/scripts/script.php?script_id=3025 Command-T]
     * [ ] [http://www.vim.org/scripts/script.php?script_id=1984 FuzzyFinder]
     * [ ] acp
