@@ -12,3 +12,6 @@
 
 == Google Code ==
 帐号及密码：点击项目右上角登录后，点击项目上面的 [http://code.google.com/p/vim-script-cn/source/checkout Source] 标签，在中间会有一个 [https://code.google.com/hosting/settings google.com password] 的链接，进去后即可看到自己的账户密码。这个密码是随机生成的，你可以随时再重新生成来修改密码。
+
+== 其他 ==
+[http://www.cnblogs.com/analyzer/archive/2009/01/20/1378904.html Google Code Project中文翻译]
