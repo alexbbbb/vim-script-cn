@@ -3,7 +3,7 @@
     * {X} [http://code.google.com/p/snipmate/ snipMate.vim] [http://github.com/msanders/snipmate.vim 2] [http://www.vim.org/scripts/script.php?script_id=2540 3] [http://code.google.com/p/vim-script-cn/source/browse/trunk/doc/snipMate.cnx snipMate.cnx] (hotoo.cn{AT}gmail.com)
     * {X} [http://www.vim.org/scripts/script.php?script_id=1238 mark] [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_1238_mark.html home]
     * [ ] [http://www.vim.org/scripts/script.php?script_id=2657 VOoM] ([http://xbeta.info/vim-voof.htm xbeta])
-    * [http://www.vim.org/scripts/script.php?script_id=2899 TxtBrowser]([http://xbeta.info/vim-txtbrowser.htm xbeta])
+    * [ ] [http://www.vim.org/scripts/script.php?script_id=2899 TxtBrowser]([http://xbeta.info/vim-txtbrowser.htm xbeta])
     * [ ] [http://www.vim.org/scripts/script.php?script_id=3052 changesPlugin : indicate changes of a buffer]
     * [ ] [http://www.vim.org/scripts/script.php?script_id=152 ShowMarks : Visually shows the location of marks.]
     * [ ] [http://www.vim.org/scripts/script.php?script_id=2142 showmarks : Display marks as signs (needs +sign feat )]
