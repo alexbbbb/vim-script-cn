@@ -4,7 +4,7 @@
     for Windows: `$VIM/vimfiles/doc`
     for Linux &　Mac: `~/.vim/doc`
     以下统称 $VIM/vimfiles 和 ~/.vim 目录为 runtime 目录。
-  #　启动 Vim 运行 `helptags` 命令：
+  # 启动 Vim 运行 `helptags` 命令：
     for Windows:
     {{{
     :helptags $Vim/vimfiles/doc
