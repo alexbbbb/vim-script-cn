@@ -89,6 +89,6 @@ WikiWord 命名规则：
   * 建议每个脚本的文档由一人独立完成；
   * 对于需要多人合作的大文档，建议由参与者商讨分工，完成后相互review、合并文档。
 
-
+test for index.
 
 <img style="padding: 0pt 2px 0pt 0pt; margin: 0pt; border: medium none;" src="http://www.google.com/talk/service/resources/chaticon.gif" alt="" height="14" width="16" /><img style="padding: 0pt 2px 0pt 0pt; margin: 0pt; border: medium none;" src="http://www.google.com/talk/service/badge/Show?tk=z01q6amlqlsilmv8o1h5uvspl981vhrqbkdo00gcmfraqlghm11f5kvj1824if9thi3sdhra8dmi62vcuh3gekllgu8c1gc6m27vd4spsh8vtou3bf9lnugiipht2nbi4hhjmemsrv2nv57ljh9llf3nn867gjdkidm22it2r&amp;w=9&amp;h=9" alt="" height="9" width="9" /><a href="http://www.google.com/talk/service/badge/Start?tk=z01q6amlqlsilmv8o1h5uvspl981vhrqbkdo00gcmfraqlghm11f5kvj1824if9thi3sdhra8dmi62vcuh3gekllgu8c1gc6m27vd4spsh8vtou3bf9lnugiipht2nbi4hhjmemsrv2nv57ljh9llf3nn867gjdkidm22it2r" target="_blank" title="Click here to chat with 闲耘™">Chat with 闲耘™</a> *警告：* 如果没有事情的话请不要点击，避免造成我们双方的麻烦，谢谢。
