@@ -1,8 +1,8 @@
 = 安装 Vim script 中文文档 =
-  # 下载 [http://code.google.com/p/vim-script-cn/source/browse/#svn/trunk/doc Vim script 中文文档(.cnx)]
-  # 放至 Vim 用户目录下的 doc 目录中
-    for Windows: `$VIM/vimfiles/doc`
-    for Linux &　Mac: `~/.vim/doc`
+  # 下载 [http://code.google.com/p/vim-script-cn/source/browse/#svn/trunk/doc Vim script 中文文档(*.cnx)]
+  # 放至 Vim 用户目录下的 doc 目录中<br />
+    for Windows: `$VIM/vimfiles/doc`<br />
+    for Linux &　Mac: `~/.vim/doc`<br />
     以下统称 $VIM/vimfiles 和 ~/.vim 目录为 runtime 目录。
   # 启动 Vim 运行 `helptags` 命令：
     for Windows:
