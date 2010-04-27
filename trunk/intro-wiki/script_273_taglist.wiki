@@ -1,0 +1,29 @@
+
+= [http://www.vim.org/scripts/script.php?script_id=273 TagList] =
+
+== 运行时帮助 ==
+替换/修改 s:Tlist_Window_Display_Help 函数中的对应文本如下即可(for v4.5)：
+{{{
+    if s:tlist_brief_help
+        " Add the brief help
+        call append(0, '" 按 <F1> 显示帮助')
+    else
+        " Add the extensive help
+        call append(0, '" <enter> : 跳转到 tag 定义')
+        call append(1, '" o : 在新窗口中打开并跳转到 tag 定义')
+        call append(2, '" p : 预览 tag 定义（光标不离开 tag 列表）')
+        call append(3, '" <space> : 显示 tag 原型')
+        call append(4, '" u : 刷新 taglist')
+        call append(5, '" s : 排序')
+        call append(6, '" d : 从 taglist 中删除文件')
+        call append(7, '" x : 缩小/放大 taglist 窗口')
+        call append(8, '" + : 展开')
+        call append(9, '" - : 折叠')
+        call append(10, '" * : 展开所有')
+        call append(11, '" = : 折叠所有')
+        call append(12, '" [[ : 移动光标到上一个文件的开始')
+        call append(13, '" ]] : 移动光标到下一个文件的开始')
+        call append(14, '" q : 关闭 taglist 窗口')
+        call append(15, '" <F1> : 清除帮助信息')
+    endif
+}}}
