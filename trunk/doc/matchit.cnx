@@ -1,4 +1,4 @@
-*matchit.txt*   扩展 "%" 的匹配
+*matchit.txt*   扩展 "%" 的匹配功能
 
 有关这个文件的安装说明，在 Vim 内输入命令
 	:help matchit-install
@@ -24,28 +24,29 @@
 你可以在 |vimrc| 中设置变量 "loaded_matchit" 来避免这个插件被加载： >
 	:let loaded_matchit = 1
 
-{Vi 不支持这些}
+{Vi 无此功能}
 
 ==============================================================================
 1. 扩展 "%" 的匹配 	                                          *matchit-intro*
 
                                                                   *matchit-%*
-%   在匹配的组里顺序循环跳转，例如 "if", "else", "endif"，你可以通过
+%   在匹配的组里按顺序循环跳转，例如 "if", "else", "endif"，你也可以通过
     |b:match_words| 来修改设置。
 
                                                            *g%* *v_g%* *o_g%*
-g%  在匹配的组里倒序循环跳转，可以通过 |b:match_words| 来设置。例如，
+g%  在匹配的组里按倒序循环跳转，可以通过 |b:match_words| 来改变设置。例如，
     从 "if" 到 "endif" 再到 "else" 跳转。
 
-							*[%* *v_[%* *o_[%*
-[%	Go to [count] previous unmatched group, as specified by
-	|b:match_words|.  Similar to |[{|.
+						                                   *[%* *v_[%* *o_[%*
+[%	跳转到上 [count] 个未匹配的组，可以通过 |b:match_words| 来指定设置。与 |[{|
+    类似。
 
-							*]%* *v_]%* *o_]%*
-]%	Go to [count] next unmatched group, as specified by
-	|b:match_words|.  Similar to |]}|.
+							                               *]%* *v_]%* *o_]%*
+]%	跳转到下 [count] 个未匹配的组，可以通过 |b:match_words| 来指定设置。与
+    |]}| 类似。
 
-							*v_a%*
+------------------------------------------------------------------------------
+							                                           *v_a%*
 a%	In Visual mode, select the matching group, as specified by
 	|b:match_words|, containing the cursor.  Similar to |v_a[|.
 	A [count] is ignored, and only the first character of the closing
@@ -71,6 +72,7 @@ option.  The matchit plugin extends this in several ways:
 See |matchit-details| for details on what the script does, and |b:match_words|
 for how to specify matching patterns.
 
+------------------------------------------------------------------------------
 MODES:			*matchit-modes* *matchit-v_%* *matchit-o_%*
 
 Mostly, % and related motions (|g%| and |[%| and |]%|) work just like built-in
@@ -80,16 +82,17 @@ that define them start with "v" in order to make the default behavior
 inclusive.  (See |o_v|.)  In other words, "dV%" will not work.  The
 work-around is to go through Visual mode:  "V%d" will work.
 
-LANGUAGES:					*matchit-languages*
+------------------------------------------------------------------------------
+语言：					                                  *matchit-languages*
 
-Currently, the following languages are supported:  Ada, ASP with VBS, Csh,
-DTD, Entity, Essbase, Fortran, HTML, JSP (same as HTML), LaTeX, Lua, Pascal,
-SGML, Shell, Tcsh, Vim, XML.  Other languages may already have support via
-the default |filetype-plugin|s in the standard vim distribution.
+目前已支持以下语言： Ada, ASP with VBS, Csh, DTD, Entity, Essbase, Fortran,
+HTML, JSP (same as HTML), LaTeX, Lua, Pascal, SGML, Shell, Tcsh, Vim, XML.
+其他语言也许在标准的 Vim 发行版通过默认的 |filetype-plugin| 得到支持。
 
-To support a new language, see |matchit-newlang| below.
+要支持新的语言，参考 |matchit-newlang|。
 
-DETAILS:				*matchit-details* *matchit-parse*
+------------------------------------------------------------------------------
+细节：				                        *matchit-details* *matchit-parse*
 
 Here is an outline of what matchit.vim does each time you hit the "%" key.  If
 there are |backref|s in |b:match_words| then the first step is to produce a
@@ -100,6 +103,7 @@ example, "\(foo\|bar\):end\1" is parsed to yield
 nested groups.  If debugging is turned on, the parsed version is saved as
 |b:match_pat|.
 
+------------------------------------------------------------------------------
 							*matchit-choose*
 Next, the script looks for a word on the current line that matches the pattern
 just constructed.  It includes the patterns from the 'matchpairs' option.
@@ -172,6 +176,7 @@ file, but the recommended method is to add a line such as >
 to the |filetype-plugin| for your language.  See |b:match_words| below for how
 this variable is interpreted.
 
+------------------------------------------------------------------------------
 TROUBLESHOOTING					*matchit-troubleshoot*
 
 The script should work in most installations of Vim.  It may not work if Vim
@@ -195,6 +200,7 @@ can be defined in the |filetype-plugin| or autocommand that defines
 The main variable is |b:match_words|.  It is described in the section below on
 supporting a new language.
 
+------------------------------------------------------------------------------
 				*MatchError* *matchit-hl* *matchit-highlight*
 MatchError is the highlight group for error messages from the script.  By
 default, it is linked to WarningMsg.  If you do not want to be bothered by
@@ -203,6 +209,7 @@ if you use the GUI version of Vim and your command line is normally white, you
 can do >
 	:hi MatchError guifg=white guibg=white
 <
+------------------------------------------------------------------------------
 						*b:match_ignorecase*
 If you >
 	:let b:match_ignorecase = 1
@@ -212,10 +219,12 @@ are equivalent.  If you >
 then matchit.vim treats "end" and "END" differently.  (There will be no
 b:match_infercase option unless someone requests it.)
 
+------------------------------------------------------------------------------
 						*b:match_debug*
 Define b:match_debug if you want debugging information to be saved.  See
 |matchit-debug|, below.
 
+------------------------------------------------------------------------------
 						*b:match_skip*
 If b:match_skip is defined, it is passed as the skip argument to
 |searchpair()|.  This controls when matching structures are skipped, or
@@ -254,34 +263,27 @@ Examples:
 	syntax and a regular expression.
 
 ==============================================================================
-4. Supporting a New Language				*matchit-newlang*
-							*b:match_words*
-In order for matchit.vim to support a new language, you must define a suitable
-pattern for |b:match_words|.  You may also want to set some of the
-|matchit-configure| variables, as described above.  If your language has a
-complicated syntax, or many keywords, you will need to know something about
-Vim's |regular-expression|s.
+4. 支持新的语言                                             *matchit-newlang*
+							                                  *b:match_words*
+要让 matchit.vim 支持一个行的语言，你需要为 |b:match_words| 定义适当的模式。
+如上所述，你也许还想设置 |matchit-configure| 变量。如果新的的语言有比较复杂
+的语法，和很多关键字，你可能还需要了解 Vim 的正则表达式 |regular-expression|。
 
-The format for |b:match_words| is similar to that of the 'matchpairs' option:
-it is a comma (,)-separated list of groups; each group is a colon(:)-separated
-list of patterns (regular expressions).  Commas and backslashes that are part
-of a pattern should be escaped with backslashes ('\:' and '\,').  It is OK to
-have only one group; the effect is undefined if a group has only one pattern.
-A simple example is >
+|b:match_words| 的格式跟 'matchpairs' 选项类似：逗号(,)分隔每个匹配组所组成的
+列表；每个匹配组又由冒号(:)分隔出正则表达式模式列表。逗号和冒号也是模式的
+一部分，它们可以通过反斜杠来转义('\:' 和 '\,')。仅有一个匹配组也是可以的，如果
+匹配组仅有一个模式表达式，效果和其未定义一样。简单的示例如下： >
 	:let b:match_words = '\<if\>:\<endif\>,'
 		\ . '\<while\>:\<continue\>:\<break\>:\<endwhile\>'
-(In Vim regular expressions, |\<| and |\>| denote word boundaries.  Thus "if"
-matches the end of "endif" but "\<if\>" does not.)  Then banging on the "%"
-key will bounce the cursor between "if" and the matching "endif"; and from
-"while" to any matching "continue" or "break", then to the matching "endwhile"
-and back to the "while".  It is almost always easier to use |literal-string|s
-(single quotes) as above:  '\<if\>' rather than "\\<if\\>" and so on.
+(在 Vim 的正则表达式中，|\<| 和 |\>| 表示单词边界。所以 "if" 匹配 "endif" 的
+末尾，但是 "\<if\>" 则不匹配。)因此敲击 "%" 键时，光标将在 "if" 和匹配的
+"endif" 之间来回跳转；并且会从 "while" 开始跳转到任何匹配的 "continue" 和
+"break" 之上，然后跳转到 "endwhile" 上，最后又回到"while"。基本上可以和上面
+一样简单的使用字面字符串（单引号）：'\<if\>' 比 "\\<if\\> 要好，等等等等。
 
-Exception:  If the ":" character does not appear in b:match_words, then it is
-treated as an expression to be evaluated.  For example, >
+异常：如果字符 ":" 没有出现在 b:match_words 中，就会被当作异常处理。例如， >
 	:let b:match_words = 'GetMatchWords()'
-allows you to define a function.  This can return a different string depending
-on the current syntax, for example.
+允许定义一个函数。它可以根据当前的语法返回一个不同的字符串，例如。
 
 Once you have defined the appropriate value of |b:match_words|, you will
 probably want to have this set automatically each time you edit the
@@ -344,6 +346,7 @@ so that "%" can bounce between matching "<" and ">" pairs or (starting on
 bounce from "tag" to the "<" in "</tag>", and another "%" would not take you
 back to where you started.
 
+-----------------------------------------------------------------------------
 DEBUGGING				*matchit-debug* *:MatchDebug*
 
 If you are having trouble figuring out the appropriate definition of
@@ -404,4 +407,4 @@ try to implement this in a future version.  (This is not so easy to arrange as
 you might think!)
 
 ==============================================================================
-vim:tw=78:fo=tcq2:
+ vim:tw=78:fo=tcq2:ft=help

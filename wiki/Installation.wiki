@@ -4,7 +4,7 @@
     for Windows: `$VIM/vimfiles/doc`<br />
     for Linux &　Mac: `~/.vim/doc`<br />
     以下统称 $VIM/vimfiles 和 ~/.vim 目录为 runtime 目录。
-  # 启动 Vim 运行 `helptags` 命令：
+  # 在 Vim 环境中运行 `helptags` 命令：
     for Windows:
     {{{
     :helptags $Vim/vimfiles/doc
@@ -18,4 +18,4 @@
     {{{
     :set helplang=cn
     }}}
-    如果在 vimrc 设置无效，可以查看并修改 runtime/plugin/vimcdoc.vim 中的设置。
+    如果在 vimrc 设置无效，可以查看并修改 runtime/plugin/vimcdoc.vim 中的设置，之前安装有 Vim 中文帮助则可以忽略这步。
