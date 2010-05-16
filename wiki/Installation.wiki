@@ -1,4 +1,6 @@
-= 安装 Vim script 中文文档 =
+#summary 安装 Vim Script 中文文档的方法。
+
+= 安装 Vim Script 中文文档 =
   # 下载 [http://code.google.com/p/vim-script-cn/source/browse/#svn/trunk/doc Vim script 中文文档(*.cnx)]
   # 放至 Vim 用户目录下的 doc 目录中<br />
     for Windows: `$VIM/vimfiles/doc`<br />

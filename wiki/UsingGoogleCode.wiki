@@ -1,4 +1,6 @@
-= Google Code 用法 =
+#summary Google Code 的用法。
+
+= Google Code 的用法 =
 
 鉴于部分成员不熟悉 Google Code 或 SVN 使用，这里介绍一些常见问题和常用技巧。
 
