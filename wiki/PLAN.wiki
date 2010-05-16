@@ -1,4 +1,5 @@
 #summary Vim Script 翻译计划。
+#labels Featured
 
 = 翻译计划 =
     * {X} [http://www.vim.org/scripts/script.php?script_id=2226 Vimwiki.vim] [http://code.google.com/p/vimwiki/ 2] [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_2226.Vimwiki.html home] [http://code.google.com/p/vim-script-cn/source/browse/trunk/doc/vimwiki.cnx Vimwiki.cnx] (hotoo.cn{AT}gmail.com,lizaib{AT}gmail.com)
