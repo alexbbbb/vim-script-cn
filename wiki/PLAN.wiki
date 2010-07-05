@@ -16,6 +16,7 @@
     * [ ] [http://www.vim.org/scripts/script.php?script_id=2136 repeat]
     * {o} NERD_tree [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_1658.NERD_tree.html home]
     * {o} NERD_tree Project [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_2801.NERD_tree_Project.html home]
+    * {X} [http://www.vim.org/scripts/script.php?script_id=69 Project] [http://code.google.com/p/vim-script-cn/source/browse/trunk/doc/project.cnx project.cnx]
     * [ ] calendar
     * {X} [http://www.vim.org/scripts/script.php?script_id=42 bufexplorer] [http://code.google.com/p/vim-script-cn/source/browse/trunk/doc/bufexplorer.cnx doc/bufexplorer.cnx]
     * [ ] [http://www.vim.org/scripts/script.php?script_id=2620 NeoComplCache] [http://github.com/Shougo/neocomplcache 2] [http://sinolog.it/?p=1399 Vim的终极自动补全插件：NeoComplCache]
