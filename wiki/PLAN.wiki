@@ -31,4 +31,5 @@
     * [ ] Template
     * {o} The DERD Commenter [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_1218.NERD_commenter.html home]
     * {X} CSS Color Preview [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_2150.CSS_Color_Preview.html home]
+    * [ ] [http://www.vim.org/scripts/script.php?script_id=2678 GoogleReader.vim]
     * {X} vimbuddy [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_8.VimBuddy.html home]
