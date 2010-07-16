@@ -48,12 +48,11 @@
     * 可以很方便的扩展以支持新语言，修改现有语言支持也很容易。
     * 提供了在 Vim 状态栏或者标题栏显示当前 tag 名称的功能。
     * taglist 中的 tags 和文件列表可以被保存并用于恢复整个 Vim 会话(Session).
-    * Provides commands to get the name and prototype of the current tag.
-    * Runs in both console/terminal and GUI versions of Vim.
-    * Works with the winmanager plugin. Using the winmanager plugin, you
-      can use Vim plugins like the file explorer, buffer explorer and the
-      taglist plugin at the same time like an IDE.
-    * Can be used in both Unix and MS-Windows systems.
+    * 提供了获取当前 tag 名称和原型的命令。
+    * 支持在控制台/终端和 GUI 的 Vim 版本。
+    * 可以配合 winmanager 插件一起工作。使用 winmanager，可以让 Vim 插件，比如
+      文件资源管理器，缓冲区浏览器和 taglist 插件就像在 IDE 一样。
+    * 支持 Unix 和 MS-Windows 操作系统。
 
 ==============================================================================
 						*taglist-internet*
