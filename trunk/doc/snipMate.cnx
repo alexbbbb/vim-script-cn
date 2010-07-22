@@ -233,9 +233,7 @@ snipMate.vim 还有一些其他的特性：
     有时候这非常有用。
   - 在输入过程中自动更新片段。
   - 片段支持多项匹配。
-  - Snippets can be out of order. For instance, in a do...while loop, the
-    condition can be added before the code.
-  - 片段可以跨出规程。例如，在 do...while 循环中，条件表达式可以被添加到
+  - 片段补全可以是无序的。例如，在 do...while 循环中，条件表达式可以被添加到
     代码之前。
   - [新] 支持基于文件的片段定义。
   - [新] 可以展开触发器后非单词分隔符，例如 "bar.foo" 中的 "foo"。
@@ -245,8 +243,7 @@ snipMate.vim 还有一些其他的特性：
 DISADVANTAGES                                         *snipMate-disadvantages*
 (缺点)
 
-snipMate.vim currently has the following disadvantages to TextMate's snippets:
-与 TextMate 的片段相比，snipMate 还有以下缺点。
+与 TextMate 的片段相比，snipMate 还有以下缺点：
     - 没有 $0；制表位必须有明确的开始（必须从$1开始）。
     - 不支持嵌套的占位符，例如： >
 
