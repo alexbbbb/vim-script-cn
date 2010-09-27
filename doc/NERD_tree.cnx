@@ -88,6 +88,51 @@ The following features and functionality are provided by the NERD tree:
     * By default the script overrides the default file browser (netw), so if
       you :edit a directory a (slighly modified) NERD tree will appear in the
       current window
+==========================================================================
+1.*简介                                                      * NERDTree
+
+什么是“NERD tree？？
+
+NERD tree 允许您浏览您的文件系统并且打开文件或目录,通过键盘/鼠标使文系统以目录树
+的形式呈现,并且允许您进行简单的文件系统操作。
+
+NERO tree提供以下特性和功能：
+    *以层次的树状结构显示文件和目录
+    *为下列文件/目录类型提供不同的高亮显示：
+        *普通文件
+        *目录
+        *符号链接
+        *windows的.lnk(快捷方式)
+        *只读文件
+        *可执行文件
+    *NERD tree提供了很多功能的映射(可修改)：
+        *打开/关闭/遍历目录
+        *在新的/已存在的窗口/标签 中打开文件
+        *改变当前的根目录
+        *目录定位
+        * ...
+    *可以标识目录和文件
+    *大多数NERD tree导航也可以用鼠标完成
+    *过滤树的内容（可以在运行时切换）
+        *自定义文件过滤器. 例如防止显示vim备份文件
+        *可选择显示隐含文件(.files)
+        *可以关闭显示文件,只显示目录
+    *您可以通过NERO tree提供的一个文本菜单来执行 创建/删除/移动文件和目录复制（
+    仅支持的操作系统）
+    *可自定义NERD tree的窗口位置以及大小
+    *可自定义目录树显示节点的排序方式
+
+    这将有如下优势：
+        *所有的文件系统信息被缓存，只有在需要的时候被重新读取
+        *如果您重新访问先前的会话，目录将保持在您上一次离开时的状态(打开/关闭)
+
+    *NERO tree会记住光标和窗口的位置,你可以切换它（或关闭NERO tree窗口），然后
+    重新打开它（：NERDTreeToggle）NERD tree窗口将保持在最后一次被改变时的状态
+
+    *你可以为每一个tab标签分配一个单独NERD tree,共享一个NERD tree，或者合并他们
+    *默认情况下NERO tree覆盖vim的文件浏览器（vim的netw脚本），因此，如果
+    你通过 ：edit 来编辑一个目录（不重要的修改）NERD tree将显示在当前窗口
+
 
 ==============================================================================
 2. Functionality provided                              *NERDTreeFunctionality*
