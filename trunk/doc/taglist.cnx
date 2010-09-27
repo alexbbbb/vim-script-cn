@@ -3,6 +3,7 @@
 作者：Yegappan Lakshmanan  (yegappan AT yahoo DOT com)
 译者：闲耘™(hotoo.cn[AT]gmail.com)
       张雷 (zhang.lei.fly[AT]gmail.com)
+      davidx (mykingheaven[AT]gmail.com)
 
 针对 Vim version 6.0 及其以上版本
 最后更新： 2007/5/24
@@ -56,15 +57,14 @@
 
 ==============================================================================
 						*taglist-internet*
-2. Taglist on the internet~
+2. 互联网上的 Taglist
 
-The home page of the taglist plugin is at:
+Taglist 的主页在:
 >
 	http://vim-taglist.sourceforge.net/
 <
-You can subscribe to the taglist mailing list to post your questions or
-suggestions for improvement or to send bug reports. Visit the following page
-for subscribing to the mailing list:
+你可以加入到 Taglist 的邮件列表中来提出你的问题, 建议, 或者bug报告.
+访问下面的页面来加入到邮件列表中:
 >
 	http://groups.yahoo.com/group/taglist
 <
