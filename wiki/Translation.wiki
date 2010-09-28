@@ -36,7 +36,7 @@ wiki 目录存放是项目 Wiki，即 http://code.google.com/p/vim-script-cn/w/l
 == 5. 范例 (翻译新文档: plugin.txt v1.0) ==
     # 从 https://vim-script-cn.googlecode.com/svn/ checkout 项目。
     # 复制要翻译的原始文档(plugin.txt 或 plugin.jax) 到 trunk/doc 目录，并重命名为 plugin.cnx
-        # 另复制一份原始档到 tags/doc/plugin_v1.0/plugin.txt
+        另复制一份原始档到 tags/doc/plugin_v1.0/plugin.txt
     # 在 plugin.cnx 中进行翻译，完成一段就删除原文（注意先检查一下翻译结果）。
     # 文档不懂的地方可以保留不译，或者请教他人。
     # 可以随时提交，但建议完成较多的内容之后再统一提交。
