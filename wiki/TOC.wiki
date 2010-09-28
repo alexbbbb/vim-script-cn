@@ -1,4 +1,4 @@
 = Table of Content =
-  # [PLAN 翻译计划]
-  # [Translation 翻译方法及技巧说明]
-  # [Installation 安装中文文档]
+  * [PLAN 翻译计划]
+  * [Translation 翻译方法及技巧说明]
+  * [Installation 安装中文文档]
