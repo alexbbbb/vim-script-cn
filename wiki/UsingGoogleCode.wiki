@@ -1,4 +1,5 @@
-#summary Google Code 的用法。
+#summary Google Code 的用法
+#sidebar TOC
 
 = Google Code 的用法 =
 
