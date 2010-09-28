@@ -1,4 +1,5 @@
 #summary Vim Script 文档中文计划的介绍。
+#sidebar TOC
 
 = Vim Script 文档中文计划 =
 Vim Script 即 Vim 脚本，又称 Vim 插件(Plugin)，以下统称“脚本”。
