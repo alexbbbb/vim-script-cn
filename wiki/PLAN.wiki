@@ -28,7 +28,7 @@
 || acp || || || ||
 || mru || || || ||
 || ctags || || || ||
-|| taglist || || taglist.cnx || mykingheaven ||
+|| taglist || || taglist.cnx || zhang.lei.fly, mykingheaven ||
 || tasklist || || || ||
 || Template || || || ||
 || The DERD Commenter || [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_1218.NERD_commenter.html home] (ing...) || || hotoo.cn ||
