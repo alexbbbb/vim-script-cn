@@ -1,5 +1,6 @@
 #summary Vim Script 翻译计划。
 #labels Featured
+#sidebar TOC
 
 = 翻译计划(Plan) =
 
