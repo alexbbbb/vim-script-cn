@@ -1,4 +1,5 @@
 #summary Vim Script 翻译方法及技巧说明。
+#labels Featured
 
 = Vim Script 翻译方法及技巧说明 =
 建议大家从 https://vim-script-cn.googlecode.com/svn/ 开始 checkout，这样就
