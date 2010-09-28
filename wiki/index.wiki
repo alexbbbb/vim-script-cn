@@ -7,18 +7,35 @@ Vim Script 即 Vim 脚本，又称 Vim 插件(Plugin)，以下统称“脚本”
 
 欢迎有兴趣的朋友加入翻译或推荐脚本。参加方法：(建议使用自己的Gmail) 发邮件到 hotoo.cn[http://vim-script-cn.googlecode.com/svn/trunk/img/at.png]gmail.com
 
-= 广告：[https://dl.dropbox.com/u/1151037/blog/Gtalk-group-for-Vim.html 欢迎加入 Vim 的 Gtalk 群] =
+= 广告：[http://hotoo.googlecode.com/svn/blog/Gtalk-group-for-Vim.html 欢迎加入 Vim 的 Gtalk 群] =
 
 [http://vim-script-cn.googlecode.com/svn/trunk/img/vim-logo.png]
 
-== 预览 ==
+
+== 0. 预览 ==
   * [http://code.google.com/p/vim-script-cn/source/browse/#svn/trunk/doc 帮助文档]
   * [http://vim-script-cn.googlecode.com/svn/trunk/intro/index.html 官方介绍]
   * [https://dl.dropbox.com/u/1151037/vimwiki/Vim.html Vim 资料收集]
   * 翻译计划：[PLAN]
 
-== 翻译方法及约定 ==
-=== 官方主页 ===
+
+== 1. 翻译方法及约定 ==
+
+=== 1.1. 帮助文档 ===
+注：使用文档：即脚本附带的使用说明，一般要放置到 vimfiles/doc 目录中。
+  * 翻译的文件与原始文档同名，后缀改为 .cnx
+  * 文件放置到 trunk/doc/ 目录中。
+  * 翻译完成后，在 Vim 中执行一下命令生成 tag：
+  Windows:
+  {{{
+  :helptags $VIM/vimfiles/doc
+  }}}
+  Linux:
+  {{{
+  :helptags ~/.vim/doc
+  }}}
+
+=== 1.2. 官方主页 ===
 [http://www.vim.org/scripts/index.php Vim Script 官方主页]
 
 方法 I: 使用 Vimwiki (*推荐*)。
@@ -73,24 +90,6 @@ WikiWord 命名规则：
   * 使用电子邮件，将翻译好的内容和相关信息(包括被翻译的URL地址) 发送到 hotoo.cn[http://vim-script-cn.googlecode.com/svn/trunk/img/at.png]gmail.com
 
 
-=== 帮助文档 ===
-注：使用文档：即脚本附带的使用说明，一般要放置到 vimfiles/doc 目录中。
-  * 翻译的文件与原始文档同名，后缀改为 .cnx
-  * 文件放置到 trunk/doc/ 目录中。
-  * 翻译完成后，在 Vim 中执行一下命令生成 tag：
-  Windows:
-  {{{
-  :helptags $VIM/vimfiles/doc
-  }}}
-  Linux:
-  {{{
-  :helptags ~/.vim/doc
-  }}}
-
-== 分工 ==
+== 2. 分工 ==
   * 建议每个脚本的文档由一人独立完成；
   * 对于需要多人合作的大文档，建议由参与者商讨分工，完成后相互review、合并文档。
-
-
-
-<img style="padding: 0pt 2px 0pt 0pt; margin: 0pt; border: medium none;" src="http://www.google.com/talk/service/resources/chaticon.gif" alt="" height="14" width="16" /><img style="padding: 0pt 2px 0pt 0pt; margin: 0pt; border: medium none;" src="http://www.google.com/talk/service/badge/Show?tk=z01q6amlqlsilmv8o1h5uvspl981vhrqbkdo00gcmfraqlghm11f5kvj1824if9thi3sdhra8dmi62vcuh3gekllgu8c1gc6m27vd4spsh8vtou3bf9lnugiipht2nbi4hhjmemsrv2nv57ljh9llf3nn867gjdkidm22it2r&amp;w=9&amp;h=9" alt="" height="9" width="9" /><a href="http://www.google.com/talk/service/badge/Start?tk=z01q6amlqlsilmv8o1h5uvspl981vhrqbkdo00gcmfraqlghm11f5kvj1824if9thi3sdhra8dmi62vcuh3gekllgu8c1gc6m27vd4spsh8vtou3bf9lnugiipht2nbi4hhjmemsrv2nv57ljh9llf3nn867gjdkidm22it2r" target="_blank" title="Click here to chat with 闲耘™">Chat with 闲耘™</a> *警告：* 如果没有事情的话请不要点击，避免造成我们双方的麻烦，谢谢。

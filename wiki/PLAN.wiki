@@ -1,35 +1,37 @@
 #summary Vim Script 翻译计划。
 #labels Featured
 
-= 翻译计划 =
-    * {X} [http://www.vim.org/scripts/script.php?script_id=2226 Vimwiki.vim] [http://code.google.com/p/vimwiki/ 2] [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_2226.Vimwiki.html home] [http://code.google.com/p/vim-script-cn/source/browse/trunk/doc/vimwiki.cnx Vimwiki.cnx] (hotoo.cn{AT}gmail.com,lizaib{AT}gmail.com)
-    * {X} [http://code.google.com/p/snipmate/ snipMate.vim] [http://github.com/msanders/snipmate.vim 2] [http://www.vim.org/scripts/script.php?script_id=2540 3] [http://code.google.com/p/vim-script-cn/source/browse/trunk/doc/snipMate.cnx snipMate.cnx] (hotoo.cn{AT}gmail.com)
-    * {X} [http://www.vim.org/scripts/script.php?script_id=1238 mark] [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_1238_mark.html home]
-    * [ ] [http://www.vim.org/scripts/script.php?script_id=2657 VOoM] ([http://xbeta.info/vim-voof.htm xbeta]) 需要Python支持。
-    * [ ] [http://www.vim.org/scripts/script.php?script_id=2899 TxtBrowser] ([http://xbeta.info/vim-txtbrowser.htm xbeta])
-    * [ ] [http://www.vim.org/scripts/script.php?script_id=3052 changesPlugin : indicate changes of a buffer]
-    * [ ] [http://www.vim.org/scripts/script.php?script_id=152 ShowMarks : Visually shows the location of marks.]
-    * [ ] [http://www.vim.org/scripts/script.php?script_id=2142 showmarks : Display marks as signs (needs +sign feat )]
-    * [ ] [http://www.vim.org/scripts/script.php?script_id=1026 Visual Mark : Visual mark, similar to UltraEdit's bookmark]
-    * {o} matchit [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_39.matchit.html home]
-    * [ ] [http://www.vim.org/scripts/script.php?script_id=1697 surround]
-    * [ ] [http://www.vim.org/scripts/script.php?script_id=2136 repeat]
-    * {o} NERD_tree [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_1658.NERD_tree.html home]
-    * {o} NERD_tree Project [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_2801.NERD_tree_Project.html home]
-    * {X} [http://www.vim.org/scripts/script.php?script_id=69 Project] [http://code.google.com/p/vim-script-cn/source/browse/trunk/doc/project.cnx project.cnx]
-    * [ ] calendar
-    * {X} [http://www.vim.org/scripts/script.php?script_id=42 bufexplorer] [http://code.google.com/p/vim-script-cn/source/browse/trunk/doc/bufexplorer.cnx doc/bufexplorer.cnx]
-    * [ ] [http://www.vim.org/scripts/script.php?script_id=2620 NeoComplCache] [http://github.com/Shougo/neocomplcache 2] [http://sinolog.it/?p=1399 Vim的终极自动补全插件：NeoComplCache]
-    * [ ] [http://www.vim.org/scripts/script.php?script_id=1520 OmniCppComplete]
-    * [ ] [http://www.vim.org/scripts/script.php?script_id=3025 Command-T]
-    * [ ] [http://www.vim.org/scripts/script.php?script_id=1984 FuzzyFinder]
-    * [ ] acp
-    * [ ] mru
-    * [ ] ctags
-    * [ ] taglist
-    * [ ] tasklist
-    * [ ] Template
-    * {o} The DERD Commenter [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_1218.NERD_commenter.html home]
-    * {X} CSS Color Preview [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_2150.CSS_Color_Preview.html home]
-    * [ ] [http://www.vim.org/scripts/script.php?script_id=2678 GoogleReader.vim]
-    * {X} vimbuddy [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_8.VimBuddy.html home]
+= 翻译计划(Plan) =
+
+|| *Plugin* || *Home Page(cnx)* || *Doc(cnx)* || *Translator* ||
+|| [http://www.vim.org/scripts/script.php?script_id=2226 Vimwiki.vim] [http://code.google.com/p/vimwiki/ 2] || [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_2226.Vimwiki.html home](100%) || [http://code.google.com/p/vim-script-cn/source/browse/trunk/doc/vimwiki.cnx Vimwiki.cnx] (1.1) || hotoo.cn, lizaib ||
+|| [http://code.google.com/p/snipmate/ snipMate.vim] [http://github.com/msanders/snipmate.vim 2] [http://www.vim.org/scripts/script.php?script_id=2540 3] || || [http://code.google.com/p/vim-script-cn/source/browse/trunk/doc/snipMate.cnx snipMate.cnx] || hotoo.cn ||
+|| [http://www.vim.org/scripts/script.php?script_id=1238 mark] || [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_1238_mark.html home] (1.1.8-g) || || hotoo.cn ||
+|| [http://www.vim.org/scripts/script.php?script_id=2657 VOoM] [http://xbeta.info/vim-voof.htm xbeta] +python || || || ||
+|| [http://www.vim.org/scripts/script.php?script_id=2899 TxtBrowser] [http://xbeta.info/vim-txtbrowser.htm xbeta] || || || ||
+|| [http://www.vim.org/scripts/script.php?script_id=3052 changesPlugin] || || || ||
+|| [http://www.vim.org/scripts/script.php?script_id=152 ShowMarks] || || || ||
+|| [http://www.vim.org/scripts/script.php?script_id=2142 showmarks] || || || ||
+|| [http://www.vim.org/scripts/script.php?script_id=1026 Visual Mark] || || || ||
+|| matchit || [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_39.matchit.html home] || matchit.cnx (ing...) || hotoo.cn ||
+|| [http://www.vim.org/scripts/script.php?script_id=1697 surround] || || || ||
+|| [http://www.vim.org/scripts/script.php?script_id=2136 repeat] || || || ||
+|| NERD_tree || [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_1658.NERD_tree.html home] (100%) || NERD_tree.cnx (ing...) || hoto.cn, admin.cloud ||
+|| NERD_tree Project || [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_2801.NERD_tree_Project.html home] (100%) || || ||
+|| [http://www.vim.org/scripts/script.php?script_id=69 Project] || || [http://code.google.com/p/vim-script-cn/source/browse/trunk/doc/project.cnx project.cnx] (100%) || Denven ||
+|| calendar || || || ||
+|| [http://www.vim.org/scripts/script.php?script_id=42 bufexplorer] || || [http://code.google.com/p/vim-script-cn/source/browse/trunk/doc/bufexplorer.cnx doc/bufexplorer.cnx] (100%) || shrek.wang ||
+|| [http://www.vim.org/scripts/script.php?script_id=2620 NeoComplCache] [http://github.com/Shougo/neocomplcache 2] || || || ||
+|| [http://www.vim.org/scripts/script.php?script_id=1520 OmniCppComplete] || || || ||
+|| [http://www.vim.org/scripts/script.php?script_id=3025 Command-T] || || || ||
+|| [http://www.vim.org/scripts/script.php?script_id=1984 FuzzyFinder] || || || ||
+|| acp || || || ||
+|| mru || || || ||
+|| ctags || || || ||
+|| taglist || || taglist.cnx || mykingheaven ||
+|| tasklist || || || ||
+|| Template || || || ||
+|| The DERD Commenter || [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_1218.NERD_commenter.html home] (ing...) || || hotoo.cn ||
+|| CSS Color Preview || [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_2150.CSS_Color_Preview.html home] (100%) || || hotoo.cn ||
+|| [http://www.vim.org/scripts/script.php?script_id=2678 GoogleReader.vim] || || || ||
+|| vimbuddy || [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_8.VimBuddy.html home] (100%) || || hotoo.cn ||
