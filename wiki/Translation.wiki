@@ -12,11 +12,9 @@ trunk/doc 目录下均只存放被翻译的 .cnx 文档，一般来说，
 大家在 trunk 下直接翻译就好了，无需打分支到 branches 下，当然打分支同样也可以。
 
 == 2. 翻译 ==
-    # 在 .cnx 文档的翻译过程中，翻好一段，确认之后就可以删除原始英文内容了。
-        保留不译的部分除外，不要保留原始内容在 .cnx 档中。
+    # 在 .cnx 文档的翻译过程中，翻好一段，确认之后就可以删除原始英文内容了。保留不译的部分除外，不要保留原始内容在 .cnx 档中。
     # changelog 可以不译。
-    # 尽量保持 Vim doc 格式，一般来说，格式跟原始档一致就可以了，
-        建议在 Vim 中翻译，可以预览格式。
+    # 尽量保持 Vim doc 格式，一般来说，格式跟原始档一致就可以了，建议在 Vim 中翻译，可以预览格式。
 
 == 3. 标记(tags) ==
 在 tags 目录下，保留了各个 Plugin 的多个版本翻译记录。比如 vimwiki 就包含
@@ -37,8 +35,7 @@ wiki 目录存放是项目 Wiki，即 http://code.google.com/p/vim-script-cn/w/l
 
 == 5. 范例 (翻译新文档: plugin.txt v1.0) ==
     # 从 https://vim-script-cn.googlecode.com/svn/ checkout 项目。
-    # 复制要翻译的原始文档(plugin.txt 或 plugin.jax) 到 trunk/doc 目录，
-        并重命名为 plugin.cnx
+    # 复制要翻译的原始文档(plugin.txt 或 plugin.jax) 到 trunk/doc 目录，并重命名为 plugin.cnx
         # 另复制一份原始档到 tags/doc/plugin_v1.0/plugin.txt
     # 在 plugin.cnx 中进行翻译，完成一段就删除原文（注意先检查一下翻译结果）。
     # 文档不懂的地方可以保留不译，或者请教他人。
