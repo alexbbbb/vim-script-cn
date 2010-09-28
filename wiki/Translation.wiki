@@ -5,7 +5,7 @@
 
 == 1. checkout ==
 建议大家从 https://vim-script-cn.googlecode.com/svn/ 开始 checkout，而不是
-项目默认提供的 https://vim-script-cn.googlecode.com/svn/trunk/，
+项目默认提供的 https://vim-script-cn.googlecode.com/svn/trunk/ ，
 这样就可以把包括 branches, tags, trunk, wiki 几个目录都 checkout 下来。
 
 trunk/doc 目录下均只存放被翻译的 .cnx 文档，一般来说，
@@ -24,7 +24,11 @@ v0.9.9 和 v1.0 两个版本。vimwiki_v0.9.9 和 vimwiki_v1.0 目录下都存�
 所以大家可以把原始档放到 tags 目录里。等中文文档翻译并检查完成后，可以打 tags
 到对应的目录。
 
-如果不会打 tags，可以联系 闲耘(hotoo.cn(AT)gmail.com)
+Windows 下如果安装了 TortoiseSVN，右键目标文件（如 plugin.cnx），TortoiseSVN ->
+Branch/tag...，浏览 "to URL:" 到目标目录（如 tags/doc/vimwiki_v1.0/vimwiki.cnx）
+
+如果不会打标签(tags)，可以联系 闲耘(hotoo.cn(AT)gmail.com) 来完成打标签。
+*注意* 打标签是有意义的，相当于版本里程碑(例如 v1.0, v2.0)，请不要随意操作，谢谢。
 
 == 4. Wiki ==
 wiki 目录存放是项目 Wiki，即 http://code.google.com/p/vim-script-cn/w/list
@@ -40,13 +44,15 @@ wiki 目录存放是项目 Wiki，即 http://code.google.com/p/vim-script-cn/w/l
     # 在 plugin.cnx 中进行翻译，完成一段就删除原文（注意先检查一下翻译结果）。
     # 文档不懂的地方可以保留不译，或者请教他人。
     # 可以随时提交，但建议完成较多的内容之后再统一提交。
-    # 全部完成后，提交，并打标签(tags)到 tags/doc/plugin_v1.0/plugin.cnx
+    # 全部完成后，提交到主干(trunk)。
+    # 打标签(tags)到 tags/doc/plugin_v1.0/plugin.cnx
 
 == 6. 范例 (翻译文档新版本: 从 v1.0 到 v2.0) ==
     # 复制 plugin.txt v2.0 版到 tags/doc/plugin_v2.0/plugin.txt
     # 比较 plugin.txt 原始档 v2.0 和 v1.0 版的变化。
     # 补充/删除/修正不同的部分即可。
-    # 完成后提交，并打标签到 tags/doc/plugin_v2.0/plugin.cnx
+    # 完成后提交到主干(trunk)。
+    # 打标签到 tags/doc/plugin_v2.0/plugin.cnx
 
 == 7. 分工 ==
 对于由多人分工合作翻译的文档，参与者最好事先商定各自负责的内容。
