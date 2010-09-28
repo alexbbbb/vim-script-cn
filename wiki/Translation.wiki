@@ -7,6 +7,14 @@
 trunk/doc 目录下均只存放被翻译的 .cnx 文档，一般来说，
 大家在 trunk 下直接翻译就好了，无需打分支到 branches 下，当然打分支同样也可以。
 
+在 .cnx 文档的翻译过程中，翻好一段，确认之后就可以删除原始英文内容了。
+除非保留不译的部分，不要保留原始内容在 .cnx 档中。
+
+changelog 可以不译。
+
+尽量保持 Vim doc 格式，一般格式跟原始档一致就可以了，建议在 Vim 中翻译，可以
+预览格式。
+
 而 tags 目录下，就保留了各个 Plugin 的多个版本翻译记录，比如 vimwiki 就包含
 v0.9.9 和 v1.0 两个版本。vimwiki_v0.9.9 和 vimwiki_v1.0 目录下都存有各自版本
 对应的英文原始档(.txt)。
@@ -14,7 +22,7 @@ v0.9.9 和 v1.0 两个版本。vimwiki_v0.9.9 和 vimwiki_v1.0 目录下都存�
 所以大家可以把原始档放到 tags 目录里。等中文文档翻译并检查完成后，可以打 tags
 到对应的目录。
 
-如果不会打 tags，可以联系 闲耘(hotoo.cn[AT]gmail.com)
+如果不会打 tags，可以联系 闲耘(hotoo.cn(AT)gmail.com)
 
 wiki 目录存放是项目 Wiki，即 http://code.google.com/p/vim-script-cn/w/list
 里面的内容。
