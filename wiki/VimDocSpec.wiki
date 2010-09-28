@@ -1,4 +1,5 @@
 #summary Vim 文档规范
+#sidebar TOC
 
 = 介绍 =
 
