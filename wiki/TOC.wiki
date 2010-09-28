@@ -1,6 +1,6 @@
-= Table of Content =
-  * [PLAN 计划]
-  * [Translation 方法及技巧]
-  * [Installation 安装]
-  * [VimDocSpec 文档规范]
-  * [UsingGoogleCode About Google Code]
+  * [index Vim Script 文档中文计划]
+    * [PLAN 计划]
+    * [Translation 方法及技巧]
+    * [Installation 安装]
+    * [VimDocSpec 文档规范]
+    * [UsingGoogleCode About Google Code]
