@@ -1,5 +1,6 @@
 #summary 安装 Vim Script 中文文档的方法。
 #labels Featured,Phase-Deploy
+#sidebar TOC
 
 = 安装 Vim Script 中文文档 =
   # 下载 [http://code.google.com/p/vim-script-cn/source/browse/#svn/trunk/doc Vim script 中文文档(*.cnx)]
