@@ -1,5 +1,6 @@
 #summary Vim Script 翻译方法及技巧说明。
 #labels Featured
+#sidebar TOC
 
 = Vim Script 翻译方法及技巧说明 =
 
