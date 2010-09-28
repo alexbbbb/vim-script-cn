@@ -38,82 +38,73 @@
 在 MRU 窗口这按 't' 键让文件在新标签页(tab)中打开。如果文件已经在窗口、或者在
 当前或其他标签页中打开，光标将移到这个标签页，否则，在新的标签页中打开。
 
-You can open multiple files from the MRU window by specifying a count before
-pressing '<Enter>' or 'v' or 'o' or 't'. You can also visually select
-multiple filenames and invoke the commands to open the files. Each selected
-file will be opened in a separate window or tab.
+在按 '<Enter>', 'v', 'o' 或 't' 键之前加特定的量词(count)，可以从 MRU 窗口中
+打开多分文件。也可以通过可视模式选择多个文件并调用这些命令来打开这些选中的文件。
+每个文件都将在分隔窗口或标签页中打开。
 
-You can press the 'u' key in the MRU window to update the file list. This is
-useful if you keep the MRU window open always.
+按 'u' 键可以更新 MRU 窗口的文件列表。这在设置 MRU 窗口始终打开时非常有用。
 
-You can close the MRU window by pressing the 'q' key or using one of the Vim
-window commands.
+按 'q' 键或者使用 Vim 的窗口命令可以关闭 MRU 窗口。
 
-To display only files matching a pattern from the MRU list in the MRU
-window, you can specify a pattern to the ":MRU" command. For example, to
-display only file names containing "vim" in them, you can use the following
-command ":MRU vim".  When you specify a partial file name and only one
-matching filename is found, then the ":MRU" command will edit that file.
+要控制 MRU 窗口仅显示匹配某模式的 MRU 列表，可以给 :MRU 命令指定特定的模式。
+例如，希望仅显示文件名包含 "vim" 的列表，可以使用命令 ":MRU vim"。当指定的
+模式仅匹配到一个文件时，":MRU" 命令会直接编辑这个文件。
 
-The ":MRU" command supports command-line completion of file names from
-the MRU list. You can enter a partial file name and then press <Tab>
-or <Ctrl-D> to complete or list all the matching file names. Note that
-after typing the ":MRU" command, you have to enter a space before completing
-the file names with <Tab>.
+":MRU" 命令支持命令行补全。输入文件名的一部分，然后按 <Tab> 或者 <Ctrl-D>
+来补全所有匹配的文件名。注意：需要在 ":MRU" 命令之后，并在使用 <Tab> 补全
+文件名之前加一个空格。
 
-When a file supplied to the ":MRU" command is not present in the MRU list,
-but it is a readable file, then the file will be opened (even though it is
-not present in the MRU list). This is useful if you want to open a file
-present in the same directory as a file in the MRU list. You can use the
-command-line completion of the ":MRU" command to complete the full path of a
-file and then modify the path to open another file present in the same path.
+如果一个文件提供给 ":MRU" 命令，虽然它目前不在 MRU 列表中，但它是个可读的文件，
+这个文件会被打开（即使它目前不在 MRU 列表中）。这在你希望打开 MRU 列表中
+某文件所在目录下的一个文件时会非常有用。使用 ":MRU" 命令的补全出某文件的完整
+路径，然后修改这个路径来打开这个路径下的其他文件。
 
-Whenever the MRU list changes, the MRU file is updated with the latest MRU
-list. When you have multiple instances of Vim running at the same time, the
-latest MRU list will show up in all the instances of Vim.
+每当 MRU 列表有变化，MRU 存储文件会更新为最后的 MRU 列表。如果同时运行了多个
+Vim 实例，最新的 MRU 列表会显示在所有的 Vim 实例中。
 
 == 选项设置 ==
 
-By changing the following variables you can configure the behavior of this
-plugin. Set the following variables in your .vimrc file using the 'let'
-command.
+通过以下变量，可以为这个插件修改配置。在 .vimrc 中使用 `'let'` 命令来设置以下
+变量。
 
-The list of recently edited file names is stored in the file specified by the
-MRU_File variable.  The default setting for this variable is
-$HOME/.vim_mru_files for Unix-like systems and $USERPROFILE/_vim_mru_files
-for MS-Windows systems. You can change this variable to point to a file by
-adding the following line to the .vimrc file:
-
+最近编辑的文件名列表存储在一个通过 `MRU_File` 变量指定的文件中，其默认值
+在 Unix-like 的操作系统下是 `$HOME/.vim_mru_files` ，MS-Windows 下是
+`$USERPROFILE/_vim_mru_files` 。可以通过添加下面这行到 .vimrc 中，改变这个变量
+以指定到特定的文件。
+{{{
       let MRU_File = 'd:\myhome\_vim_mru_files'
+}}}
 
-By default, the plugin will remember the names of the last 100 used files.
-As you edit more files, old file names will be removed from the MRU list.
-You can set the 'MRU_Max_Entries' variable to remember more file names. For
-example, to remember 1000 most recently used file names, you can use
-
+默认情况下，这个插件会记住最近使用的 100 个文件名，当你编辑更多的文件时，
+旧的文件名将从 MRU 列表里被删除。可以设置 `MRU_Max_Entries` 变量来记忆更多的
+文件名。例如，要记忆 1000 个最近使用的文件名，可以使用：
+{{{
       let MRU_Max_Entries = 1000
+}}}
 
-By default, all the edited file names will be added to the MRU list. If you
-want to exclude file names matching a list of patterns, you can set the
-MRU_Exclude_Files variable to a list of Vim regular expressions. By default,
-this variable is set to an empty string. For example, to not include files
-in the temporary (/tmp, /var/tmp and d:\temp) directories, you can set the
-MRU_Exclude_Files variable to
-
+默认情况下，所有被编辑的文件名字都会被添加到 MRU 列表中，如果你想排除一些
+匹配模式的列表，可以设置 `MRU_Exclude_Files` 变量为 Vim 的正则表达式列表，
+其默认值是一个空字符串。例如，不希望包含临时目录（/tmp, /var/tmp 和 d:\tmp），
+可以设置 `MRU_Exclude_Files` 变量为：
+{{{
       let MRU_Exclude_Files = '^/tmp/.*\|^/var/tmp/.*'  " For Unix
       let MRU_Exclude_Files = '^c:\\temp\\.*'           " For MS-Windows
+}}}
 
-The specified pattern should be a Vim regular expression pattern.
+指定的模式应该是一个 Vim 的正则表达式模式。
 
 If you want to add only file names matching a set of patterns to the MRU
 list, then you can set the MRU_Include_Files variable. This variable should
 be set to a Vim regular expression pattern. For example, to add only .c and
 .h files to the MRU list, you can set this variable as below:
-
+如果希望仅仅添加匹配模式集合的文件名到 MRU 列表，可以设置 `MRU_Include_Files`
+变量，这个变量需要设置为 Vim 的正则表达式模式。例如，仅添加 .c 和 .h 文件
+到 MRU 列表，可以设置如下设置：
+{{{
       let MRU_Include_Files = '\.c$\|\.h$'
+}}}
 
-By default, MRU_Include_Files is set to an empty string and all the edited
-filenames are added to the MRU list.
+`MRU_Include_Files` 默认设为空字符串，所有被编辑的文件名字都会被添加到 MRU 列表。
 
 The default height of the MRU window is 8. You can set the MRU_Window_Height
 variable to change the window height.
