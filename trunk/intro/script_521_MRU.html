@@ -1,162 +1,251 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<head>
+<link rel="Stylesheet" type="text/css" href="css/style.css" />
+<title>script_521_MRU</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+    <div id="contents">
 
-= [http://www.vim.org/scripts/script.php?script_id=521 MRU.vim] =
+<h1 id="toc_1"><a href="http://www.vim.org/scripts/script.php?script_id=521">MRU.vim</a></h1>
 
-作者：[http://www.vim.org/account/profile.php?user_id=224 Yegappan Lakshmanan]
+<p>
+作者：<a href="http://www.vim.org/account/profile.php?user_id=224">Yegappan Lakshmanan</a>
+</p>
 
+<p>
 脚本类型：公用(utility)
+</p>
 
-== 概述 ==
+<h2 id="toc_1.1">概述</h2>
 
+<p>
 最近常用(MRU) 插件提供了便于在 Vim 中访问最近打开/编辑的文件列表的功能。
 这个插件自动存储在 Vim 中打开/编辑的文件名。
+</p>
 
+<p>
 这个插件支持所有的平台上的 Vim 版本，同时支持控制台和 GUI 版本。这个版本
 的 MRU 插件需要 Vim 7.0 及以上版本，如果你使用较早的 Vim 版本，你需要使用
 较早的 MRU 插件版本。
+</p>
 
+<p>
 最近使用的文件名存储在一个指定文件中，可以通过 MRU_File 变量设置。
+</p>
 
-== 使用方法 ==
+<h2 id="toc_1.2">使用方法</h2>
 
-你可以通过 `:MRU` 命令从 MRU 列表中列出并编辑文件。`:MRU` 命令显示最近使用
+<p>
+你可以通过 <code>:MRU</code> 命令从 MRU 列表中列出并编辑文件。<code>:MRU</code> 命令显示最近使用
 的文件列表在一个临时的 Vim 窗口中，如果 MRU 窗口已经被打开，则刷新这个 MRU
 列表。
+</p>
 
-如果你使用 GUI 版本的 Vim，这最近编辑过的文件会被添加到“文件->最近使用的文件”
+<p>
+如果你使用 GUI 版本的 Vim，这最近编辑过的文件会被添加到“文件-&gt;最近使用的文件”
 菜单，你可以通过选择其子菜单中的文件名来编辑文件。
+</p>
 
+<p>
 在 MRU 窗口中可以使用普通模式(normal)的 Vim 命令来移动光标，但不能改变其内容。
+</p>
 
+<p>
 可以通过在选中的文件上按回车键或双击鼠标左键来编辑文件，选中的文件将被打开，
 如果这个文件已被打开，光标会移动到其窗口中，否则，这个文件会在预览窗口中打开。
 如果预览窗口已被修改，或者预览窗口是由其他插件打开的，则文件在新窗口中打开。
+</p>
 
+<p>
 通过按 'o' 键，选中的文件将在 MRU 窗口之下的新窗口中打开。
+</p>
 
+<p>
 在 MRU 窗口中按 'v' 键可以在只读模式下打开文件。
+</p>
 
+<p>
 在 MRU 窗口这按 't' 键让文件在新标签页(tab)中打开。如果文件已经在窗口、或者在
 当前或其他标签页中打开，光标将移到这个标签页，否则，在新的标签页中打开。
+</p>
 
-在按 '<Enter>', 'v', 'o' 或 't' 键之前加特定的量词(count)，可以从 MRU 窗口中
+<p>
+在按 '&lt;Enter&gt;', 'v', 'o' 或 't' 键之前加特定的量词(count)，可以从 MRU 窗口中
 打开多分文件。也可以通过可视模式选择多个文件并调用这些命令来打开这些选中的文件。
 每个文件都将在分隔窗口或标签页中打开。
+</p>
 
+<p>
 按 'u' 键可以更新 MRU 窗口的文件列表。这在设置 MRU 窗口始终打开时非常有用。
+</p>
 
+<p>
 按 'q' 键或者使用 Vim 的窗口命令可以关闭 MRU 窗口。
+</p>
 
+<p>
 要控制 MRU 窗口仅显示匹配某模式的 MRU 列表，可以给 :MRU 命令指定特定的模式。
 例如，希望仅显示文件名包含 "vim" 的列表，可以使用命令 ":MRU vim"。当指定的
 模式仅匹配到一个文件时，":MRU" 命令会直接编辑这个文件。
+</p>
 
-":MRU" 命令支持命令行补全。输入文件名的一部分，然后按 <Tab> 或者 <Ctrl-D>
-来补全所有匹配的文件名。注意：需要在 ":MRU" 命令之后，并在使用 <Tab> 补全
+<p>
+":MRU" 命令支持命令行补全。输入文件名的一部分，然后按 &lt;Tab&gt; 或者 &lt;Ctrl-D&gt;
+来补全所有匹配的文件名。注意：需要在 ":MRU" 命令之后，并在使用 &lt;Tab&gt; 补全
 文件名之前加一个空格。
+</p>
 
+<p>
 如果一个文件提供给 ":MRU" 命令，虽然它目前不在 MRU 列表中，但它是个可读的文件，
 这个文件会被打开（即使它目前不在 MRU 列表中）。这在你希望打开 MRU 列表中
 某文件所在目录下的一个文件时会非常有用。使用 ":MRU" 命令的补全出某文件的完整
 路径，然后修改这个路径来打开这个路径下的其他文件。
+</p>
 
+<p>
 每当 MRU 列表有变化，MRU 存储文件会更新为最后的 MRU 列表。如果同时运行了多个
 Vim 实例，最新的 MRU 列表会显示在所有的 Vim 实例中。
+</p>
 
-== 选项设置 ==
+<h2 id="toc_1.3">选项设置</h2>
 
-通过以下变量，可以为这个插件修改配置。在 .vimrc 中使用 `'let'` 命令来设置以下
+<p>
+通过以下变量，可以为这个插件修改配置。在 .vimrc 中使用 <code>'let'</code> 命令来设置以下
 变量。
+</p>
 
-最近编辑的文件名列表存储在一个通过 `MRU_File` 变量指定的文件中，其默认值
-在 Unix-like 的操作系统下是 `$HOME/.vim_mru_files` ，MS-Windows 下是
-`$USERPROFILE/_vim_mru_files` 。可以通过添加下面这行到 .vimrc 中，改变这个变量
+<p>
+最近编辑的文件名列表存储在一个通过 <code>MRU_File</code> 变量指定的文件中，其默认值
+在 Unix-like 的操作系统下是 <code>$HOME/.vim_mru_files</code> ，MS-Windows 下是
+<code>$USERPROFILE/_vim_mru_files</code> 。可以通过添加下面这行到 .vimrc 中，改变这个变量
 以指定到特定的文件。
-{{{
+</p>
+<pre>
       let MRU_File = 'd:\myhome\_vim_mru_files'
-}}}
+</pre>
 
+<p>
 默认情况下，这个插件会记住最近使用的 100 个文件名，当你编辑更多的文件时，
-旧的文件名将从 MRU 列表里被删除。可以设置 `MRU_Max_Entries` 变量来记忆更多的
+旧的文件名将从 MRU 列表里被删除。可以设置 <code>MRU_Max_Entries</code> 变量来记忆更多的
 文件名。例如，要记忆 1000 个最近使用的文件名，可以使用：
-{{{
+</p>
+<pre>
       let MRU_Max_Entries = 1000
-}}}
+</pre>
 
+<p>
 默认情况下，所有被编辑的文件名字都会被添加到 MRU 列表中，如果你想排除一些
-匹配模式的列表，可以设置 `MRU_Exclude_Files` 变量为 Vim 的正则表达式列表，
+匹配模式的列表，可以设置 <code>MRU_Exclude_Files</code> 变量为 Vim 的正则表达式列表，
 其默认值是一个空字符串。例如，不希望包含临时目录（/tmp, /var/tmp 和 d:\tmp），
-可以设置 `MRU_Exclude_Files` 变量为：
-{{{
+可以设置 <code>MRU_Exclude_Files</code> 变量为：
+</p>
+<pre>
       let MRU_Exclude_Files = '^/tmp/.*\|^/var/tmp/.*'  " For Unix
       let MRU_Exclude_Files = '^c:\\temp\\.*'           " For MS-Windows
-}}}
+</pre>
 
+<p>
 指定的模式应该是一个 Vim 的正则表达式模式。
+</p>
 
+<p>
 If you want to add only file names matching a set of patterns to the MRU
 list, then you can set the MRU_Include_Files variable. This variable should
 be set to a Vim regular expression pattern. For example, to add only .c and
 .h files to the MRU list, you can set this variable as below:
-如果希望仅仅添加匹配模式集合的文件名到 MRU 列表，可以设置 `MRU_Include_Files`
+如果希望仅仅添加匹配模式集合的文件名到 MRU 列表，可以设置 <code>MRU_Include_Files</code>
 变量，这个变量需要设置为 Vim 的正则表达式模式。例如，仅添加 .c 和 .h 文件
 到 MRU 列表，可以设置如下设置：
-{{{
+</p>
+<pre>
       let MRU_Include_Files = '\.c$\|\.h$'
-}}}
+</pre>
 
-`MRU_Include_Files` 默认设为空字符串，所有被编辑的文件名字都会被添加到 MRU 列表。
+<p>
+<code>MRU_Include_Files</code> 默认设为空字符串，所有被编辑的文件名字都会被添加到 MRU 列表。
+</p>
 
+<p>
 MRU 窗口默认高度为 8 行，设置 MRU_Window_Height 变量可以改变这个窗口高度。
-    {{{
-      let MRU_Window_Height = 15
-    }}}
+</p>
+<pre>
+  let MRU_Window_Height = 15
+</pre>
+<p>
 执行 :MRU 命令时，MRU 列表默认在新窗口中打开，如果想重复利用当前窗口，设置
 'MRU_Use_Current_Window' 变量为 1。
-    {{{
-      let MRU_Use_Current_Window = 1
-    }}}
+</p>
+<pre>
+  let MRU_Use_Current_Window = 1
+</pre>
+<p>
 MRU 插件将重用当前窗口，选中文件也会在当前窗口中打开。
+</p>
 
+<p>
 在 MRU 窗口中选中并打开文件时，MRU 窗口会被自动关闭，选中的文件在上次使用
 的窗口中打开。设置 MRU_Auto_Close 为 0 可以保持 MRU 窗口为打开状态。
-    {{{
-      let MRU_Auto_Close = 0
-    }}}
-设置 "MRU_Add_Menu" 变量为 0 可以禁用 "文件->Recent Files" 菜单。默认是启用
+</p>
+<pre>
+  let MRU_Auto_Close = 0
+</pre>
+<p>
+设置 "MRU_Add_Menu" 变量为 0 可以禁用 "文件-&gt;Recent Files" 菜单。默认是启用
 菜单的。
-    {{{
-      let MRU_Add_Menu = 0
-    }}}
+</p>
+<pre>
+  let MRU_Add_Menu = 0
+</pre>
+<p>
 当有太多的文件名在当前的 MRU 列表中，更新 MRU 菜单到列表就会特别慢，为了
 避免这种情况，设置 MRU_Max_Menu_Entries 变量可以控制 MRU 菜单显示文件名的
 数量。默认值为 10。
-    {{{
-      let MRU_Max_Menu_Entries = 20
-    }}}
+</p>
+<pre>
+  let MRU_Max_Menu_Entries = 20
+</pre>
+<p>
 如果有太多的文件名在当前 MRU 列表中，MRU 菜单会分割成子菜单，每个子菜单包含
 MRU_Max_Submenu_Entries 个文件名。默认值是 10。
-    {{{
-      let MRU_Max_Submenu_Entries = 15
-    }}}
+</p>
+<pre>
+  let MRU_Max_Submenu_Entries = 15
+</pre>
 
-== 安装细节 ==
+<h2 id="toc_1.4">安装细节</h2>
+<p>
 1. 复制 mru.vim 到以下目录之一：
-    {{{
-      $HOME/.vim/plugin     - Unix like systems
-      $HOME/vimfiles/plugin - MS-Windows
-      $VIM:vimfiles:plugin  - Macintosh
-      $VIM/vimfiles/plugin  - All
-    }}}
+</p>
+<pre>
+  $HOME/.vim/plugin     - Unix like systems
+  $HOME/vimfiles/plugin - MS-Windows
+  $VIM:vimfiles:plugin  - Macintosh
+  $VIM/vimfiles/plugin  - All
+</pre>
+<p>
    关于 Vim Plugin 的更多细节，参考以下帮助：
-    {{{
-      :help add-plugin
-      :help add-global-plugin
-      :help runtimepath
-    }}}
+</p>
+<pre>
+  :help add-plugin
+  :help add-global-plugin
+  :help runtimepath
+</pre>
+<p>
 2. 在 .vimrc 文件中设置 MRU_File 变量为一个文件的路径，这个文件将被用来存储
    最近编辑的文件名称。这是可选的设置。
 3. 重启 Vim。
 4. 使用 ":MRU" 命令可以列出最近使用的文件名称。在 GUI 版的 Vim 中，还可以使用
-   '文件->Recent Files' 菜单访问最近使用的文件。
+   '文件-&gt;Recent Files' 菜单访问最近使用的文件。
+</p>
 
+<p>
 要删除这个插件，删除 mru.vim 文件即可。
+</p>
+    </div>
+    <div id="footer">
+        Copyleft &copy; 2009-2010 <a href="http://code.google.com/p/vim-script-cn/">Vim Script 文档中文团队</a>.
+    </div>
+</body>
+</html>
