@@ -1,0 +1,25 @@
+#summary Vim Script 翻译方法及技巧说明。
+
+= Vim Script 翻译方法及技巧说明 =
+建议大家从 https://vim-script-cn.googlecode.com/svn/ 开始 checkout，这样就
+可以把包括 branches, tags, trunk, wiki 几个目录都 checkout 下来。
+
+trunk/doc 目录下均只存放被翻译的 .cnx 文档，一般来说，
+大家在 trunk 下直接翻译就好了，无需打分支到 branches 下，当然打分支同样也可以。
+
+而 tags 目录下，就保留了各个 Plugin 的多个版本翻译记录，比如 vimwiki 就包含
+v0.9.9 和 v1.0 两个版本。vimwiki_v0.9.9 和 vimwiki_v1.0 目录下都存有各自版本
+对应的英文原始档(.txt)。
+
+所以大家可以把原始档放到 tags 目录里。等中文文档翻译并检查完成后，可以打 tags
+到对应的目录。
+
+如果不会打 tags，可以联系 闲耘(hotoo.cn[AT]gmail.com)
+
+wiki 目录存放是项目 Wiki，即 http://code.google.com/p/vim-script-cn/w/list
+里面的内容。
+
+== 分工 ==
+对于由多人分工合作翻译的文档，参与者最好事先商定各自负责的内容。
+
+合并时，除自己负责的内容外，均以他人的为准。
