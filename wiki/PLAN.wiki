@@ -4,48 +4,47 @@
 
 = 翻译计划(Plan) =
 
-|| *Plugin* || *Home Page(cnx)* || *Doc(cnx)* || *Translator* ||
+|| ID || *Plugin* || *Home Page(cnx)* || *Doc(cnx)* || *Translator* ||
 *A*
-|| acp || || || ||
+|| #1879 || [http://www.vim.org/scripts/script.php?script_id=1879 acp.vim] || || [http://code.google.com/p/vim-script-cn/source/browse/trunk/doc/acp.cnx acp.cnx](v2.14.1) || volcanowill ||
 *B*
-|| [http://www.vim.org/scripts/script.php?script_id=42 bufexplorer] || || [http://code.google.com/p/vim-script-cn/source/browse/trunk/doc/bufexplorer.cnx doc/bufexplorer.cnx] (100%) || shrek.wang ||
+|| #42 || [http://www.vim.org/scripts/script.php?script_id=42 bufexplorer] || || [http://code.google.com/p/vim-script-cn/source/browse/trunk/doc/bufexplorer.cnx bufexplorer.cnx](v7.2.4) || shrek.wang ||
 *C*
-|| calendar || || || ||
-|| [http://www.vim.org/scripts/script.php?script_id=3052 changesPlugin] || || || ||
-|| [http://www.vim.org/scripts/script.php?script_id=3025 Command-T] || || || ||
-|| CSS Color Preview || [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_2150.CSS_Color_Preview.html CSS_Color_Preview#2150] || || hotoo.cn ||
-|| ctags || || || ||
+|| #52|| [http://www.vim.org/scripts/script.php?script_id=52 calendar.vim] || || || ||
+|| #3052 || [http://www.vim.org/scripts/script.php?script_id=3052 changesPlugin] || || || ||
+|| #3025 || [http://www.vim.org/scripts/script.php?script_id=3025 Command-T] || || || ||
+|| #2150 || CSS Color Preview || [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_2150.CSS_Color_Preview.html CSS_Color_Preview#2150] || || hotoo.cn ||
 *F*
-|| [http://www.vim.org/scripts/script.php?script_id=1984 FuzzyFinder] || || || ||
+|| #1984 || [http://www.vim.org/scripts/script.php?script_id=1984 FuzzyFinder] || || || ||
 *G*
-|| [http://www.vim.org/scripts/script.php?script_id=2678 GoogleReader.vim] || || || ||
+|| #2678 || [http://www.vim.org/scripts/script.php?script_id=2678 GoogleReader.vim] || || || ||
 *M*
-|| [http://www.vim.org/scripts/script.php?script_id=1238 mark] || [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_1238_mark.html mark#1238](v1.1.8-g) || || hotoo.cn ||
-|| [http://www.vim.org/scripts/script.php?script_id=521 mru.vim] || [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_521_MRU.html mru.vim#521] (v3.3) || || hotoo.cn ||
-|| matchit || [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_39.matchit.html matchit#39] || matchit.cnx (ing...) || hotoo.cn ||
+|| #1238 || [http://www.vim.org/scripts/script.php?script_id=1238 mark] || [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_1238_mark.html mark#1238](v1.1.8-g) || || hotoo.cn ||
+|| #521 || [http://www.vim.org/scripts/script.php?script_id=521 mru.vim] || [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_521_MRU.html mru.vim#521](v3.3) || || hotoo.cn ||
+|| #39 || matchit || [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_39.matchit.html matchit#39] || matchit.cnx (ing...) || hotoo.cn ||
 *N*
-|| [http://www.vim.org/scripts/script.php?script_id=2620 NeoComplCache] [http://github.com/Shougo/neocomplcache 2] || || || ||
-|| NERD_tree || [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_1658.NERD_tree.html NERD_tree#1658] || NERD_tree.cnx (ing...) || hoto.cn, admin.cloud ||
-|| NERD_tree Project || [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_2801.NERD_tree_Project.html NERD_tree_Project#2801] || || ||
+|| #2620 || [http://www.vim.org/scripts/script.php?script_id=2620 NeoComplCache] [http://github.com/Shougo/neocomplcache 2] || || || ||
+|| #1658 || NERD_tree || [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_1658.NERD_tree.html NERD_tree#1658] || NERD_tree.cnx (ing...) || hoto.cn, admin.cloud ||
+|| #2801 || NERD_tree Project || [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_2801.NERD_tree_Project.html NERD_tree_Project#2801] || || ||
 *O*
-|| [http://www.vim.org/scripts/script.php?script_id=1520 OmniCppComplete] || || || ||
+|| #1520 || [http://www.vim.org/scripts/script.php?script_id=1520 OmniCppComplete] || || || ||
 *P*
-|| [http://www.vim.org/scripts/script.php?script_id=69 Project] || || [http://code.google.com/p/vim-script-cn/source/browse/trunk/doc/project.cnx project.cnx] (100%) || Denven ||
+|| #69 || [http://www.vim.org/scripts/script.php?script_id=69 Project] || || [http://code.google.com/p/vim-script-cn/source/browse/trunk/doc/project.cnx project.cnx](v1.4.1) || Denven ||
 *R*
-|| [http://www.vim.org/scripts/script.php?script_id=2136 repeat] || || || ||
+|| #2136 || [http://www.vim.org/scripts/script.php?script_id=2136 repeat] || || || ||
 *S*
-|| [http://www.vim.org/scripts/script.php?script_id=152 ShowMarks] || || || ||
-|| [http://www.vim.org/scripts/script.php?script_id=2142 showmarks] || || || ||
-|| [http://code.google.com/p/snipmate/ snipMate.vim] [http://github.com/msanders/snipmate.vim 2] [http://www.vim.org/scripts/script.php?script_id=2540 3] || || [http://code.google.com/p/vim-script-cn/source/browse/trunk/doc/snipMate.cnx snipMate.cnx] || hotoo.cn ||
-|| [http://www.vim.org/scripts/script.php?script_id=1697 surround] || || || ||
+|| #152 || [http://www.vim.org/scripts/script.php?script_id=152 ShowMarks] || || || ||
+|| #2142 || [http://www.vim.org/scripts/script.php?script_id=2142 showmarks] || || || ||
+|| #2540 || [http://code.google.com/p/snipmate/ snipMate.vim] [http://github.com/msanders/snipmate.vim 2] [http://www.vim.org/scripts/script.php?script_id=2540 3] || || [http://code.google.com/p/vim-script-cn/source/browse/trunk/doc/snipMate.cnx snipMate.cnx](v0.83) || hotoo.cn ||
+|| #1697 || [http://www.vim.org/scripts/script.php?script_id=1697 surround] || || || ||
 *T*
-|| taglist || || taglist.cnx || zhang.lei.fly, mykingheaven ||
-|| tasklist || || || ||
-|| Template || || || ||
-|| The DERD Commenter || [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_1218.NERD_commenter.html NERD_commenter#1218](ing...) || || hotoo.cn ||
-|| [http://www.vim.org/scripts/script.php?script_id=2899 TxtBrowser] [http://xbeta.info/vim-txtbrowser.htm xbeta] || || || ||
+|| #273 || [http://www.vim.org/scripts/script.php?script_id=273 taglist] || || taglist.cnx || zhang.lei.fly, mykingheaven ||
+|| #2607 || [http://www.vim.org/scripts/script.php?script_id=2607 TaskList] || || || ||
+|| || [http://www.gracecode.com/archives/2414/ Template] || || || ||
+|| #1218 || The DERD Commenter || [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_1218.NERD_commenter.html NERD_commenter#1218](ing...) || || hotoo.cn ||
+|| #2899 || [http://www.vim.org/scripts/script.php?script_id=2899 TxtBrowser] [http://xbeta.info/vim-txtbrowser.htm xbeta] || || || ||
 *V*
-|| vimbuddy || [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_8.VimBuddy.html VimBuddy#8] || || hotoo.cn ||
-|| [http://www.vim.org/scripts/script.php?script_id=2226 Vimwiki.vim] [http://code.google.com/p/vimwiki/ 2] || [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_2226.Vimwiki.html Vimwiki#2226](v1.1) || [http://code.google.com/p/vim-script-cn/source/browse/trunk/doc/vimwiki.cnx Vimwiki.cnx](v1.1) || hotoo.cn, lizaib ||
-|| [http://www.vim.org/scripts/script.php?script_id=1026 Visual Mark] || || || ||
-|| [http://www.vim.org/scripts/script.php?script_id=2657 VOoM] [http://xbeta.info/vim-voof.htm xbeta] +python || || || ||
+|| #8 || vimbuddy || [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_8.VimBuddy.html VimBuddy#8] || || hotoo.cn ||
+|| #2226 || [http://www.vim.org/scripts/script.php?script_id=2226 Vimwiki.vim] [http://code.google.com/p/vimwiki/ 2] || [http://vim-script-cn.googlecode.com/svn/trunk/intro/script_2226.Vimwiki.html Vimwiki#2226](v1.1) || [http://code.google.com/p/vim-script-cn/source/browse/trunk/doc/vimwiki.cnx Vimwiki.cnx](v1.0) ([http://code.google.com/p/vim-script-cn/source/browse/tags/doc/vimwiki.0.9.9.cnx?r=114&spec=svn156 v0.9.9]) || hotoo.cn, lizaib ||
+|| #1026 || [http://www.vim.org/scripts/script.php?script_id=1026 Visual Mark] || || || ||
+|| #2657 || [http://www.vim.org/scripts/script.php?script_id=2657 VOoM] [http://xbeta.info/vim-voof.htm xbeta] +python || || || ||
