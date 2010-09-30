@@ -88,7 +88,7 @@ Perl Omni-Completion ~
 支持 perl-completion.vim 自动补全
 (http://www.vim.org/scripts/script.php?script_id=2852).
 
-要启用这种自动补全，要设置 |g:acp_behaviorPerlOmniLength| 选项为 0 或更大值。
+要启用这种自动补全，设置 |g:acp_behaviorPerlOmniLength| 选项为 0 或更大值。
 
 ==============================================================================
 命令                                                            *acp-commands*
