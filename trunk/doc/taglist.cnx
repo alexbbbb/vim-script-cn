@@ -977,22 +977,20 @@ specified by the 'Tlist_WinWidth' variable.
 
 ==============================================================================
 						*taglist-commands*
-7. Commands~
+7. 命令~
 
-The taglist plugin provides the following ex-mode commands:
+taglist 插件提供了以下命令：
 
-|:TlistAddFiles|	Add multiple files to the taglist.
+|:TlistAddFiles|	增加多个文件到 taglit
 |:TlistAddFilesRecursive|
-			Add files recursively to the taglist.
-|:TlistClose|		Close the taglist window.
-|:TlistDebug|		Start logging of taglist debug messages.
-|:TlistLock|		Stop adding new files to the taglist.
-|:TlistMessages|	Display the logged taglist plugin debug messages.
-|:TlistOpen|		Open and jump to the taglist window.
-|:TlistSessionSave|	Save the information about files and tags in the
-			taglist to a session file.
-|:TlistSessionLoad|	Load the information about files and tags stored
-			in a session file to taglist.
+			递归的将文件加入到 taglist 中。
+|:TlistClose|		关闭 taglist 窗口
+|:TlistDebug|		开始记录 taglist 的调试信息
+|:TlistLock|		停止向 taglist 中增加新文件
+|:TlistMessages|	显示已记录的 taglit 插件的调试信息
+|:TlistOpen|		打开并跳转到 taglit 窗口
+|:TlistSessionSave|	把 taglist 中的文件和 tags 的信息保存到会话文件中
+|:TlistSessionLoad|	把存储在会话文件中的文件和 tags 的信息加载到 taglist 中
 |:TlistShowPrototype|	Display the prototype of the tag at or before the
 		    	specified line number.
 |:TlistShowTag|		Display the name of the tag defined at or before the
@@ -1005,68 +1003,54 @@ The taglist plugin provides the following ex-mode commands:
 
 						*:TlistAddFiles*
 :TlistAddFiles {file(s)} [file(s) ...]
-		Add one or more specified files to the taglist. You can
-		specify multiple filenames using wildcards. To specify a
-		file name with space character, you should escape the space
-		character with a backslash.
-		Examples:
+		增加一个或多个文件到 taglist 中。您也可以使用通配符来指定多个
+		文件。如果文件名中有空格，要使用反斜线符号转义。
+		例子：
 >
 		    :TlistAddFiles *.c *.cpp
 		    :TlistAddFiles file1.html file2.html
 <
-		If you specify a large number of files, then it will take some
-		time for the taglist plugin to process all of them. The
-		specified files will not be edited in a Vim window and will
-		not be added to the Vim buffer list.
+		如果您指定了大量的文件，taglit 插件将花费大量的时间来处理。指
+		的文件不能在 Vim 窗口中编辑，也不会增加到 Vim 的缓冲列表中。
 
 						*:TlistAddFilesRecursive*
 :TlistAddFilesRecursive {directory} [ {pattern} ]
-		Add files matching {pattern} recursively from the specified
-		{directory} to the taglist. If {pattern} is not specified,
-		then '*' is assumed. To specify the current directory, use "."
-		for {directory}. To specify a directory name with space
-		character, you should escape the space character with a
-		backslash.
-		Examples:
+		向 taglit 中递归增加指定目录 {directory} 下匹配规则
+		{pattern} 的所有文件。如果没有指定 {pattern} ，就会指定为 '*'
+		。如果要指定当前目录，就用 "." 代替 {directory}。如果指定目录
+		名中有空格，您应该使用反斜线符号进行转义。
+		例子:
 >
 		    :TlistAddFilesRecursive myproject *.java
 		    :TlistAddFilesRecursive smallproject
 <
-		If large number of files are present in the specified
-		directory tree, then it will take some time for the taglist
-		plugin to process all of them.
+		如果指定的目录树中有大量的文件，taglit 插件会花费大量的时间来
+		进行处理。
 
 						*:TlistClose*
-:TlistClose	Close the taglist window. This command can be used from any
-		one of the Vim windows.
+:TlistClose	关闭 taglist 窗口。在任何 Vim 窗口中，该命令都是可以使用的。
 
 						*:TlistDebug*
 :TlistDebug [filename]
-		Start logging of debug messages from the taglist plugin.
-		If {filename} is specified, then the debug messages are stored
-		in the specified file. Otherwise, the debug messages are
-		stored in a script local variable. If the file {filename} is
-		already present, then it is overwritten.
+		形如记录 taglist 插件中的调试信息。如果指定了 {filename}，调
+		试信息会储存到这个文件中。否则，调试信息会存到一个脚本的局部
+		变量中。如果文件 {filename} 已经存在了，它会被覆盖掉。
 
 						*:TlistLock*
 :TlistLock
-		Lock the taglist and don't process new files. After this
-		command is executed, newly edited files will not be added to
-		the taglist.
+		锁定 taglist ,不处理新文件。执行这个命令后，新被编辑的文件不
+		会增加到 taglist 中。
 
 						*:TlistMessages*
 :TlistMessages
-		Display the logged debug messages from the taglist plugin
-		in a window.  This command works only when logging to a
-		script-local variable.
+		在一个窗口中显示来自于 taglist 插件的调试信息。仅当调试信息被
+		记录到脚本的局部变量时，该命令才有效。
 
 						*:TlistOpen*
-:TlistOpen	Open and jump to the taglist window. Creates the taglist
-		window, if the window is not opened currently. After executing
-		this command, the cursor is moved to the taglist window.  When
-		the taglist window is opened for the first time, all the files
-		in the buffer list are processed and the tags defined in them
-		are displayed in the taglist window.
+:TlistOpen	打开并跳转到 taglist 窗口。如果 taglist 窗口没有打开，则创建
+		该窗口。当该命令执行时，光标会移动到 taglist 窗口中。如果是第
+		一次打开 taglist 窗口，缓冲列表里所有的文件都会被处理，taglist
+		窗口会显示他们定义好的 tags 
 
 						*:TlistSessionSave*
 :TlistSessionSave {filename}
@@ -1077,7 +1061,7 @@ The taglist plugin provides the following ex-mode commands:
 						*:TlistSessionLoad*
 :TlistSessionLoad {filename}
 		Load the information about files and tags stored in the
-		specified session file to the taglist.
+｀		specified session file to the taglist.
 
 						*:TlistShowPrototype*
 :TlistShowPrototype [filename] [linenumber]
@@ -1116,21 +1100,19 @@ The taglist plugin provides the following ex-mode commands:
 
 						*:TlistUndebug*
 :TlistUndebug
-		Stop logging of debug messages from the taglist plugin.
+		停止记录 taglist 插件的调试信息
 
 						*:TlistUnlock*
 :TlistUnlock
-		Unlock the taglist and start processing newly edited files.
+		解锁taglist，开始处理新的文件。
 
 						*:TlistUpdate*
-:TlistUpdate	Update the tags information for the current buffer. This
-		command can be used to re-process the current file/buffer and
-		get the tags information. As the taglist plugin uses the file
-		saved in the disk (instead of the file displayed in a Vim
-		buffer), you should save a modified buffer before you update
-		the taglist. Otherwise the listed tags will not include the
-		new tags created in the buffer. You can use this command even
-		when the taglist window is not opened.
+:TlistUpdate	
+		更新当前缓冲区里的标签信息。这个命令可以用来重新处理当前的文件
+		或缓冲区来得到标签信息。当 taglist 插件使用硬盘上的文件（而不
+		是 Vim 缓冲区里显示的文件），在你保存更新 taglist 前，你应该保
+		存已经修改的缓冲区。否则所列出的标签将不包括在缓冲区中新建的那
+		些。当 taglist 窗口关闭的时候，你也可以使用这个命令。
 
 ==============================================================================
 						*taglist-functions*
@@ -1296,138 +1278,114 @@ are generated for the flags b, c and l respectively.
 
 ==============================================================================
 						*taglist-faq*
-10. Frequently Asked Questions~
+10. 常见问题~
 
-Q. The taglist plugin doesn't work. The taglist window is empty and the tags
-   defined in a file are not displayed.
-A. Are you using Vim version 6.0 and above? The taglist plugin relies on the
-   features supported by Vim version 6.0 and above. You can use the following
-   command to get the Vim version:
+问：taglist 插件不能用。taglist 窗口是空白的，文件中定义好的 tags 不显示。
+答：你是洁使用的是 Vim 6.0 或更高的版本？taglist 插件信赖一些 vim 6.0 或更高的
+    版本才支持的特性。您可以使用下面的命令得到 Vim 的版本：
 >
 	$ vim --version
 <
-   Are you using exuberant ctags version 5.0 and above? The taglist plugin
-   relies on the features supported by exuberant ctags and will not work with
-   GNU ctags or the Unix ctags utility. You can use the following command to
-   determine whether the ctags installed in your system is exuberant ctags:
+    您正在使用 exuberant ctags 5.0 或更高的版本嘛？ taglist 插件依赖于
+    exuberant ctags 支持的特性，而与 GUN ctags 或 Unix ctags utility 是不起作
+    用的。您能使用下面的命令来判定您系统里安装的 ctags 是否是 exuberant
+    ctags：
 >
 	$ ctags --version
 <
-   Is exuberant ctags present in one of the directories in your PATH? If not,
-   you need to set the Tlist_Ctags_Cmd variable to point to the location of
-   exuberant ctags. Use the following Vim command to verify that this is setup
-   correctly:
+    是否 exuberant ctags 出现在你系统的 PATH 目录中？如果没有，您需要设定
+    Tlist_Ctags_Cmd 变量来指向 exuberant ctags 的位置。使用下面的 Vim 命令来验
+    正设置是否正确：
 >
 	:echo system(Tlist_Ctags_Cmd . ' --version')
 <
-   The above command should display the version information for exuberant
-   ctags.
+    上面的命令应该显示 exuberant ctags 的版本信息。   
 
-   Did you turn on the Vim filetype detection? The taglist plugin relies on
-   the filetype detected by Vim and passes the filetype to the exuberant ctags
-   utility to parse the tags. Check the output of the following Vim command:
+    您是否打开了 Vim 的文件类型侦测？ taglist 插件信赖于由 Vim 侦测的文件类型
+    并将之传递给 exuberant ctags 来解析 tags 。检查下面 Vim 命令的输入：
 >
 	:filetype
 <
-   The output of the above command should contain "filetype detection:ON".
-   To turn on the filetype detection, add the following line to the .vimrc or
-   _vimrc file:
+    上面命令的输出应该包含 "filetype detection:ON" 。如查要打开文件类型侦测功
+    能，请把下面一行增加到 .vimrc 或 _vimrc 文件中：
 >
 	filetype on
 <
-   Is your version of Vim compiled with the support for the system() function?
-   The following Vim command should display 1:
+    您的 Vim 版本中是否编译入了 system() 函数功能支持？下面的 Vim 命令应该会显
+    示 1：
 >
 	:echo exists('*system')
 <
-   In some Linux distributions (particularly Suse Linux), the default Vim
-   installation is built without the support for the system() function. The
-   taglist plugin uses the system() function to invoke the exuberant ctags
-   utility. You need to rebuild Vim after enabling the support for the
-   system() function. If you use the default build options, the system()
-   function will be supported.
+    在一些 Linux 发行版中 (尤其是 Suse Linux )，默认的 Vim 安装是没有编译
+    system() 函数支持的。taglist 插件使用 system() 函数来调用 exuberant ctags
+    程序。你需要启用 system() 函数支持后重新编译 Vim。如果你使用默认的编译选项
+    ，system() 函数功能将不会被支持。
 
-   Do you have the |'shellslash'| option set? You can try disabling the
-   |'shellslash'| option. When the taglist plugin invokes the exuberant ctags
-   utility with the path to the file, if the incorrect slashes are used, then
-   you will see errors.
+    你是否有 |'shellslash'| 选项集？你能试图关闭 |'shellslash'| 选项。当
+    taglist 插件使用文件路径调用 exuberant ctags 程序，如果使用不正确的斜线，
+    你将看到错误提示。
 
-   Check the shell related Vim options values using the following command:
+    使用下面的命令检查与 shell 相关的 Vim 选项值。
 >
 	:set shell? shellcmdflag? shellpipe?
 	:set shellquote? shellredir? shellxquote?
 <
-   If these options are set in your .vimrc or _vimrc file, try removing those
-   lines.
+    如果你的 .vimrc 或 _vimrc 文件中设置了这些选项，试着移除这些选项。
 
-   Are you using a Unix shell in a MS-Windows environment? For example,
-   the Unix shell from the MKS-toolkit. Do you have the SHELL environment
-   set to point to this shell? You can try resetting the SHELL environment
-   variable.
+    你是否在一个 MS-Windows 环境中使用 Unix shell ? 例如，来自于 MKS-toolkit
+    的 Unix shell。你是否设定了指向 shell 的 SHELL 环境设置？你可以重新设置
+    SHELL 环境变量。
 
-   If you are using a Unix shell on MS-Windows, you should try to use
-   exuberant ctags that is compiled for Unix-like environments so that
-   exuberant ctags will understand path names with forward slash characters.
+    如果你正在 MS-Windows 中使用 Unix shell ，为了 exuberant ctags 能理解路径
+    名中的斜线字符 , 你需要为 Unix 环境编译的exuberant ctags ， 
 
-   Is your filetype supported by the exuberant ctags utility? The file types
-   supported by the exuberant ctags utility are listed in the ctags help. If a
-   file type is not supported, you have to extend exuberant ctags. You can use
-   the following command to list the filetypes supported by exuberant ctags:
+    exuberant ctags 程序是否支持你的文件类型？ctags 的帮助中列出了 exuberant
+    tags 支持的文件类型。如果某文件类型不被支持，你可以扩展 exuberant ctags 来
+    支持它。你能使用下面的命令来列出 exuberant ctags 支持的所有文件类型。
 >
 	ctags --list-languages
 <
-   Run the following command from the shell prompt and check whether the tags
-   defined in your file are listed in the output from exuberant ctags:
+    在命令提示符下运行下面的命令来检查 exuberant ctags 的输出文件中是否列出了
+    你的文件中定义的 tags ：Note
 >
 	ctags -f - --format=2 --excmd=pattern --fields=nks <filename>
 <
-   If you see your tags in the output from the above command, then the
-   exuberant ctags utility is properly parsing your file.
+    从上面的命令中，如果你能在输出是看到你的 tags , exuberant ctags 程序就能正
+    确的解析你的文件。
 
-   Do you have the .ctags or _ctags or the ctags.cnf file in your home
-   directory for specifying default options or for extending exuberant ctags?
-   If you do have this file, check the options in this file and make sure
-   these options are not interfering with the operation of the taglist plugin.
+    在你的主目录中是否存在 .ctags 、 _ctags 或 ctags.cnf 文件为扩展 exuberant
+    ctgas 指定默认的选项？如果存在这个文件，请检查文件内的选项以确保这些选项与
+    taglist 插件的操作产生冲突。
 
-   If you are using MS-Windows, check the value of the TEMP and TMP
-   environment variables. If these environment variables are set to a path
-   with space characters in the name, then try using the DOS 8.3 short name
-   for the path or set them to a path without the space characters in the
-   name. For example, if the temporary directory name is "C:\Documents and
-   Settings\xyz\Local Settings\Temp", then try setting the TEMP variable to
-   the following:
+    如果你正在使用 MS-Windows ，查检 TEMP 和 TMP 的环境变量值。如果这些变量值
+    设定路径中存在空格，就用 DOS 8.3 格式的短路径名，或者把他设置指向没有空格
+    字符的路径。例如，如果临时目录名是 "C:\Documents and Settings\xyz\Local 
+    Settings\Temp"，那么设置 TEMP 变量如下：
 >
 	set TEMP=C:\DOCUMEN~1\xyz\LOCALS~1\Temp
 <
-   If exuberant ctags is installed in a directory with space characters in the
-   name, then try adding the directory to the PATH environment variable or try
-   setting the 'Tlist_Ctags_Cmd' variable to the shortest path name to ctags
-   or try copying the exuberant ctags to a path without space characters in
-   the name. For example, if exuberant ctags is installed in the directory
-   "C:\Program Files\Ctags", then try setting the 'Tlist_Ctags_Cmd' variable
-   as below:
+    如果 exuberant ctags 安装到了含有空格字符的目录中，那么把这个目录加入 PATH
+    的环境变量，或都设置 'Tlist_Ctags_Cmd' 变量为指向 ctags 的短路径名，或者把
+    exuberant ctags 拷贝到名字中没有空格的路径。例如，如果 exuberant ctags 安
+    装到目录"C:\Program Files\Ctags"中，那么设置 'Tlist_Ctags_Cmd' 变量如下：
 >
 	let Tlist_Ctags_Cmd='C:\Progra~1\Ctags\ctags.exe'
 <
-   If you are using a cygwin compiled version of exuberant ctags on MS-Windows,
-   make sure that either you have the cygwin compiled sort utility installed
-   and available in your PATH or compile exuberant ctags with internal sort
-   support. Otherwise, when exuberant ctags sorts the tags output by invoking
-   the sort utility, it may end up invoking the MS-Windows version of
-   sort.exe, thereby resulting in failure.
+    如果你在 MS-Windows 上使用 cygwin 编译的 exuberant ctags 版本，确保你已经
+    安装了 cygwin 编译的排序程序，而且在你的变量路径里。或者编译的 exuberant
+    ctags 支持排序。否则，当 exuberant ctags 使用调用排序程序处理标签输出时，
+    他可能会调用MS-windows版本的sort.exe，从而导致错误。
 
-Q. When I try to open the taglist window, I am seeing the following error
-   message. How do I fix this problem?
+问：当我试图打开taglist窗口的时候，我看到了如下这个错误信息。我怎样才能修复这
+    个问题？
 
-   Taglist: Failed to generate tags for /my/path/to/file
-   ctags: illegal option -- -^@usage: ctags [-BFadtuwvx] [-f tagsfile] file ...
+    Taglist:无法在/my/path/to/file产生标签
+    ctags:无效选项 -- -^@使用：ctags [-BFadtuwvx] [-f tagsfile] file ...
 
-A. The taglist plugin will work only with the exuberant ctags tool. You
-   cannot use the GNU ctags or the Unix ctags program with the taglist plugin.
-   You will see an error message similar to the one shown above, if you try
-   use a non-exuberant ctags program with Vim. To fix this problem, either add
-   the exuberant ctags tool location to the PATH environment variable or set
-   the 'Tlist_Ctags_Cmd' variable.
+答：taglist 插件只能和 exuberant ctags 在一起工作。你不能使用 GUN ctags 或者
+    Unix ctags 程序。如果你用一个非 exuberant ctags 程序，你就会得到与上面类似
+    的错误信息。为了修复这个问题，可以把 exuberant ctags 工具的路径加到系统的
+    环境变量中或者设置 'Tlist_Ctags_Cmd' 这个变量。
 
 Q. A file has more than one tag with the same name. When I select a tag name
    from the taglist window, the cursor is positioned at the incorrect tag
@@ -1445,31 +1403,25 @@ A. The exuberant ctags utility will process only files that are present in the
    disk. To list the tags defined in a file, you have to save the file and
    then update the taglist window.
 
-Q. I have created a ctags file using the exuberant ctags utility for my source
-   tree. How do I configure the taglist plugin to use this tags file?
-A. The taglist plugin doesn't use a tags file stored in disk. For every opened
-   file, the taglist plugin invokes the exuberant ctags utility to get the
-   list of tags dynamically. The Vim system() function is used to invoke
-   exuberant ctags and get the ctags output. This function internally uses a
-   temporary file to store the output. This file is deleted after the output
-   from the command is read. So you will never see the file that contains the
-   output of exuberant ctags.
+问：我已经使用 exuberant ctags 工具为我的源代码树产生了 ctags 文件。我如何设置
+    taglist 插件来使用这个 tags 文件。
+答：taglist 插件不使用存储在硬盘里的 tags 文件。对于打开的文件，tagslist 插件
+    会自动调用 exuberant ctags 程序来产生列表。vim 的 system() 函数用来调用
+    exuberant ctags 来产生 ctags 的输出。这个函数内部使用了一个临时文件来存储
+    输出。当读取完输出的内容后，这个文件就会被删除。所以你永远不会看到包函
+    exuberant ctags 输出内容的文件。
 
-Q. When I set the |'updatetime'| option to a low value (less than 1000) and if
-   I keep pressing a key with the taglist window open, the current buffer
-   contents are changed. Why is this?
-A. The taglist plugin uses the |CursorHold| autocmd to highlight the current
-   tag. The CursorHold autocmd triggers for every |'updatetime'| milliseconds.
-   If the |'updatetime'| option is set to a low value, then the CursorHold
-   autocmd will be triggered frequently. As the taglist plugin changes
-   the focus to the taglist window to highlight the current tag, this could
-   interfere with the key movement resulting in changing the contents of
-   the current buffer. The workaround for this problem is to not set the
-   |'updatetime'| option to a low value.
+问：当我设置 |'updatetime'| 选项一个较小的值（小于1000），而且如果我打开了
+    taglist 的窗口中按键，当前缓冲的内容会发生改变。这是为什么？
+答：taglist 插件使用 |CursorHold| 自动命令来高亮当前的标签。CursorHold 自动 命
+    令每 |'updatetime'| 毫秒时间内就会被触发。如果 |'updatetime'| 选项设定一个
+    小值时，CursorHold 自动命令会频繁的被触发。由于 taglist 插件为了高亮当前的
+    标签而改变焦点，可能与键的移动产生冲突，从而导致当前缓冲区内的内容发生改变
+    。对于这个问题，工作区内不把 |'updatetime'| 选项设定为一个小值。
 
 ==============================================================================
 						*taglist-license*
-11. License~
+11. 许可证~
 Permission is hereby granted to use and distribute the taglist plugin, with or
 without modifications, provided that this copyright notice is copied with it.
 Like anything else that's free, taglist.vim is provided *as is* and comes with
@@ -1479,7 +1431,7 @@ software.
 
 ==============================================================================
 						*taglist-todo*
-12. Todo~
+12. 待办事项~
 
 1. Group tags according to the scope and display them. For example,
    group all the tags belonging to a C++/Java class
