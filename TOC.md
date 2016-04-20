@@ -1,0 +1,6 @@
+  * [Vim Script 文档中文计划](index.md)
+    * [计划](PLAN.md)
+    * [方法及技巧](Translation.md)
+    * [文档规范](VimDocSpec.md)
+    * [安装](Installation.md)
+    * [About Google Code](UsingGoogleCode.md)
